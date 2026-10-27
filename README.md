@@ -1,11 +1,12 @@
 # teleConnect 可交互原型
 
-当前版本：第56版。
+当前版本：第60版。
 
 - [打开在线原型](https://aidenhwang99.github.io/teleconnect-prototype/)
-- [固定第56版地址](https://aidenhwang99.github.io/teleconnect-prototype/versions/v56/)
-- [功能说明](docs/v56.md)
-- [在线发布与验收说明](docs/hosting-v56.md)
+- [固定第60版地址](https://aidenhwang99.github.io/teleconnect-prototype/versions/v60/)
+- [第60版功能说明](docs/v60.md)
+- [第60版在线发布说明](docs/hosting-v60.md)
+- [历史第56版](https://aidenhwang99.github.io/teleconnect-prototype/versions/v56/)
 
 ## 使用方式
 
@@ -15,6 +16,6 @@
 
 ## 发布结构
 
-`index.html`为当前入口，`versions/v56/index.html`为固定版本。单文件包含应用逻辑、样例数据、样式及图标。发布包移除可选的外部Google Fonts依赖，使用系统中文字体；应用JavaScript与本地第56版完全一致。`.nojekyll`避免静态文件被模板构建处理。
+`index.html`为当前入口，`versions/v60/index.html`为当前固定版本，`versions/v56/`保留历史版本。单文件包含应用逻辑、样例数据、样式及图标。发布包移除可选的外部Google Fonts依赖，使用系统中文字体；应用JavaScript与本地第60版完全一致。`.nojekyll`避免静态文件被模板构建处理。
 
 `main`保存交付源文件和说明；`gh-pages`保存在线发布文件。更新后先验证再提交，执行`scripts/publish-pages.sh`发布当前已提交版本。旧版本可从Git历史与固定版本目录查看。

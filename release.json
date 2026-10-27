@@ -1,11 +1,12 @@
 {
-  "version": 56,
-  "sourceFile": "teleConnect_AI主动模式原型_56.html",
-  "sourceSha256": "f463eefe7b643301fd97cfb9e37a6cf306b2916c3dfab956d7fbe4c67d18cf87",
-  "hostedSha256": "9b60684a882d409862b272d2295f72462ac5b46a86c5d6557db86a6f5b3cc6e6",
-  "packaging": "Removed optional Google Fonts stylesheet; application script and styles unchanged. Uses installed Chinese system fonts.",
-  "storage": "Per-browser localStorage; not shared collaboration storage.",
+  "version": 60,
+  "sourceFile": "teleConnect_AI主动模式原型_60.html",
+  "sourceSha256": "1a2c3349dfb64f2600f0fe474f75a12cee37be105b792eae488e548329e1be74",
+  "hostedSha256": "598c600498636f3e30f51be174e8f0e5451e2749820e3ffc62a5205a83ecde08",
+  "packaging": "Removed optional Google Fonts stylesheet; application script and inline styles unchanged. Uses installed Chinese system fonts.",
+  "storage": "Per-browser localStorage; version 60 uses its own configuration key. Previous local edits are not automatically migrated.",
   "services": "All integrations, AI responses and operations remain simulated.",
   "entry": "./",
-  "fixedVersion": "versions/v56/"
+  "fixedVersion": "versions/v60/",
+  "previousVersion": "versions/v56/"
 }

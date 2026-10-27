@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>teleConnect · 开发参照原型 · 第56版</title>
+<title>teleConnect · 开发参照原型 · 第60版</title>
 <style>
 :root{
   --bg:#F4F4F1; --panel:#FFFFFF; --soft:#F7F7F4; --line:#E6E6E1; --line2:#EFEFEA;
@@ -680,6 +680,13 @@ aside.wfp.v39-panel > .pb.v39-body{display:block!important;gap:0!important;paddi
 /* Scope compact two-column cards to the start/end contract dialog only. */
 .w56-contractgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin-top:12px;align-items:start}.w56-contractgrid>.w56-field{margin:0;padding:12px;min-width:0}.w56-contractgrid>.w56-add{grid-column:1/-1;margin-top:0}.w56-contractgrid .w56-fieldrow{grid-template-columns:minmax(0,1fr) 104px 54px;gap:8px;margin:8px 0}.w56-contractgrid .w56-fieldrow:nth-child(3){grid-template-columns:repeat(2,minmax(0,1fr))}.w56-contractgrid .w56-fieldrow:nth-child(3) .w56-span2{grid-column:auto}.w56-contractgrid .w56-fieldhead{margin-bottom:4px;min-height:24px}.w56-contractgrid .w56-fieldhead b{font-size:13px;overflow-wrap:anywhere}.w56-contractgrid .w56-field details{margin-top:9px}.w56-originpop{max-height:min(540px,calc(100vh - 160px));overflow:auto}.w56-provenance p{margin:4px 0 8px}.w56-provenance small{color:#809085}.w56-provenance ul{padding:6px 0;margin:4px 0;list-style:none}.w56-provenance li{display:flex;justify-content:space-between;gap:10px;padding:4px 0;border-bottom:1px solid #edf1ee}.w56-provenance li span{min-width:0;overflow-wrap:anywhere}.w56-provenance li code{flex-shrink:0}@media(max-width:900px){.w56-contractgrid{grid-template-columns:minmax(0,1fr)}}
 
+</style><style>.trial57-actor{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:12px 14px;background:#f3f7f4;border:1px solid #dce8e0;border-radius:10px;margin-bottom:18px;color:#5e7266;font-size:12px}.trial57-actor label{display:flex;align-items:center;gap:9px}.trial57-actor select{width:190px;height:34px}.trial57-choice{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:15px 0}.trial57-choice label{display:flex;flex-direction:column;gap:7px;font-size:13px}.trial57-approval textarea{min-height:72px!important}.trial57-submit{display:flex;gap:14px;align-items:center;margin:12px 0}.trial57-submit small,.trial57-muted{color:#748579;font-size:12px;line-height:1.65}.trial57-limits{font-size:12px;margin-top:12px;color:#728278}.trial57-nav{display:flex;flex-wrap:wrap;gap:8px;position:relative;isolation:isolate}.trial57-records{margin-top:15px}.trial57-step{border:1px solid #dce5df;border-radius:9px;margin:10px 0;padding:12px}.trial57-step>summary{display:flex;align-items:center;gap:10px;cursor:pointer}.trial57-step>summary small{margin-left:auto;color:#78867d}.trial57-step details{margin:12px 0;padding:10px;background:#f8faf9;border-radius:7px}.trial57-index{width:25px;height:25px;display:inline-flex;align-items:center;justify-content:center;background:#e7f1ea;border-radius:50%;color:#25804f;font-size:12px}.trial57-casehelp{padding:14px 16px;background:#f5f8f6;border:1px solid #e0e9e3;border-radius:9px;font-size:13px;line-height:1.7;margin-bottom:16px}.trial57-casehelp summary{cursor:pointer;font-weight:600}.w56-publish{border-radius:9px;box-shadow:0 2px 4px #147f3520;overflow:visible;isolation:isolate}.w56-publish>.btn{height:36px;border:0;box-shadow:none;background:#16844b;color:white;margin:0!important}.w56-publish>.btn:first-child{border-radius:8px 0 0 8px;padding:0 17px;font-weight:600}.w56-publish>.w56-more{border-radius:0 8px 8px 0;width:34px;padding:0;display:inline-flex;align-items:center;justify-content:center;border-left:1px solid #ffffff45}.w56-publish>.btn:hover{background:#106f3d}.w56-publishmenu{min-width:260px;padding:7px;border-radius:11px;box-shadow:0 12px 35px #183c2629;z-index:500}.w56-publishmenu button{padding:12px;display:flex;flex-direction:column;gap:5px;border-radius:7px}.w56-publishmenu b{font-size:13px}.w56-publishmenu small{font-size:11px;color:#7a8b7f}.w56-publishmenu button+button{border-top:1px solid #edf1ee}@media(max-width:760px){.trial57-choice{grid-template-columns:1fr}.trial57-submit{align-items:flex-start;flex-direction:column}.trial57-actor label{width:100%}.trial57-actor select{flex:1}}
+/* Raise the split-button stacking context above the later canvas sibling. */
+.w56-publish{z-index:600}
+</style><style>.check58-summary{display:flex;gap:16px;align-items:center;padding:18px;border-radius:12px;background:#edf8f1;border:1px solid #c7e4d1}.check58-summary.bad{background:#fff6ea;border-color:#edd4a9}.check58-summary h4{font-size:18px;margin:0 0 6px}.check58-summary p{margin:0;color:#53665c;line-height:1.6}.check58-summary>b{margin-left:auto;white-space:nowrap}.check58-icon{font-size:26px;color:#178251}.check58-list>section{border-bottom:1px solid #e7ece9}.check58-row{display:flex;gap:12px;align-items:center;padding:16px 4px}.check58-row>div{flex:1}.check58-row p{margin:5px 0 0;font-size:12px;color:#6b7c73;line-height:1.5}.check58-row>span:last-child{font-size:12px;white-space:nowrap}.check58-state{width:24px;height:24px;border-radius:50%;display:grid;place-items:center;background:#e8f5ed;color:#168152}.check58-state.bad{background:#fff0de;color:#a65e14}.check58-list ul{padding-left:40px;color:#a3472a;line-height:1.9}.check58-details{margin-top:16px}.check58-details>div{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px;padding:16px 0;font-size:12px}.check58-note{font-size:12px;color:#76857e;line-height:1.7;margin-bottom:0}.fixture58-context{padding:12px 14px;background:#eef6f0;border-radius:8px;line-height:1.7;margin:12px 0}.check58-list button{margin-left:8px}@media(max-width:650px){.check58-details>div{grid-template-columns:1fr}.check58-summary{align-items:flex-start}.check58-summary>b{display:none}}
+.fixture58-window .mb>.btn{align-self:flex-start}.fixture58-window .mb>.fixture58-context,.fixture58-window .mb>.u42-note{margin:0}.fixture58-window .mb>.u42-formgrid{margin:4px 0}.fixture58-window .mb>.u42-note{padding:10px 12px}.fixture58-window .fixture58-context{padding:10px 12px}
+</style><style>.meta59-form{display:grid;grid-template-columns:1fr 1fr;gap:18px}.meta59-form label,.meta59-service label{display:flex;flex-direction:column;gap:8px;font-size:13px;color:#334f40}.meta59-form textarea{min-height:86px;resize:vertical}.meta59-form .meta59-description{min-height:120px}.meta59-span{grid-column:1/-1}.meta59-help,.meta59-form small{font-size:12px;color:#74867b;line-height:1.7}.meta59-tabs{display:flex;gap:24px;border-bottom:1px solid #e0e8e3;margin-bottom:20px}.meta59-tabs button{padding:10px 2px 13px;border:0;border-bottom:2px solid transparent;background:none;color:#65796c;cursor:pointer}.meta59-tabs button.on{color:#138453;border-bottom-color:#138453;font-weight:650}.meta59-service{display:flex;flex-direction:column;gap:14px}.meta59-service>label{max-width:340px}.meta59-service details label{margin:14px 0}.meta59-service textarea{min-height:200px}.graph59-compact.p32-model{padding:0 16px 10px;gap:0}.graph59-compact .u46-navcontext{min-height:44px;padding:6px 0;margin:0;gap:12px;flex-wrap:wrap;border-bottom:0}.graph59-compact .u46-navcontext>span{font-size:13px}.graph59-compact .u46-navcontext>span>b{font-size:17px}.graph59-headeractions{display:flex;gap:8px;align-items:center}.graph59-compact .u46-navcontext>.row{margin-left:auto}.graph59-compact .p32-toolbar{gap:10px;padding:0 0 8px;min-height:40px;flex-shrink:0}.graph59-compact .p31-graphmodes{padding:3px}.graph59-compact .p31-graphmodes button{padding:7px 13px}.graph59-compact .p32-maphead{min-height:46px;padding:7px 12px;gap:10px;flex-wrap:wrap}.graph59-compact .p32-maphead>div:not(.graph59-relationactions){display:flex;align-items:center;gap:12px;flex-wrap:wrap}.graph59-relationactions{display:flex;align-items:center;gap:8px;flex-shrink:0}.graph59-compact .p32-views{padding:2px}.graph59-compact .p32-views button{padding:6px 11px}.graph59-compact .u36-snapshot{gap:6px}.graph59-compact .p31-graphlegend{padding:8px 12px;gap:10px}.graph59-compact .p32-graphbody{flex:1;min-height:0}.graph59-compact .p31-graphstage{min-height:280px}.graph59-edithelp{font-size:12px;color:#23734d;background:#e8f5ed;border-radius:6px;padding:8px 12px;margin-bottom:8px}.graph59-compact.u42-graph{gap:8px;padding:0 16px 10px}.graph59-compact .u42-graphcontrols{padding:8px 12px;gap:10px;margin:0}.graph59-compact .u42-graphcontrols .u42-field{gap:4px}.graph59-compact .u42-graphcontrols .inp{min-height:32px;height:32px}.graph59-compact .u42-ghead{padding:6px 12px;min-height:40px;gap:8px}.graph59-compact .u43-querybar{margin:0;padding:8px 12px;gap:10px}.graph59-compact .u42-gbody{min-height:0;flex:1}.graph59-compact .p32-maphead small{font-size:11px}.graph59-compact .u42-heading{padding:0}@media(max-width:1150px){.graph59-compact .p32-maphead small{max-width:230px}.graph59-compact .p32-toolbar{flex-wrap:wrap}.graph59-headeractions{margin-left:auto}.graph59-compact .u46-navcontext{gap:8px}}@media(max-width:700px){.meta59-form{grid-template-columns:1fr}.meta59-span{grid-column:auto}.graph59-compact .u46-navcontext>span{flex:1 1 100%}.graph59-compact .p32-maphead{gap:6px}.graph59-compact .p31-graphsearch{min-width:180px}.graph59-compact .p31-graphsearch .inp{width:150px}}
+.graph59-compact .p32-maphead>.graph59-relationactions{flex:0 0 auto}
 </style></head>
 <body>
 <div id="root" class="app"></div>
@@ -728,17 +735,17 @@ unpack40=raw=>{
 };
 
 let BOOTING43=true;let BOOT40={},flushStorage40=()=>{};
-(function(){const key='teleconnect-prototype-56-object-workflow-r1',owner=typeof Storage==='function'?Storage.prototype:localStorage,get=owner.getItem,set=owner.setItem;let memoRaw,memoValue,pending,ready=false,initialValue=null;try{initialValue=unpack40(get.call(localStorage,key))??null;BOOT40=JSON.parse(initialValue||'{}');}catch{}owner.getItem=function(k){if(k!==key)return get.call(this,k);if(!ready&&initialValue!==null)return initialValue;if(pending!==undefined)return pending;const raw=get.call(this,k);if(raw===memoRaw)return memoValue;memoRaw=raw;memoValue=unpack40(raw);return memoValue;};owner.setItem=function(k,value){if(k!==key)return set.call(this,k,value);if(!ready){if(initialValue===null&&pending===undefined)initialValue=String(value);pending=String(value);return;}const packed=pack40(String(value));set.call(this,k,packed);memoRaw=packed;memoValue=String(value);};flushStorage40=()=>{ready=true;if(pending!==undefined){const value=pending;pending=undefined;owner.setItem.call(localStorage,key,value);}};})();
+(function(){const key='teleconnect-prototype-60-zoom-r1',owner=typeof Storage==='function'?Storage.prototype:localStorage,get=owner.getItem,set=owner.setItem;let memoRaw,memoValue,pending,ready=false,initialValue=null;try{initialValue=unpack40(get.call(localStorage,key))??null;BOOT40=JSON.parse(initialValue||'{}');}catch{}owner.getItem=function(k){if(k!==key)return get.call(this,k);if(!ready&&initialValue!==null)return initialValue;if(pending!==undefined)return pending;const raw=get.call(this,k);if(raw===memoRaw)return memoValue;memoRaw=raw;memoValue=unpack40(raw);return memoValue;};owner.setItem=function(k,value){if(k!==key)return set.call(this,k,value);if(!ready){if(initialValue===null&&pending===undefined)initialValue=String(value);pending=String(value);return;}const packed=pack40(String(value));set.call(this,k,packed);memoRaw=packed;memoValue=String(value);};flushStorage40=()=>{ready=true;if(pending!==undefined){const value=pending;pending=undefined;owner.setItem.call(localStorage,key,value);}};})();
 
-try { if(localStorage.getItem('teleconnect-prototype-56-object-workflow-r1')==null){const p=localStorage.getItem('teleconnect-prototype-39');if(p){const d=JSON.parse(p);if(d.schema===1&&Array.isArray(d.objects)&&Array.isArray(d.defs))localStorage.setItem('teleconnect-prototype-56-object-workflow-r1',p);}} } catch(e){console.info('使用本版初始配置');}
-let PRELOAD36=null;try{PRELOAD36=JSON.parse(localStorage.getItem('teleconnect-prototype-56-object-workflow-r1')||'{}').state36;}catch{}
+try { if(localStorage.getItem('teleconnect-prototype-60-zoom-r1')==null){const p=localStorage.getItem('teleconnect-prototype-39');if(p){const d=JSON.parse(p);if(d.schema===1&&Array.isArray(d.objects)&&Array.isArray(d.defs))localStorage.setItem('teleconnect-prototype-60-zoom-r1',p);}} } catch(e){console.info('使用本版初始配置');}
+let PRELOAD36=null;try{PRELOAD36=JSON.parse(localStorage.getItem('teleconnect-prototype-60-zoom-r1')||'{}').state36;}catch{}
 
 // Copy the compatible previous snapshot once; never write back into version 34.
 
 
-const PRELOAD29=(()=>{try{return JSON.parse(localStorage.getItem("teleconnect-prototype-56-object-workflow-r1")||"null");}catch{return null;}})();
+const PRELOAD29=(()=>{try{return JSON.parse(localStorage.getItem("teleconnect-prototype-60-zoom-r1")||"null");}catch{return null;}})();
 
-var SAVED25=null;try{SAVED25=JSON.parse(localStorage.getItem("teleconnect-prototype-56-object-workflow-r1")||"null");}catch{}
+var SAVED25=null;try{SAVED25=JSON.parse(localStorage.getItem("teleconnect-prototype-60-zoom-r1")||"null");}catch{}
 
 /* ================= 核心：图标 / 工具 / 图表 / 渲染 / 事件 ================= */
 const sv = (p, s = 20, w = 1.8) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
@@ -2983,9 +2990,11 @@ document.addEventListener('mousemove', e => {
 });
 document.addEventListener('mouseup', () => { if (DRAG && DRAG.m) NOCLICK = true; DRAG = null; });
 document.addEventListener('click', e => { if (NOCLICK) { NOCLICK = false; e.stopPropagation(); e.preventDefault(); } }, true);
-document.addEventListener('wheel', e => { if (!S.wf || !e.target.closest('#wfc') || e.target.closest('.wfpop,.nc23-picker,.v38-menu')) return; e.preventDefault(); const W = S.wf;
-  if (e.ctrlKey || e.metaKey) { const r = document.getElementById('wfc').getBoundingClientRect(), mx = e.clientX - r.left, my = e.clientY - r.top, nz = Math.max(0.3, Math.min(1.6, W.z * (e.deltaY < 0 ? 1.1 : 0.9))); W.px = mx - (mx - W.px) * nz / W.z; W.py = my - (my - W.py) * nz / W.z; W.z = +nz.toFixed(2); setW(); }
-  else { W.px -= e.deltaX; W.py -= e.deltaY; setW(); } }, { passive: false });
+// Ordinary wheel retains workflow panning; modified wheel is owned by the shared canvas handler.
+document.addEventListener('wheel', e => {
+ if (!S.wf || S.modal || !e.target.closest('#wfc') || e.target.closest('.wfpop,.nc23-picker,.v38-menu,input,textarea,select,[contenteditable]') || e.ctrlKey || e.metaKey) return;
+ e.preventDefault(); S.wf.px -= e.deltaX; S.wf.py -= e.deltaY; setW();
+}, { passive: false });
 document.addEventListener('keydown', e => { if (!S.wf || S.modal) return; if (e.target.closest('input, textarea, select')) return;
   if (e.key === 'Escape') { S.wf.link = null; S.wf.pop = null; S.wf.eSel = null; render(); }
   if (e.key === 'Delete' || e.key === 'Backspace') { if (S.wf.eSel != null) A.wfEDel(); else if (S.wf.sel && wn(S.wf.d, S.wf.sel).type !== 'start') A.wfDelN(S.wf.sel); } });
@@ -3499,7 +3508,7 @@ const alarmDef23={...emptyDef23(),id:'oss_site_query',name:'站点信息查询',
 bindObject23(alarmDef23,'site','query_info');publishInitial23(alarmDef23);DEFS23.push(alarmDef23);
 function resourceToDef23(r,name,id){const d={...emptyDef23(),id,name,code:id,category:r.category,description:r.description,kind:r.kind,source:{resourceId:r.id,resourceVersion:r.version},inputs:clone23(r.inputs),outputs:clone23(r.outputs),branches:['ok','fail'],risk:r.risk,approval:r.approval};publishInitial23(d);return d;}
 DEFS23.push(resourceToDef23(RES23.find(x=>x.id==='sk_report'),'经营分析报告','bd_report'),resourceToDef23(RES23.find(x=>x.id==='ag_oss'),'OSS Agent 诊断','oss_agent'));
-const CACHE23='teleconnect-prototype-56-object-workflow-r1';
+const CACHE23='teleconnect-prototype-60-zoom-r1';
 try{const v=JSON.parse(localStorage.getItem(CACHE23)||'null');if(v?.schema===1){DEFS23=v.defs;CATS23=v.cats;if(v.flows)RULES3.splice(0,RULES3.length,...v.flows);if(v.tpls)TPLS.splice(0,TPLS.length,...v.tpls);if(v.objects)OB.splice(0,OB.length,...v.objects);}}catch(e){console.info('Prototype storage unavailable',e.message);}
 function persist23(){if(BOOTING43)return true;try{localStorage.setItem(CACHE23,JSON.stringify({schema:1,defs:DEFS23,cats:CATS23,flows:RULES3,tpls:TPLS,objects:OB}));}catch(e){toast('浏览器存储不可用，本次修改仅保留到页面关闭');}}
 const def23=id=>DEFS23.find(d=>d.id===id);
@@ -5825,7 +5834,7 @@ IN.caseReview36=v=>V36.caseReview=v;A.caseTransition36=v=>{const [id,action]=v.s
 MODALS.caseDetail36=({id})=>{const k=case36(id),edit=editable24(k),review=k.status36==='pending'&&k.reviewer36===B25.actor;return modal25(esc(k.title),errors29(V36.errors)+`<div class="u36-kbfacts"><span>${esc(CASE_STATUS36[k.status36])}</span><span>${esc(domainName24(k.domainId))}</span><span>审核人 ${esc(k.reviewer36)}</span><span>当前演示身份 ${esc(B25.actor)}</span></div>${[['根因',k.rc],['处理方法',k.fix],['验证结果',k.result],['证据摘要',k.evidence36]].map(([l,v])=>`<h4>${l}</h4><p style="white-space:pre-wrap">${esc(v||'未填写')}</p>`).join('')}${k.runId36?`<button class="btn sm" data-a="runOpen25" data-v="${k.runId36}">查看来源运行</button>`:''}${k.published36?`<details><summary>发布快照 v${k.version36} · 知识同步为本地模拟</summary>${jsonBlock25(k.published36)}</details>`:''}${edit?`<label class="u36-note">审核意见 / 失效原因<textarea class="inp" data-in="caseReview36" aria-label="审核意见或失效原因" style="width:100%;min-height:70px">${esc(V36.caseReview||'')}</textarea></label>`:''}<details><summary>处理记录</summary>${jsonBlock25(k.history36||[])}</details>`,!edit?'':`${k.status36!=='pending'?'<button class="btn" data-a="caseEdit36" data-v="'+id+'">编辑草稿</button>':''}${['draft','expired'].includes(k.status36)?'<button class="btn pri" data-a="caseTransition36" data-v="'+id+'|submit">提交审核</button>':''}${review?'<button class="btn" data-a="caseTransition36" data-v="'+id+'|reject">退回修改</button><button class="btn pri" data-a="caseTransition36" data-v="'+id+'|approve">审核并发布</button>':''}${k.published36&&k.publishedActive36!==false&&k.sync36?.status!=='revoked_simulated'?'<button class="btn" data-a="caseTransition36" data-v="'+id+'|expire">使此版本失效</button>':''}`,true);};
 A.caseHelp36=()=>openModal('caseHelp36',{});MODALS.caseHelp36=()=>modal25('知识案例使用说明','<p>案例从草稿提交给审核人，审核后发布。发布保留来源运行、验证结果及固定证据；失效会停止知识服务引用。</p><p>此页面维护业务案例审核，文档存储、索引与访问控制复用Knowledge Management。本原型仅保存模拟同步回执。</p>');
 /* concise in-product help; implementation explanations stay in the handoff */
-const topbarBase36=topbar;topbar=()=>topbarBase36().replace('第56版 · 开发参照原型','第56版 · 本地演示');
+const topbarBase36=topbar;topbar=()=>topbarBase36().replace('第56版 · 开发参照原型','第60版 · 本地演示');
 const adminBase36=adminView;adminView=()=>adminBase36().replace(/<div class="p25-mini"[^>]*>第56版[\s\S]*?外部调用与发布均为本地模拟。<\/div>/,'').replace(/<div class="p26-integration">现有后台功能的整合示例[\s\S]*?<\/div>/,'');
 HELP27.objs=['对象建模','维护对象基本信息、实例标识、HTTP或MCP能力、事件与关系。保存仅更新草稿；发布形成固定版本。导入先映射依赖，再创建独立草稿。'];
 HELP27.tpls=['场景模板','模板可导入/导出资产包。导入创建草稿；发布版可只读体验或创建业务流程。缺失依赖、类型冲突需要先修复。'];
@@ -9997,6 +10006,204 @@ const endPanelPrior56=nodePanel;nodePanel=n=>{if(n.type==='end'){if(V28.open['e5
 function diagnosticSamples56(d){if(Object.hasOwn(STATE43.diagnosticFixtures55,d.id))return STATE43.diagnosticFixtures55[d.id];return d.simulationFixtures56?.diagnostic||null;}
 const fixturePrior56=fixtureDefinition55;fixtureDefinition55=r=>{if(!r.definition.diagnosticRules55)return fixturePrior56(r);if(!r.diagnosticFixture55){const samples=diagnosticSamples56(r.definition);if(!samples)throw Error('此流程缺少诊断响应样例，请在测试数据中配置正常 / 异常响应后再试运行');r.diagnosticFixture55=clone23(samples);r.diagnosticFixtureSource56={kind:'simulation_response_examples',version:r.definition.simulationFixtures56?.version||'local-config',independent:true};}const copy={...r,definition:clone23(r.definition)};for(const p of copy.definition.fbb40?.scenarios||[])for(const c of p.checks||[]){const sample=r.diagnosticFixture55[p.id]?.[c.key]||{};for(const key of ['healthy','fault'])if(!Object.hasOwn(sample,key))throw Error('诊断响应样例缺少 '+p.name+' / '+c.key+' 的'+(key==='fault'?'异常值':'正常值')+'；不会使用健康期望值替代缺失响应');c.healthyValue=clone23(sample.healthy);c.faultValue=clone23(sample.fault);}return copy;};
 A.diagnosticFixtures55=()=>{DIAG55.fixtureText=JSON.stringify(diagnosticSamples56(S.wf.d)||{},null,2);DIAG55.error='';openModal('diagnosticFixtures55',{});};
+
+// v57: a single run navigation, explicit demo identity and approval intent.
+const UI57={decisions:{},busyCases:new Set()};
+function runActor57(r){return `<div class="trial57-actor"><label>当前演示身份<select class="inp" aria-label="试运行演示身份" data-ch="demoActor57">${PEOPLE25.map(p=>`<option value="${esc(p.id)}" ${p.id===B25.actor?'selected':''}>${esc(p.name+' · '+p.role)}</option>`).join('')}</select></label>${r?.waiting?`<span>当前待办处理人 <b>${esc(r.waiting.assignee)}</b></span>${B25.actor!==r.waiting.assignee&&PEOPLE25.some(p=>p.id===r.waiting.assignee)?btn42('切换为 '+r.waiting.assignee,'demoAssignee57',r.id,'sm'):''}`:'<span>仅切换本地演示身份</span>'}</div>`;}
+CH.demoActor57=id=>{if(!PEOPLE25.some(p=>p.id===id))return;B25.actor=id;V40.error='';C49.error='';persist23();render();};
+A.demoAssignee57=id=>{const r=runBy25(id);if(!r?.waiting)return toast('此待办已更新，请刷新');CH.demoActor57(r.waiting.assignee);};
+function decision57(r){const w=r.waiting,prior=UI57.decisions[r.id];if(!prior||prior.token!==w.token)UI57.decisions[r.id]={token:w.token,value:w.task==='approval'?'approve':w.task==='suspended48'?'resume':'retry'};return UI57.decisions[r.id].value;}
+CH.approvalChoice57=(v,e)=>{const r=runBy25(e.dataset.v);if(!r?.waiting)return;UI57.decisions[r.id]={token:r.waiting.token,value:v};V40.error='';renderModal();};
+const waitBefore57=waitingHTML40;
+waitingHTML40=r=>{const w=r.waiting,n=w&&wn(r.definition,w.nodeId);if(!r.definition.engine48||!['approval','suspended48'].includes(w?.task))return waitBefore57(r);const paused=w.task==='suspended48',c=n.cfg.approval48,expired=Date.now()>w.expiresAt;let choice=decision57(r);const options=expired?[['timeout','超时升级 · 不执行设备操作']]:paused?[['resume','恢复处理 · 重新检查执行条件']]:[['approve','批准并继续 · 不退回'],['reject','拒绝自动执行 · 转人工'],['return','退回补充 · 重跑指定步骤'],['suspend','暂缓处理 · 挂起']];if(!options.some(o=>o[0]===choice))choice=options[0][0];const labels={approve:'批准并继续',reject:'拒绝并转人工',return:'确认退回补充',suspend:'确认挂起',resume:'恢复并重新检查',timeout:'超时升级'};return `<section class="u48-wait trial57-approval"><header><h3>${paused?'审批已挂起':'设备操作待审批'}</h3><span class="tag">处理人 ${esc(w.assignee)}</span></header><p>目标 <b>${esc(w.plan?.instance||w.plan?.parameters?.instance_id||r.runtime40.context.target_instance)}</b> · 操作 <b>${esc(ACTIONS34[w.plan?.parameters?.action||r.runtime40.context.action]?.name||w.plan?.function||r.runtime40.context.action)}</b> · 工单 ${esc(r.runtime40.context.ticket_id||'未创建')}</p><details><summary>本次计划与审批依据</summary>${jsonBlock25(w.plan)}${jsonBlock25({诊断:r.runtime40.context.diagnosis,依据时间:new Date(w.evidenceAt).toLocaleString()})}</details><div class="trial57-choice"><label>处理方式<select class="inp" aria-label="审批处理方式" data-ch="approvalChoice57" data-v="${r.id}">${options.map(([v,l])=>`<option value="${v}" ${choice===v?'selected':''}>${l}</option>`).join('')}</select></label>${choice==='return'?field43('退回至','waitInput40','target',V40.waitData?.target||c.returnTarget,'select',c.returnTargets.map(id=>[id,wn(r.definition,id)?.name||id])):''}</div>${resumePreviewHTML54(r,choice)}${paused?`<p>挂起原因：${esc(w.reason)}</p>`:''}${field43('处理说明 *','waitInput40','note',V40.waitData?.note||'','textarea')}<div class="trial57-submit"><button class="btn pri" data-a="resumeUI40" data-v="${r.id}|${w.token}|${choice}" ${B25.actor!==w.assignee?'disabled':''}>${labels[choice]}</button><small>${B25.actor!==w.assignee?'请在上方切换到当前待办处理人。':'仅处理当前待办；批准后继续后续节点。'}</small></div>${V40.error?errors29([V40.error]):''}<details class="trial57-limits"><summary>时限与模拟工具</summary><p>截止 ${new Date(w.expiresAt).toLocaleString()} · 退回 ${r.returnCount48||0}/${c.maxReturns} · 恢复 ${r.resumeCount48||0}/${c.maxResumes||3}</p><p>批准不会跳过计划、版本、白名单与恢复检查。挂起恢复必须重检，不能直接重发设备指令。</p>${r.mode==='test'?btn42('模拟超时','resumeUI40',r.id+'|'+w.token+'|simulate_timeout','sm'):''}</details></section>`;};
+function runNav57(tab){return `<nav class="u43-run-tabs trial57-nav" aria-label="运行详情导航">${[['overview','诊断概览'],['timeline','执行记录'],['sources','采集与归一证据'],['diagnostics45','场景诊断采证'],['ai48','AI 分析调用'],['result','结果与恢复']].map(([id,l])=>`<button class="btn sm ${tab===id?'pri':''}" data-a="runTab43" data-v="${id}" aria-pressed="${tab===id}">${l}</button>`).join('')}</nav>`;}
+function timeline57(r){return `<div class="trial57-records"><p class="trial57-muted">按实际执行顺序展示；展开节点查看输入输出、内部采集和回执。同一节点重跑会保留每轮记录。</p>${r.steps.map((s,i)=>{const id=s.nodeId||s.id,n=wn(r.definition,id),collection=r.collection50?.[id],round=r.steps.slice(0,i+1).filter(v=>(v.nodeId||v.id)===id).length,calls=(r.runtime40.sources||[]).filter(v=>v.nodeId===id),isLatest=!r.steps.slice(i+1).some(v=>(v.nodeId||v.id)===id),internal=isLatest?collection:collection?.attempts?.[round-1];return `<details class="trial57-step" ${s.status==='waiting'?'open':''}><summary><span class="trial57-index">${i+1}</span><b>${esc(s.name||n?.name||id)}</b><small>第 ${round} 轮 · ${esc(({waiting:'等待处理',returned:'已退回',running:'执行中',completed:'已完成',failed:'失败'})[s.status]||STATUS25[s.status]||s.status)}</small></summary>${s.error?errors29([s.error]):''}<div class="u42-formgrid"><section><h4>输入</h4>${jsonBlock25(s.input||{})}</section><section><h4>输出 / 当前结果</h4>${jsonBlock25(s.output||{})}</section></div>${internal?.stages?.length?`<details><summary>内部采集步骤 · ${internal.stages.length}</summary>${internal.stages.map(v=>`<details><summary>${esc(v.name)} · ${esc(STATUS25[v.status]||v.status)}</summary>${jsonBlock25(v.data||v.output||{})}</details>`).join('')}</details>`:''}${calls.length?`<details><summary>此节点的来源调用与回执 · ${calls.length}（全部轮次）</summary>${calls.map(v=>`<details><summary>${esc(v.source_system||v.object)} → ${esc(v.instance||v.target_instance||v.request?.instance_id||v.function)} · ${esc(v.status)}</summary>${jsonBlock25(v)}</details>`).join('')}</details>`:''}</details>`;}).join('')||'<p>尚未执行节点。开始运行后显示记录。</p>'}<details class="trial57-step"><summary>人工处理与转向记录 · ${r.history.length}</summary>${jsonBlock25(r.history)}</details></div>`;}
+const modalBefore57=MODALS.runDetail25;
+MODALS.runDetail25=d=>{const r=runBy25(d.id);if(!r?.definition.engine43)return modalBefore57(d);if(V43.runTab==='groups48')V43.runTab='timeline';let h=modalBefore57(d);const nav=runNav57(V43.runTab);if(V43.runTab==='ai48'){h=h.replace(/<button[^>]*data-a="runTab43"[^>]*>[\s\S]*?<\/button>/,nav);}else h=h.replace(/<nav class="u43-run-tabs">[\s\S]*?<\/nav>/,nav);h=h.replace('<div class="mb">','<div class="mb">'+runActor57(r));if(V43.runTab==='timeline'){const at=h.indexOf('<div class="p40-timeline">'),end=h.indexOf('</div><div class="mf">',at);if(at>=0&&end>=0)h=h.slice(0,at)+timeline57(r)+h.slice(end);}if(S.wf?.d.id===r.definition.id&&r.mode==='test'&&r.status!=='running')h=h.replace('<div class="mf">','<div class="mf">'+btn42('存为测试样例','caseFromRun57',r.id,'sm'));return h;};
+const runTabBefore57=A.runTab43;A.runTab43=tab=>runTabBefore57(tab==='groups48'?'timeline':tab);
+const trialBefore57=MODALS.trial43;MODALS.trial43=()=>trialBefore57().replace('<div class="mb">','<div class="mb">'+runActor57(null));
+// Reuse the existing publication handlers; only the button and menu presentation change.
+const editorBefore57=wfEditor;wfEditor=()=>{let h=editorBefore57();h=h.replace(/<button class="btn pri w56-more"[^>]*>[\s\S]*?<\/button>/,`<button class="btn pri w56-more" data-a="publishMenu56" aria-label="更多发布方式" aria-expanded="${WF56.menu}" title="更多发布方式"><svg viewBox="0 0 16 16" width="16" height="16" aria-hidden="true"><path d="m4 6 4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></button>`);if(WF56.menu)h=h.replace('<div class="w56-publishmenu"><button data-a="publishTemplate56">发布为场景模板</button></div>',`<div class="w56-publishmenu" role="menu" aria-label="发布方式"><button role="menuitem" data-a="publishFlow57"><b>发布流程版本</b><small>供 Agent 或服务调用</small></button><button role="menuitem" data-a="publishTemplate56"><b>发布为场景模板</b><small>复制配置，供其他流程复用</small></button></div>`);return h;};
+A.publishFlow57=()=>{WF56.menu=false;A.wfSave('pub');};
+document.addEventListener('click',e=>{if(WF56.menu&&e.target?.closest&&!e.target.closest('.w56-publish')){WF56.menu=false;document.querySelector('.w56-publishmenu')?.remove();document.querySelector('[data-a="publishMenu56"]')?.setAttribute('aria-expanded','false');}});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&WF56.menu){WF56.menu=false;render();}});
+// Test cases assert a stable pause or finish, not the transient asynchronous 'running' state.
+const caseBefore57=runCase29;
+runCase29=async c=>{const result=caseBefore57(c);if(!result.runId)return result;const r=runBy25(result.runId),d=r.definition;await TASKS40.get(r.id);await OPCHECKS54.get(r.id);if(!r.runtime40)return result;const assertions=[{name:'运行状态',expected:STATUS25[c.expectedStatus]||c.expectedStatus,actual:STATUS25[r.status]||r.status,ok:r.status===c.expectedStatus}];for(const b of c.branches){const n=wn(d,b.nodeId),label=n&&handlesOf(n).find(h=>h.h===b.handle)?.l,steps=r.steps.filter(s=>(s.nodeId||s.id)===b.nodeId),matched=steps.some(s=>s.branch===b.handle||s.branch===label||(s.taken||[]).some(v=>v===b.handle||d.edges[v]?.h===b.handle));assertions.push({name:'分支 · '+(n?.name||b.nodeId),expected:label||b.handle,actual:steps.map(s=>s.branch||(s.taken||[]).join(',')).join('；')||'未执行',ok:matched});}for(const a of c.assertions){const f=fieldByRef29(d,a.ref29),value=f?readPath(r.T.nodeOutputs39?.[f.nodeId]?.[f.name]??r.vals[f.full],a.ref29.tail?.replace(/^\./,'')||''):undefined;assertions.push({name:'输出 · '+(f?.full||a.source),expected:a.value,actual:value===undefined?'字段缺失':JSON.stringify(value),ok:value!==undefined&&valueMatches29(value,a.value,a.operator)});}c.last={...result,at:stamp25(),assertions,ok:assertions.every(a=>a.ok),checkpoint:!!r.waiting};persist23();return c.last;};
+A.caseRun29=async id=>{const c=STATE29.cases.find(c=>c.id===id);if(!c||UI57.busyCases.has(id))return;UI57.busyCases.add(id);renderModal();try{await runCase29(c);}catch(e){c.last={at:stamp25(),ok:false,error:e.message,assertions:[]};}finally{UI57.busyCases.delete(id);persist23();if(S.modal?.type==='testCases29')renderModal();}};
+A.caseRunAll29=async()=>{for(const c of [...casesFor29()]){if(S.modal?.type!=='testCases29')break;await A.caseRun29(c.id);}};
+A.caseFromRun57=id=>{const r=runBy25(id);if(!r||r.mode!=='test'||S.wf?.d.id!==r.definition.id||r.status==='running')return toast('请在当前流程中等待运行暂停或结束后保存');V29.caseEditor={id:uid23('CASE57'),flowId:r.definition.id,name:r.flowName+' · '+(r.status==='completed'&&r.history.some(h=>h.action==='approve')?'审批检查点':STATUS25[r.status]||r.status),text:r.text||'',inst:'',input:JSON.stringify(r.runtime40?.input||r.T.input29||{},null,2),values:JSON.stringify({__simulation40:r.runtime40?.simulation||{},__fixture43:r.fixture43||'huawei'},null,2),mocks:{},expectedStatus:r.status==='completed'&&r.history.some(h=>h.action==='approve')?'waiting_approval':r.status,checkpoint57:r.status==='completed'&&r.history.some(h=>h.action==='approve'),branches:[],assertions:[]};V29.caseBaseline=JSON.stringify(V29.caseEditor);V29.caseTab='edit';openModal('testCases29',{});};
+const casesModalBefore57=MODALS.testCases29;MODALS.testCases29=()=>{let h=casesModalBefore57();const help=`<details class="trial57-casehelp"><summary>测试样例什么时候用？</summary><p>把一组输入、模拟响应和预期结果保存下来，修改流程、参数映射或能力版本后重复验证。流程已有草稿编号且检查通过后可以运行，无需先发布。</p><p>试运行适合交互式走完整业务；测试样例验证固定检查点。预期“等待审批”通过，只表示正确到达审批节点，不表示已批准或故障已恢复。可打开运行详情继续办理。</p><p>建议先试运行，暂停或结束后点击“存为测试样例”，再按需增加分支和输出断言。测试数据提供模拟外部响应，测试样例规定输入和预期，两者用途不同。</p></details>`;h=h.replace('<div class="mb">','<div class="mb">'+help+(V29.caseEditor?.checkpoint57?'<p class="w56-note">本次曾人工批准后完成。重复测试不会重放批准，本样例默认验证到“等待审批”；完整闭环请在运行详情继续处理。</p>':''));for(const id of UI57.busyCases){h=h.replace(new RegExp('(<button[^>]*data-a="caseRun29"[^>]*data-v="'+id+'"[^>]*>)[\\s\\S]*?<\\/button>'),'<button class="btn sm" disabled>运行中…</button>');}if(UI57.busyCases.size)h=h.replace('data-a="caseRunAll29"','data-a="caseRunAll29" disabled');return h;};
+
+// v58: transparent publication checks and context-preserving simulation editing.
+const UI58={fixtureContext:null,fixtureBaseline:'',diagnosticBaseline:''};
+function publicationChecklist58(d){
+ const nodeIssues=wfCheck(d),publishIssues=publishIssues27(S.wf?.isTpl?'template':'flow',d);
+ const known=new Set(nodeIssues.map(x=>x.m));
+ const global=nodeIssues.filter(x=>!d.nodes.some(n=>n.id===x.id));
+ const local=nodeIssues.filter(x=>d.nodes.some(n=>n.id===x.id));
+ const extra=publishIssues.filter(m=>!known.has(m)).map(m=>({m}));
+ const access=[];if(!domainEnabled24(d.domainId))access.push({m:'请选择已启用的归属领域'});
+ if(S.wf?.readOnly27)access.push({m:'当前为只读模板体验，请先创建流程草稿'});
+ else if(S.wf?.orig&&!editable24(d))access.push({m:'请在流程归属领域维护并发布'});
+ const rows=[
+ {name:'流程结构与业务规则',detail:'检查流程整体约束、分支及已启用的诊断规则。',issues:global},
+ {name:'节点配置与数据流转',detail:`检查 ${d.nodes.length} 个节点的配置、输入输出、参数引用和执行限制。`,issues:local},
+ {name:'发布依赖与引用',detail:'检查发布所需的对象、功能及其他依赖；固定版本检查同时归入相应节点。',issues:extra},
+ {name:'领域与编辑状态',detail:'检查归属领域可用及当前流程可编辑。',issues:access}];
+ return {rows,nodeIssues,issues:[...global,...local,...extra,...access],passed:rows.filter(x=>!x.issues.length).length};
+}
+A.wfChk=()=>{if(!S.wf)return;S.wf.chk=false;openModal('checklist58',{});};
+A.recheck58=()=>renderModal();
+A.checkNode58=id=>{closeModal();A.wfGo(id);};
+A.checkPublish58=()=>{const report=publicationChecklist58(S.wf.d);if(report.issues.length)return renderModal();closeModal();A.wfSave('pub');};
+MODALS.checklist58=()=>{const d=S.wf.d,r=publicationChecklist58(d),pass=!r.issues.length;return modal40('发布检查',
+ `<section class="check58-summary ${pass?'ok':'bad'}" role="status"><span class="check58-icon">${pass?'✓':'!'}</span><div><h4>${pass?'全部检查通过，可以发布':'存在待修复项，暂不能发布'}</h4><p>${pass?'当前流程配置未发现阻断项。下一步可查看发布变更并确认版本。':`请处理 ${r.issues.length} 项问题，再重新检查。`}</p></div><b>${r.passed} / ${r.rows.length}</b></section>
+ <div class="check58-list">${r.rows.map(g=>`<section><div class="check58-row"><span class="check58-state ${g.issues.length?'bad':'ok'}">${g.issues.length?'!':'✓'}</span><div><b>${esc(g.name)}</b><p>${esc(g.detail)}</p></div><span>${g.issues.length?'待修复 '+g.issues.length:'通过'}</span></div>${g.issues.length?`<ul>${g.issues.map(e=>`<li>${esc(e.m)} ${d.nodes.some(n=>n.id===e.id)?btn42('定位节点','checkNode58',e.id,'sm'):''}</li>`).join('')}</ul>`:''}</section>`).join('')}</div>
+ <details class="check58-details"><summary>节点检查明细 · ${d.nodes.length-r.nodeIssues.filter(e=>d.nodes.some(n=>n.id===e.id)).map(e=>e.id).filter((id,i,a)=>a.indexOf(id)===i).length} / ${d.nodes.length} 通过</summary><div>${d.nodes.map(n=>`<span>${r.nodeIssues.some(e=>e.id===n.id)?'!':'✓'} ${esc(n.name)}</span>`).join('')}</div></details>
+ <p class="check58-note">自动核验当前配置，无需手动勾选。检查通过不代表真实接口、AI 或设备指令已验证；试运行仍使用模拟响应。</p>`,
+ `${btn42('返回编辑','close')}${btn42('重新检查','recheck58')}${pass&&!S.wf.readOnly27?btn42('前往发布','checkPublish58','','pri'):'<button class="btn pri" disabled>修复后再发布</button>'}`,true);};
+
+const fixturesEntryBefore58=A.fixtures43;
+function fixtureValue58(){return JSON.stringify(V43.fixtureTab==='providers'?STATE43.fixtures[V43.fixture].providerResponses:STATE43.fixtures[V43.fixture].topology,null,2);}
+function fixtureDirty58(){try{return JSON.stringify(JSON.parse(V43.fixtureText))!==JSON.stringify(JSON.parse(UI58.fixtureBaseline));}catch{return true;}}
+function leaveFixture58(next){if(fixtureDirty58())return confirmAction27('放弃未保存的响应修改？','当前 JSON 修改尚未保存。返回修改可继续编辑；确认后使用上次保存的响应。',next);next();}
+A.fixtures43=()=>{
+ if(S.modal?.type==='diagnosticFixtures55')return A.diagnosticBack58();
+ const fromTrial=S.modal?.type==='trial43';UI58.fixtureContext=fromTrial?{type:'trial43',trial:clone23(V43.trial)}:null;
+ if(fromTrial)V43.fixture=V43.trial.fixture;
+ fixturesEntryBefore58();UI58.fixtureBaseline=V43.fixtureText;
+};
+function restoreTrial58(){const c=UI58.fixtureContext;UI58.fixtureContext=null;V43.error='';if(c){V43.trial=clone23(c.trial);openModal(c.type,{});}else closeModal();}
+A.fixtureBack58=()=>leaveFixture58(restoreTrial58);
+const fixtureSaveBefore58=A.fixtureSave43;
+A.fixtureSave43=()=>{fixtureSaveBefore58();if(!V43.error){UI58.fixtureBaseline=V43.fixtureText;renderModal();}};
+A.fixtureSaveReturn58=()=>{A.fixtureSave43();if(!V43.error)restoreTrial58();};
+const fixtureChangeBefore58=CH.fixture43,fixtureTabBefore58=CH.fixtureTab43;
+CH.fixture43=v=>leaveFixture58(()=>{fixtureChangeBefore58(v);UI58.fixtureBaseline=V43.fixtureText;});
+CH.fixtureTab43=v=>leaveFixture58(()=>{V43.fixtureTab=v;fixtureChangeBefore58(V43.fixture);UI58.fixtureBaseline=V43.fixtureText;});
+const fixtureModalBefore58=MODALS.fixtures43;
+MODALS.fixtures43=()=>{
+ let h=fixtureModalBefore58().replace('p25-modal wide','p25-modal wide fixture58-window');const fromTrial=!!UI58.fixtureContext;
+ h=h.replace(/<button[^>]*data-a="domainFixtures43"[^>]*>[\s\S]*?<\/button>/g,fromTrial?'':'<button class="btn sm" data-a="domainFixtures43">其他领域测试数据 · BigData / TeleConnect</button>');
+ h=h.replace(/data-a="close"/g,'data-a="fixtureBack58"');
+ h=h.replace('测试数据 · 外部接口模拟响应',fromTrial?'FBB 试运行 · 模拟接口响应':'测试数据 · 外部接口模拟响应');
+ h=h.replace(/(<div class="mf">)[\s\S]*?(<\/div>\s*<\/div>)$/,`$1${btn42(fromTrial?'返回试运行':'关闭','fixtureBack58')}${btn42('导出测试响应','fixtureExport43')}${btn42('保存响应','fixtureSave43')}${fromTrial?btn42('保存并返回试运行','fixtureSaveReturn58','','pri'):''}$2`);
+ if(fromTrial)h=h.replace('<div class="u42-note">',`<div class="fixture58-context">返回后保留设备编号、原始事件、故障场景与验证条件。当前编辑响应：<b>${esc(STATE43.fixtures[V43.fixture].name)}</b>。</div><div class="u42-note">`);
+ return h;
+};
+const diagnosticEntryBefore58=A.diagnosticFixtures55,diagnosticSaveBefore58=A.diagnosticFixturesSave55;
+A.diagnosticFixtures55=()=>{diagnosticEntryBefore58();UI58.diagnosticBaseline=DIAG55.fixtureText;};
+A.diagnosticFixturesSave55=()=>{DIAG55.error='';diagnosticSaveBefore58();if(!DIAG55.error)UI58.diagnosticBaseline=DIAG55.fixtureText;};
+A.diagnosticBack58=()=>{const next=()=>{DIAG55.error='';openModal('fixtures43',{});};let dirty;try{dirty=JSON.stringify(JSON.parse(DIAG55.fixtureText))!==JSON.stringify(JSON.parse(UI58.diagnosticBaseline));}catch{dirty=true;}if(dirty)return confirmAction27('放弃未保存的诊断响应？','确认后返回模拟接口响应；之前填写的接口响应和试运行参数仍会保留。',next);next();};
+const diagnosticModalBefore58=MODALS.diagnosticFixtures55;
+MODALS.diagnosticFixtures55=()=>diagnosticModalBefore58().replace(/data-a="fixtures43"/g,'data-a="diagnosticBack58"').replace(/data-a="close"/g,'data-a="diagnosticBack58"').replace('返回测试数据','返回模拟接口响应');
+const closeRequestBefore58=requestClose27;
+requestClose27=()=>{if(S.modal?.type==='fixtures43')return A.fixtureBack58();if(S.modal?.type==='diagnosticFixtures55')return A.diagnosticBack58();return closeRequestBefore58();};
+A.close=requestClose27;A.maskClose=requestClose27;
+// Keep the same checklist when publishing detects a blocking configuration issue.
+const publicationPreviewBefore58=previewPublication27;
+previewPublication27=(kind,a)=>{if((kind==='flow'||kind==='template')&&S.wf?.d===a&&publicationChecklist58(a).issues.length)return A.wfChk();return publicationPreviewBefore58(kind,a);};
+const cancelActionBefore58=A.cancelAction27;
+A.cancelAction27=()=>{const parent=S.modal?.data?.parent;if(['fixtures43','diagnosticFixtures55'].includes(parent?.type)){closeModal();return openModal(parent.type,{});}return cancelActionBefore58();};
+
+// v59: one flow description, low-friction creation and compact graph chrome.
+const UI59={creation:null,meta:null,tab:'basic',baseline:''};
+function flowDescription59(d){return d.desc||d.discovery40?.description||'';}
+function nextFlowName59(isTpl){const prefix=isTpl?'新建场景模板':'新建流程',names=new Set((isTpl?TPLS:RULES3).map(x=>x.name));if(!names.has(prefix))return prefix;let i=2;while(names.has(prefix+' '+i))i++;return prefix+' '+i;}
+A.rNew=isTpl=>{const template=isTpl===true;UI59.creation={template,name:nextFlowName59(template),desc:'',domainId:D24.scope!=='all'&&domainEnabled24(D24.scope)?D24.scope:'',error:''};openModal('createFlow59',{});};
+A.tNew=()=>A.rNew(true);
+IN.createFlow59=(v,e)=>UI59.creation[e.dataset.k]=v;CH.createFlow59=IN.createFlow59;
+MODALS.createFlow59=()=>{const c=UI59.creation;return modal40(c.template?'新建场景模板':'新建流程',`${c.error?errors29([c.error]):''}<div class="meta59-form"><label>名称 *<input class="inp" aria-label="新流程名称" data-in="createFlow59" data-k="name" maxlength="100" value="${esc(c.name)}"></label><label>所属领域 *<select class="inp" aria-label="新流程所属领域" data-ch="createFlow59" data-k="domainId">${domainOptions24(c.domainId,{empty:true,enabled:true})}</select></label><label class="meta59-span">流程描述（可选）<textarea class="inp" aria-label="新流程描述" data-in="createFlow59" data-k="desc" placeholder="这个流程解决什么问题，适用于什么情况，将产生什么结果">${esc(c.desc)}</textarea></label></div><p class="meta59-help">名称和描述可在编辑器的“描述与服务”中继续修改，列表与 Agent 共用同一份描述。</p>`,`${btn42('取消','close')}${btn42('创建并编排','createFlow59','','pri')}`);};
+A.createFlow59=()=>{const c=UI59.creation;if(!c.name.trim())c.error='请填写流程名称';else if(!domainEnabled24(c.domainId))c.error='请选择已启用的所属领域';else c.error='';if(c.error)return renderModal();closeModal();createFlow24(c.template?'new-template':'new',null,c.domainId);S.wf.d.name=c.name.trim();S.wf.d.desc=c.desc.trim();S.wf.d.discovery40={description:c.desc.trim(),examples:[],keywords:'',applicable:'',excluded:'',impact:'',serviceEnabled:false};S.wf.dirty=true;UI59.creation=null;render();};
+function metadata59(d){const discovery=clone23(d.discovery40||{});return {name:d.name,desc:flowDescription59(d),discovery,error:''};}
+function metaSignature59(m){return JSON.stringify([m.name,m.desc,m.discovery]);}
+A.service40=()=>{const d=S.wf.d;UI59.meta=metadata59(d);UI59.tab='basic';UI59.baseline=metaSignature59(UI59.meta);V42.service={description:clone23(UI59.meta.discovery),input:JSON.stringify(d.engine43?{source_system:'OSS-EMS',device_id:'NEW-ONU-9001',event:{key:'API-'+Date.now(),code:'device_down'}}:d.exampleInput42||sampleFields29(flowInputs29(d)),null,2),key:'REQ59-'+Date.now(),error:'',result:null};openModal('metadata59',{});};
+IN.metadata59=(v,e)=>{const k=e.dataset.k;if(k.startsWith('discovery.'))UI59.meta.discovery[k.slice(10)]=v;else UI59.meta[k]=v;UI59.meta.error='';};
+CH.metadata59=(v,e)=>{IN.metadata59(e.dataset.k==='discovery.serviceEnabled'?v==='true':v,e);};
+A.metadataTab59=v=>{UI59.tab=v;renderModal();};
+function metadataSave59(){if(!writable28())return false;const m=UI59.meta;if(!m.name.trim()){m.error='请填写流程名称';UI59.tab='basic';renderModal();return false;}if(m.discovery.serviceEnabled===true&&!m.desc.trim()){m.error='启用服务入口前，请填写流程描述，便于识别用途';UI59.tab='basic';renderModal();return false;}if(metaSignature59(m)===UI59.baseline){toast('没有需要保存的修改');return true;}const c=clone23(m.discovery);c.description=m.desc.trim();c.examples=Array.isArray(c.examples)?c.examples:String(c.examples||'').split('\n').map(x=>x.trim()).filter(Boolean);mutation30(()=>{S.wf.d.name=m.name.trim();S.wf.d.desc=c.description;S.wf.d.discovery40=c;});UI59.meta=metadata59(S.wf.d);UI59.baseline=metaSignature59(UI59.meta);toast('已应用到流程草稿；发布后供 Agent 和服务使用');renderModal();return true;}
+A.metadataSave59=()=>metadataSave59();A.metadataDone59=()=>{if(metadataSave59())closeModal();};
+A.metadataClose59=()=>{if(writable28()&&metaSignature59(UI59.meta)!==UI59.baseline)return confirmAction27('放弃未应用的流程信息？','名称、描述和推荐条件尚未应用到流程草稿。返回修改可继续编辑。',()=>closeModal());closeModal();};
+A.metadataServiceCall59=()=>{const p=latest25('flows',S.wf.d.id);if(!p?.definition?.engine40)return toast('此流程尚无可调用的已发布服务版本');A.serviceCall42();};
+A.metadataExport59=()=>download23('workflow-service-contract',serviceContract59(S.wf.d));
+MODALS.metadata59=()=>{const d=S.wf.d,m=UI59.meta,c=m.discovery,ro=!writable28(),pub=latest25('flows',d.id),supported=!!d.engine40;let body='';
+ if(UI59.tab==='basic')body=`<div class="meta59-form"><label class="meta59-span">流程名称 *<input class="inp" aria-label="流程名称" data-in="metadata59" data-k="name" maxlength="100" value="${esc(m.name)}"></label><label class="meta59-span">流程描述<textarea class="inp meta59-description" aria-label="流程描述" data-in="metadata59" data-k="desc" placeholder="说明用途、适用场景和处理结果">${esc(m.desc)}</textarea><small>流程列表、Agent推荐及服务说明共用；这里修改后无需再填写一份。</small></label><div><span class="meta59-help">所属领域</span><p>${esc(domainName24(d.domainId))}</p></div><div><span class="meta59-help">当前发布版本</span><p>${esc(pub?.version||'尚未发布')}</p></div></div>`;
+ if(UI59.tab==='agent')body=`<p class="meta59-help">Agent使用流程描述判断用途；以下信息用于补充推荐范围，均为可选。</p><div class="meta59-form">${[['applicable','适用条件'],['excluded','不适用范围'],['examples','示例问法（每行一条）'],['keywords','关键词（逗号分隔）'],['impact','执行影响']].map(([k,l])=>`<label class="${k==='impact'?'meta59-span':''}">${l}<textarea class="inp" aria-label="${l}" data-in="metadata59" data-k="discovery.${k}">${esc(Array.isArray(c[k])?c[k].join('\n'):c[k]||'')}</textarea></label>`).join('')}</div><p class="meta59-help">在 Agent Management 绑定并发布流程版本后，推荐才会使用该版本的描述与条件。</p>`;
+ if(UI59.tab==='service')body=`<div class="meta59-service"><label>发布后允许服务调用<select class="inp" aria-label="服务调用开关" data-ch="metadata59" data-k="discovery.serviceEnabled"><option value="false" ${c.serviceEnabled===false||c.serviceEnabled==null?'selected':''}>关闭</option><option value="true" ${c.serviceEnabled===true?'selected':''}>启用</option></select></label><p class="meta59-help">修改开关随流程版本发布生效。正式接口尚未部署；下方验证使用已发布版本的本地模拟。</p><details><summary>输入输出与服务契约</summary>${jsonBlock25(serviceContract59(d))}${btn42('导出接口契约','metadataExport59','','sm')}</details>${supported?`<details><summary>验证已发布服务${pub?' · v'+esc(pub.version):' · 尚未发布'}</summary><label>调用输入 JSON<textarea class="inp mono" aria-label="服务调用输入JSON" data-in="serviceField42" data-k="input">${esc(V42.service.input)}</textarea></label><label>请求幂等键<input class="inp" data-in="serviceField42" data-k="key" value="${esc(V42.service.key)}"></label>${pub?btn42('模拟调用已发布服务','metadataServiceCall59','','pri'):'<p class="meta59-help">完成编排、检查并发布后可验证服务调用。</p>'}${V42.service.error?errors29([V42.service.error]):''}${V42.service.result?jsonBlock25(V42.service.result):''}</details>`:'<p class="meta59-help">当前流程使用通用编排组件，可维护服务契约；本地服务调用演示仅支持已适配执行器的流程。新增流程请先通过试运行验证编排。</p>'}</div>`;
+ if(ro)body=readonlyHtml24(body,['metadataExport59','metadataServiceCall59']);
+ return modal40('描述与服务',`${m.error?errors29([m.error]):''}<nav class="meta59-tabs" aria-label="流程信息页签">${[['basic','基本信息'],['agent','Agent推荐'],['service','服务调用']].map(([k,l])=>`<button class="${UI59.tab===k?'on':''}" data-a="metadataTab59" data-v="${k}" aria-pressed="${UI59.tab===k}">${l}</button>`).join('')}</nav>${body}`,`${btn42(ro?'关闭':'取消','metadataClose59')}${ro?'':btn42('应用到草稿','metadataSave59')+btn42('完成','metadataDone59','','pri')}`,true).replace(/data-a="close"/g,'data-a="metadataClose59"');
+};
+const closeBefore59=requestClose27;requestClose27=()=>S.modal?.type==='metadata59'?A.metadataClose59():closeBefore59();A.close=requestClose27;A.maskClose=requestClose27;
+const editorBefore59=wfEditor;wfEditor=()=>{let h=editorBefore59();if(!h.includes('data-a="service40"'))h=h.replace('<button class="btn sm" data-a="testCases29"','<button class="btn sm" data-a="service40">描述与服务</button><button class="btn sm" data-a="testCases29"');return h;};
+// Extract only a complete container, retaining original actions and forms.
+function container59(h,tag,cls){const start=h.indexOf('<'+tag+' class="'+cls+'"');if(start<0)return '';const re=new RegExp('<\\/?'+tag+'\\b[^>]*>','g');re.lastIndex=start;let depth=0,m;while((m=re.exec(h))){depth+=m[0].startsWith('</')?-1:1;if(!depth)return h.slice(start,re.lastIndex);}return '';}
+const graphBefore59=pgGraph3;
+pgGraph3=()=>{
+ let h=graphBefore59();if(!h.includes('u46-navcontext'))return h;
+ const header=h.match(/<header class="(?:p31-graphhead|u42-heading)">[\s\S]*?<\/header>/)?.[0]||'';
+ const actions=(header.match(/<button\b[\s\S]*?<\/button>/g)||[]).join('');
+ h=h.replace(header,'').replace('</nav>',`<div class="graph59-headeractions">${actions}</div></nav>`);
+ const bar=container59(h,'div','g56-toolbar');
+ if(bar){h=h.replace(bar,'');const buttons=(bar.match(/<button\b[\s\S]*?<\/button>/g)||[]).join('');const target=h.includes('<div class="p32-maphead">')?'p32-maphead':'u42-ghead';const map=container59(h,'div',target);if(map)h=h.replace(map,map.slice(0,-6)+`<div class="graph59-relationactions">${buttons}</div></div>`);else h=h.replace('</nav>',`<div class="graph59-relationactions">${buttons}</div></nav>`);if(G56.edit&&!graphPublished56())h=h.replace('</nav>','</nav><div class="graph59-edithelp">关系编辑：拖动对象连接点到目标，或依次点击两端连接点。</div>');}
+ return h.replace(/(<section class=")([^"]+)/,'$1$2 graph59-compact');
+};
+
+function serviceContract59(d){const copy=clone23(d);copy.interface29={inputs:flowInputs29(d),outputs:flowOutputs29(d)};copy.id ||= '<flow-id-after-save>';return {...serviceContract40(copy),name:d.name,description:flowDescription59(d)};}
+// Template publication inherits the same description for list and Agent discovery.
+const templateDefinitionBefore59=templateDefinition56;
+templateDefinition56=(...args)=>{const d=templateDefinitionBefore59(...args);if(d.discovery40)d.discovery40.description=d.desc;return d;};
+
+// Canvas-only shortcuts; no workflow mutation, node execution, or browser-wide zoom override.
+const ZOOM60={pointer:null};
+const EXCLUDE60='input,textarea,select,[contenteditable]:not([contenteditable="false"]),[role="textbox"],.wfpop,.nc23-picker,.v38-menu,.u47-menufloat';
+function canvas60(target){if(!target?.closest||target.closest(EXCLUDE60))return null;const flow=target.closest('#wfc');if(flow&&S.wf)return flow;return target.closest('.p31-graphstage')?.querySelector('svg[data-graph31]')||null;}
+function canvasAllowed60(el){return !!el&&(!S.modal||!!el.closest('.modal'))&&!TEXT55.overlay;}
+function zoomKey60(e){if(!(e.ctrlKey||e.metaKey)||e.altKey||e.isComposing)return 0;if(['+','=','＋'].includes(e.key)||e.code==='NumpadAdd')return 1;if(['-','−','－','_'].includes(e.key)||e.code==='NumpadSubtract')return -1;return 0;}
+function zoomFactor60(e){const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?240:1);return Math.exp(-Math.max(-100,Math.min(100,delta))*.002);}
+function zoomAnchor60(old,next,position,anchor){return anchor-(anchor-position)*next/old;}
+function zoomSurface60(el,factor,point){
+ if(!el||!Number.isFinite(factor)||factor<=0)return false;
+ const rect=el.getBoundingClientRect();if(!rect.width||!rect.height)return false;
+ const px=point?.x??rect.left+rect.width/2,py=point?.y??rect.top+rect.height/2;
+ if(el.id==='wfc'){
+  const w=S.wf;if(!w)return false;const old=w.z,next=Math.max(.12,Math.min(2,old*factor));
+  w.px=zoomAnchor60(old,next,w.px,px-rect.left);w.py=zoomAnchor60(old,next,w.py,py-rect.top);w.z=next;setW();
+  const select=el.querySelector('[aria-label="画布缩放比例"]');if(select){select.querySelector('option[data-live60]')?.remove();const op=document.createElement('option');op.dataset.live60='1';op.value=String(next);op.textContent=Math.round(next*100)+'%';select.appendChild(op);select.value=String(next);}
+ }else{
+  const kind=el.dataset.graph31,c=V31.graph.cameras[kind];if(!c)return false;
+  const old=c.zoom,next=Math.max(.5,Math.min(kind==='model'?2.5:2.2,old*factor)),[width,height]=el.dataset.layout31.split('|').map(Number);
+  // Inverse SVG screen transform accounts for preserveAspectRatio letterboxing.
+  const matrix=el.getScreenCTM?.();let pointSVG;
+  if(matrix){const p=el.createSVGPoint();p.x=px;p.y=py;pointSVG=p.matrixTransform(matrix.inverse());}
+  else{pointSVG={x:c.x+width/old/2,y:c.y+height/old/2};}
+  c.x=pointSVG.x-(pointSVG.x-c.x)*old/next;c.y=pointSVG.y-(pointSVG.y-c.y)*old/next;c.zoom=next;
+  el.setAttribute('viewBox',`${c.x} ${c.y} ${width/next} ${height/next}`);
+  const label=el.closest('.p31-graphstage')?.querySelector('.p31-canvascontrols span');if(label)label.textContent=Math.round(next*100)+'%';
+ }
+ return true;
+}
+document.addEventListener('pointermove',e=>{ZOOM60.pointer={x:e.clientX,y:e.clientY};},{passive:true});
+document.addEventListener('wheel',e=>{
+ if(!(e.ctrlKey||e.metaKey)||e.altKey)return;
+ const el=canvas60(e.target);if(!canvasAllowed60(el))return;
+ // Always consume at limits too, so browser zoom cannot start unexpectedly.
+ e.preventDefault();e.stopImmediatePropagation();if(e.deltaY)zoomSurface60(el,zoomFactor60(e),{x:e.clientX,y:e.clientY});
+},{capture:true,passive:false});
+document.addEventListener('keydown',e=>{
+ const direction=zoomKey60(e);if(!direction||e.target?.closest?.(EXCLUDE60))return;
+ let el=canvas60(e.target);
+ if(!el&&ZOOM60.pointer){const p=ZOOM60.pointer;el=canvas60(document.elementFromPoint(p.x,p.y));}
+ if(!canvasAllowed60(el))return;
+ e.preventDefault();e.stopImmediatePropagation();zoomSurface60(el,direction>0?1.2:1/1.2);
+},true);
+const hint60='Ctrl / ⌘ + 滚轮 或 + / − 缩放';
+const wfEditorBefore60=wfEditor;
+wfEditor=()=>wfEditorBefore60().replace('id="wfc"','id="wfc" tabindex="0" aria-label="流程画布，Ctrl或Command配合滚轮或加减键缩放"').replace('Ctrl + 滚轮缩放',hint60);
+function graphMarkup60(h){return h.replace(/<svg class="p31-graphsvg"/g,'<svg tabindex="0" class="p31-graphsvg"').replace(/(<div class="p31-canvascontrols")/g,`$1 title="${hint60}"`).replace('点击对象查看详情 · 其他对象保持可见 · 拖动空白移动画布',`拖动空白移动画布 · ${hint60}`).replace('点击节点查看详情 · 拖动空白移动画布',hint60);}
+const graphSVGbefore60=graphSVG31;graphSVG31=(...args)=>graphMarkup60(graphSVGbefore60(...args));
+const focusSVGbefore60=focusSVG42;focusSVG42=(...args)=>graphMarkup60(focusSVGbefore60(...args));
+const pgGraphBefore60=pgGraph3;pgGraph3=(...args)=>graphMarkup60(pgGraphBefore60(...args)).replace(/tabindex="0" (?:tabindex="0" )+/g,'tabindex="0" ');
 
 BOOTING43=false;persist23();flushStorage40();
 render();
