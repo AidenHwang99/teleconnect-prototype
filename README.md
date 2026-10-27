@@ -5,6 +5,7 @@
 - [打开在线原型](https://aidenhwang99.github.io/teleconnect-prototype/)
 - [固定第56版地址](https://aidenhwang99.github.io/teleconnect-prototype/versions/v56/)
 - [功能说明](docs/v56.md)
+- [在线发布与验收说明](docs/hosting-v56.md)
 
 ## 使用方式
 
