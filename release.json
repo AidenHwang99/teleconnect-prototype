@@ -1,0 +1,11 @@
+{
+  "version": 56,
+  "sourceFile": "teleConnect_AI主动模式原型_56.html",
+  "sourceSha256": "f463eefe7b643301fd97cfb9e37a6cf306b2916c3dfab956d7fbe4c67d18cf87",
+  "hostedSha256": "9b60684a882d409862b272d2295f72462ac5b46a86c5d6557db86a6f5b3cc6e6",
+  "packaging": "Removed optional Google Fonts stylesheet; application script and styles unchanged. Uses installed Chinese system fonts.",
+  "storage": "Per-browser localStorage; not shared collaboration storage.",
+  "services": "All integrations, AI responses and operations remain simulated.",
+  "entry": "./",
+  "fixedVersion": "versions/v56/"
+}
