@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>teleConnect · 开发参照原型 · 第65版</title>
+<title>teleConnect · 开发参照原型 · 第66版</title>
 <style>
 :root{
   --bg:#F4F4F1; --panel:#FFFFFF; --soft:#F7F7F4; --line:#E6E6E1; --line2:#EFEFEA;
@@ -778,6 +778,13 @@ aside.wfp.v39-panel > .pb.v39-body{display:block!important;gap:0!important;paddi
 /* Cross-end task actions share existing dialog controls. */
 .nav65-origin{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
 
+</style><style>.p66-box{border:1px solid #d8e5df;border-radius:10px;padding:14px;margin:12px 0;background:#f8fbf9}.p66-box h4{margin:0 0 10px}.p66-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}.p66-grid label{min-width:0;display:flex;flex-direction:column;gap:6px;font-size:12px;color:#496658}.p66-grid textarea{min-height:88px;resize:vertical}.p66-grid .inp{width:100%;min-width:0}.p66-actions{display:flex;flex-wrap:wrap;gap:8px;margin:10px 0}.p66-note{color:#60766a;font-size:12px;line-height:1.7;white-space:normal}.p66-badge{display:inline-block;border-radius:4px;padding:3px 7px;background:#fff0db;color:#8a561c;font-size:11px;margin-right:6px}.p66-source{display:grid;grid-template-columns:130px minmax(0,1fr);gap:10px;line-height:1.7}.p66-source dt{color:#64786c}.p66-source dd{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}.p66-full{grid-column:1/-1}.p66-json{width:100%;min-height:230px;font:12px/1.65 ui-monospace,monospace;resize:vertical}.p66-box select{min-height:36px}.p66-summary{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}.p66-source-table{width:100%;border-collapse:collapse;font-size:12px}.p66-source-table td,.p66-source-table th{padding:9px;text-align:left;border-bottom:1px solid #e3e9e5;vertical-align:top}.p66-source-table th{background:#f4f8f6}.dg55-shell>section{min-width:0}.p66-box summary{cursor:pointer;font-weight:600}.p66-box details[open]>summary{margin-bottom:10px}@media(max-width:800px){.p66-grid{grid-template-columns:1fr}.p66-source{grid-template-columns:1fr}}
+.p66-source-table small{display:block;color:#85978b;margin-top:3px}.p66-box>details{margin-top:10px}
+.p66-box p{margin:6px 0}.p66-grid{gap:10px}.p66-actions{margin:8px 0}.p25-modal:has([data-ch="trialCase66"]) .u42-code{min-height:190px!important;height:210px!important}.p25-modal:has([data-ch="trialCase66"]) .mb{row-gap:12px}
+.ta66-panel{border:1px solid #d7e5dc;border-radius:10px;padding:14px 16px;background:#f7faf8;margin:0 0 14px}.ta66-head{display:flex;justify-content:space-between;gap:12px;align-items:center}.ta66-head>div{display:flex;gap:12px;align-items:center;flex-wrap:wrap}.ta66-head span,.ta66-panel small{font-size:12px;color:#697f70}.ta66-facts{display:flex;gap:24px;flex-wrap:wrap;margin:12px 0}.ta66-facts span{font-size:12px;color:#687b6c}.ta66-facts b{color:#203d2e;margin-left:8px}.ta66-panel p{margin:6px 0;font-size:12px;color:#63796a;line-height:1.6}.ta66-history{padding:10px 0;border-top:1px solid #e1e9e4}.ta66-history span{font-size:11px;color:#809083;margin-left:12px}.ta66-rowowner{color:#246445!important;margin-top:6px}.ta66-workspace{flex:1;min-height:0;overflow:auto}.ta66-workspace .task63-work{padding:20px;max-width:none}.ta66-workspace .task63-toolbar{position:static}.ta66-workspace .task63-search{flex:1;min-width:180px}.ta66-workspace .task63-filterline{flex-wrap:wrap}.ta66-workspace .c49-table{min-width:700px}.ta66-workspace .c49-list{overflow:auto}
+.c63-tabs button[data-v="tasks"]{margin-left:0}.ta66-panel>small{display:block}.ta66-panel details{margin-top:10px}.ta66-panel summary{cursor:pointer;font-size:12px;color:#286747}
+/* Developer notes are hidden by default and never occupy a business input's space. */
+.dn66-badge{display:inline-flex!important;align-items:center;justify-content:center;width:19px;height:19px;min-width:19px;padding:0!important;margin:0 0 0 7px;border:1px solid #9db9ad!important;border-radius:50%;background:#f5fbf8!important;color:#386f59!important;font:600 12px/1 system-ui!important;vertical-align:middle;cursor:help;box-shadow:none!important;flex:none;position:relative;z-index:1;letter-spacing:0}.dn66-badge:hover,.dn66-badge:focus-visible{outline:2px solid #99c6b3;outline-offset:2px;background:#e7f5ee!important}.dn66-tip{position:fixed;z-index:2147483600;max-width:min(340px,calc(100vw - 24px));background:#203e32;color:#fff;padding:11px 14px;border-radius:8px;box-shadow:0 8px 25px #18392c25;font:12px/1.7 system-ui;pointer-events:none;white-space:normal}.dn66-drawer{position:fixed;z-index:2147483500;right:14px;top:66px;bottom:14px;width:min(430px,calc(100vw - 28px));background:#fff;border:1px solid #d3e2d9;border-radius:14px;box-shadow:0 10px 42px #18392c2b;display:flex;flex-direction:column;color:#243b30;font:13px/1.7 system-ui;overflow:hidden}.dn66-drawer[hidden]{display:none!important}.dn66-drawer>header{display:flex;align-items:flex-start;gap:12px;padding:17px 20px;border-bottom:1px solid #e2ebe6;background:#f6faf8}.dn66-drawer>header>div{flex:1;min-width:0}.dn66-drawer h3{font-size:17px;margin:2px 0 0;line-height:1.5}.dn66-drawer small{font-size:11px;color:#6e8175}.dn66-drawer button{cursor:pointer;font:inherit;color:inherit}.dn66-drawer>header>button{border:0;background:none;font-size:24px;line-height:1.2;padding:1px 4px}.dn66-body{padding:16px 20px;overflow:auto;min-height:0;overscroll-behavior:contain;flex:1}.dn66-summary{font-size:14px;font-weight:550;margin:0 0 8px}.dn66-location{font-size:11px;color:#6a8072;margin-bottom:13px}.dn66-drawer section{border-top:1px solid #edf1ee;padding-top:13px;margin-top:13px}.dn66-drawer h4{font-size:12px;color:#42745d;margin:0 0 6px}.dn66-drawer p{margin:5px 0;overflow-wrap:anywhere}.dn66-current{padding:12px;background:#f3f8f5;border-radius:8px;margin:14px 0}.dn66-drawer summary{cursor:pointer;font-weight:600;font-size:12px}.dn66-current dl{display:grid;grid-template-columns:95px minmax(0,1fr);gap:7px 10px;margin:10px 0 0;font-size:12px}.dn66-current dt{color:#6a8072}.dn66-current dd{margin:0;word-break:break-word;white-space:pre-wrap}.dn66-index{border-top:1px solid #dfe8e3;padding-top:14px;margin-top:18px}.dn66-index input{box-sizing:border-box;width:100%;margin:10px 0;padding:9px;border:1px solid #d1ddd5;border-radius:6px}.dn66-index>div{display:grid;grid-template-columns:1fr 1fr;gap:7px}.dn66-index button{background:#f8faf9;border:1px solid #e0e8e3;text-align:left;border-radius:6px;padding:7px;font-size:11px}.dn66-index button[hidden]{display:none}.dn66-drawer>footer{padding:12px 18px;border-top:1px solid #e2ebe6;display:flex;gap:10px;align-items:center;justify-content:space-between;font-size:10px;color:#718276}.dn66-drawer>footer button{padding:7px 11px;font-size:12px;border:1px solid #cbdcd1;background:white;border-radius:6px;color:#326b50;white-space:nowrap}.dn66-drawer button:focus-visible,.dn66-index input:focus-visible{outline:2px solid #438969;outline-offset:2px}@media(max-width:700px){.dn66-drawer{top:56px;right:8px;bottom:8px;width:calc(100vw - 16px)}.dn66-current dl{grid-template-columns:80px minmax(0,1fr)}}
 </style></head>
 <body>
 <div id="root" class="app"></div>
@@ -826,17 +833,17 @@ unpack40=raw=>{
 };
 
 let BOOTING43=true;let BOOT40={},flushStorage40=()=>{};
-(function(){const key='teleconnect-prototype-65-context-r1',owner=typeof Storage==='function'?Storage.prototype:localStorage,get=owner.getItem,set=owner.setItem;let memoRaw,memoValue,pending,ready=false,initialValue=null;try{initialValue=unpack40(get.call(localStorage,key))??null;BOOT40=JSON.parse(initialValue||'{}');}catch{}owner.getItem=function(k){if(k!==key)return get.call(this,k);if(!ready&&initialValue!==null)return initialValue;if(pending!==undefined)return pending;const raw=get.call(this,k);if(raw===memoRaw)return memoValue;memoRaw=raw;memoValue=unpack40(raw);return memoValue;};owner.setItem=function(k,value){if(k!==key)return set.call(this,k,value);if(!ready){if(initialValue===null&&pending===undefined)initialValue=String(value);pending=String(value);return;}const packed=pack40(String(value));set.call(this,k,packed);memoRaw=packed;memoValue=String(value);};flushStorage40=()=>{ready=true;if(pending!==undefined){const value=pending;pending=undefined;owner.setItem.call(localStorage,key,value);}};})();
+(function(){const key='teleconnect-prototype-66-provenance-r1',owner=typeof Storage==='function'?Storage.prototype:localStorage,get=owner.getItem,set=owner.setItem;let memoRaw,memoValue,pending,ready=false,initialValue=null;try{initialValue=unpack40(get.call(localStorage,key))??null;BOOT40=JSON.parse(initialValue||'{}');}catch{}owner.getItem=function(k){if(k!==key)return get.call(this,k);if(!ready&&initialValue!==null)return initialValue;if(pending!==undefined)return pending;const raw=get.call(this,k);if(raw===memoRaw)return memoValue;memoRaw=raw;memoValue=unpack40(raw);return memoValue;};owner.setItem=function(k,value){if(k!==key)return set.call(this,k,value);if(!ready){if(initialValue===null&&pending===undefined)initialValue=String(value);pending=String(value);return;}const packed=pack40(String(value));set.call(this,k,packed);memoRaw=packed;memoValue=String(value);};flushStorage40=()=>{ready=true;if(pending!==undefined){const value=pending;pending=undefined;owner.setItem.call(localStorage,key,value);}};})();
 
-try { if(localStorage.getItem('teleconnect-prototype-65-context-r1')==null){const p=localStorage.getItem('teleconnect-prototype-39');if(p){const d=JSON.parse(p);if(d.schema===1&&Array.isArray(d.objects)&&Array.isArray(d.defs))localStorage.setItem('teleconnect-prototype-65-context-r1',p);}} } catch(e){console.info('使用本版初始配置');}
-let PRELOAD36=null;try{PRELOAD36=JSON.parse(localStorage.getItem('teleconnect-prototype-65-context-r1')||'{}').state36;}catch{}
+try { if(localStorage.getItem('teleconnect-prototype-66-provenance-r1')==null){const p=localStorage.getItem('teleconnect-prototype-39');if(p){const d=JSON.parse(p);if(d.schema===1&&Array.isArray(d.objects)&&Array.isArray(d.defs))localStorage.setItem('teleconnect-prototype-66-provenance-r1',p);}} } catch(e){console.info('使用本版初始配置');}
+let PRELOAD36=null;try{PRELOAD36=JSON.parse(localStorage.getItem('teleconnect-prototype-66-provenance-r1')||'{}').state36;}catch{}
 
 // Copy the compatible previous snapshot once; never write back into version 34.
 
 
-const PRELOAD29=(()=>{try{return JSON.parse(localStorage.getItem("teleconnect-prototype-65-context-r1")||"null");}catch{return null;}})();
+const PRELOAD29=(()=>{try{return JSON.parse(localStorage.getItem("teleconnect-prototype-66-provenance-r1")||"null");}catch{return null;}})();
 
-var SAVED25=null;try{SAVED25=JSON.parse(localStorage.getItem("teleconnect-prototype-65-context-r1")||"null");}catch{}
+var SAVED25=null;try{SAVED25=JSON.parse(localStorage.getItem("teleconnect-prototype-66-provenance-r1")||"null");}catch{}
 
 /* ================= 核心：图标 / 工具 / 图表 / 渲染 / 事件 ================= */
 const sv = (p, s = 20, w = 1.8) => `<svg width="${s}" height="${s}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p}</svg>`;
@@ -3599,7 +3606,7 @@ const alarmDef23={...emptyDef23(),id:'oss_site_query',name:'站点信息查询',
 bindObject23(alarmDef23,'site','query_info');publishInitial23(alarmDef23);DEFS23.push(alarmDef23);
 function resourceToDef23(r,name,id){const d={...emptyDef23(),id,name,code:id,category:r.category,description:r.description,kind:r.kind,source:{resourceId:r.id,resourceVersion:r.version},inputs:clone23(r.inputs),outputs:clone23(r.outputs),branches:['ok','fail'],risk:r.risk,approval:r.approval};publishInitial23(d);return d;}
 DEFS23.push(resourceToDef23(RES23.find(x=>x.id==='sk_report'),'经营分析报告','bd_report'),resourceToDef23(RES23.find(x=>x.id==='ag_oss'),'OSS Agent 诊断','oss_agent'));
-const CACHE23='teleconnect-prototype-65-context-r1';
+const CACHE23='teleconnect-prototype-66-provenance-r1';
 try{const v=JSON.parse(localStorage.getItem(CACHE23)||'null');if(v?.schema===1){DEFS23=v.defs;CATS23=v.cats;if(v.flows)RULES3.splice(0,RULES3.length,...v.flows);if(v.tpls)TPLS.splice(0,TPLS.length,...v.tpls);if(v.objects)OB.splice(0,OB.length,...v.objects);}}catch(e){console.info('Prototype storage unavailable',e.message);}
 function persist23(){if(BOOTING43)return true;try{localStorage.setItem(CACHE23,JSON.stringify({schema:1,defs:DEFS23,cats:CATS23,flows:RULES3,tpls:TPLS,objects:OB}));}catch(e){toast('浏览器存储不可用，本次修改仅保留到页面关闭');}}
 const def23=id=>DEFS23.find(d=>d.id===id);
@@ -5925,7 +5932,7 @@ IN.caseReview36=v=>V36.caseReview=v;A.caseTransition36=v=>{const [id,action]=v.s
 MODALS.caseDetail36=({id})=>{const k=case36(id),edit=editable24(k),review=k.status36==='pending'&&k.reviewer36===B25.actor;return modal25(esc(k.title),errors29(V36.errors)+`<div class="u36-kbfacts"><span>${esc(CASE_STATUS36[k.status36])}</span><span>${esc(domainName24(k.domainId))}</span><span>审核人 ${esc(k.reviewer36)}</span><span>当前演示身份 ${esc(B25.actor)}</span></div>${[['根因',k.rc],['处理方法',k.fix],['验证结果',k.result],['证据摘要',k.evidence36]].map(([l,v])=>`<h4>${l}</h4><p style="white-space:pre-wrap">${esc(v||'未填写')}</p>`).join('')}${k.runId36?`<button class="btn sm" data-a="runOpen25" data-v="${k.runId36}">查看来源运行</button>`:''}${k.published36?`<details><summary>发布快照 v${k.version36} · 知识同步为本地模拟</summary>${jsonBlock25(k.published36)}</details>`:''}${edit?`<label class="u36-note">审核意见 / 失效原因<textarea class="inp" data-in="caseReview36" aria-label="审核意见或失效原因" style="width:100%;min-height:70px">${esc(V36.caseReview||'')}</textarea></label>`:''}<details><summary>处理记录</summary>${jsonBlock25(k.history36||[])}</details>`,!edit?'':`${k.status36!=='pending'?'<button class="btn" data-a="caseEdit36" data-v="'+id+'">编辑草稿</button>':''}${['draft','expired'].includes(k.status36)?'<button class="btn pri" data-a="caseTransition36" data-v="'+id+'|submit">提交审核</button>':''}${review?'<button class="btn" data-a="caseTransition36" data-v="'+id+'|reject">退回修改</button><button class="btn pri" data-a="caseTransition36" data-v="'+id+'|approve">审核并发布</button>':''}${k.published36&&k.publishedActive36!==false&&k.sync36?.status!=='revoked_simulated'?'<button class="btn" data-a="caseTransition36" data-v="'+id+'|expire">使此版本失效</button>':''}`,true);};
 A.caseHelp36=()=>openModal('caseHelp36',{});MODALS.caseHelp36=()=>modal25('知识案例使用说明','<p>案例从草稿提交给审核人，审核后发布。发布保留来源运行、验证结果及固定证据；失效会停止知识服务引用。</p><p>此页面维护业务案例审核，文档存储、索引与访问控制复用Knowledge Management。本原型仅保存模拟同步回执。</p>');
 /* concise in-product help; implementation explanations stay in the handoff */
-const topbarBase36=topbar;topbar=()=>topbarBase36().replace('第56版 · 开发参照原型','第65版 · 本地演示');
+const topbarBase36=topbar;topbar=()=>topbarBase36().replace('第56版 · 开发参照原型','第66版 · 本地演示');
 const adminBase36=adminView;adminView=()=>adminBase36().replace(/<div class="p25-mini"[^>]*>第56版[\s\S]*?外部调用与发布均为本地模拟。<\/div>/,'').replace(/<div class="p26-integration">现有后台功能的整合示例[\s\S]*?<\/div>/,'');
 HELP27.objs=['对象建模','维护对象基本信息、实例标识、HTTP或MCP能力、事件与关系。保存仅更新草稿；发布形成固定版本。导入先映射依赖，再创建独立草稿。'];
 HELP27.tpls=['场景模板','模板可导入/导出资产包。导入创建草稿；发布版可只读体验或创建业务流程。缺失依赖、类型冲突需要先修复。'];
@@ -10682,7 +10689,7 @@ for(const r of RUN25)deliverMeeting63(r);
 persist23();
 
 /* Domain workspaces share the published application and RUN25 runtime. */
-const KEY63='teleconnect-client-workspace-65-r1';
+const KEY63='teleconnect-client-workspace-66-r1';
 let SAVED63={};try{SAVED63=JSON.parse(localStorage.getItem(KEY63)||'{}');}catch{}
 const C63={domain:'oss',conversationId:'',tab:'conversation',form:null,error:'',conversations:SAVED63.conversations||[],dashboards:SAVED63.dashboards||[],drafts:{},knowledgeQuery:'',dashboardId:'',dashboardChart:true};
 const DOMAINS63={oss:{name:'OSS',title:'让每一次告警，都有清楚的处置路径',description:'从设备与实际拓扑出发，汇集多源告警、分析根因，并跟进审批和恢复。',icon:'net',action:'发起故障诊断',kind:'oss_diagnose',hint:'描述故障现象，或输入需要诊断的设备编号…',prompt:'诊断设备 NEW-ONU-9001 的告警，找出根因并给出处置建议'},bigdata:{name:'BigData',title:'把业务问题，变成看得懂的数据',description:'查询 ERP 与 Telebilling 指标，核对统计口径，把有价值的结果保存到看板。',icon:'data',action:'查询业务指标',kind:'metric_query',hint:'例如：查询9月营收，查看统计口径…',prompt:'查询9月营收，核对统计口径并保存到看板'},teleconnect:{name:'TeleConnect',title:'把讨论变成行动，让协作更轻松',description:'整理会议纪要与行动项，在发送前核对内容；从有权限的知识中查找答案。',icon:'meet',action:'整理会议纪要',kind:'meeting_minutes',hint:'例如：整理会议纪要，提取负责人和行动项…',prompt:'整理本次项目会议的纪要，提取行动项供我确认'}};
@@ -11353,7 +11360,7 @@ const nodeEditorBefore65=editPage23;editPage23=(...args)=>{const h=nodeEditorBef
    These drafts never restore waiting state, runtime context, approvals or results. */
 const TASKFORM65={drafts:new Map(),active:null,transition:0,restoring:false,pendingDOM:null};
 const TASKROOTS65=new Set(['clientTask49','runDetail25','taskProgress53']);
-const TASKFORMKEY65='teleconnect-pending-forms-65';
+const TASKFORMKEY65='teleconnect-pending-forms-66';
 function taskCopy65(value){return value==null?value:clone23(value);}
 function taskModalId65(){return TASKROOTS65.has(S.modal?.type)?S.modal?.data?.id||B25.runId:null;}
 function taskKey65(id,actor=B25.actor){return actor+'::'+id;}
@@ -11747,7 +11754,964 @@ for(const key of ['taskOpen49','noticeOpen49','taskBack53','taskReturn53','taskP
 }
 
 const adminVersionBefore65=adminView;
-adminView=()=>adminVersionBefore65().replace(/第64版 · 可交互开发参照/g,'第65版 · 可交互开发参照');
+adminView=()=>adminVersionBefore65().replace(/第64版 · 可交互开发参照/g,'第66版 · 可交互开发参照');
+
+// v66: provenance is metadata, never a replacement for production inputs or authorization.
+const UI66={stack:[],trialBase:'',fixtureMeta:null,fixtureBase:'',pendingRun:null};
+const CUSTOMER66={
+ device_down:['Network Device Down','Device ping status; Syslog / Alarm; OLT/NE status'],
+ fiber_cut:['Fiber Cut','Fiber alarm/OTDR; Optical power; Location (span)'],
+ port_problem:['Port Problem','Port status; Error counters; Interface logs'],
+ cpe_config:['CPE Configuration Problem','CPE status; Config validation; Auth / DHCP logs'],
+ backbone_config:['Backbone Configuration Problem','Config check; BGP/IGP status; Route table'],
+ customer_lan:['Customer LAN','LAN ping / traceroute; Customer device status; Site visit / customer call'],
+ customer_power:['Customer Side Commercial Power Problem','Power monitoring; Site confirmation; Power restoration'],
+ gateway:['International Gateway Problem','Gateway status; Global alert; Traceroute / ping'],
+ ne_config:['NE Configuration Issue','Config diff; NE logs; Service profile check'],
+ packet_los:['Packet LOS','PRTG/EMS alarm; Loss % / error rate; Optical power'],
+ low_optical:['Low Optical Power','Optical power level; Alarm threshold; OLT/ONT check'],
+ speed:['Speed Issue','Speed test / utilization; CPE profile; QoS / shaping check'],
+ latency:['High Latency','Latency / jitter; Traceroute; Network congestion'],
+ cpe_modem:['CPE Modem Problem','CPE status / logs; Signal level; Replace / reboot']
+};
+const BASIS66={id:'customer-fbb-diagram',title:'FBB Fault Management Workflow – Auto Diagnosis, TT Auto Creation and TT Auto Archive',location:'本会话用户提供的业务流程图，中间 Fault Scenarios & Auto Diagnosis 区域，第 1–14 项',scope:'提供故障分类和建议诊断方式；未提供设备实例、接口报文、数值门槛、AI置信度、责任团队或SLA具体值。',availability:'原图内容已按本会话附件逐项转录；原临时图片文件已不可读取，本页保留文本依据，不冒充已归档的原始附件。'};
+const CONDITIONS66=[...CONDITIONS43,['failDiagnostic45','第二轮诊断来源超时'],['missingMetric45','诊断必需指标缺失'],['staleEvidence45','诊断证据过期'],['conflictingEvidence45','同一指标多来源冲突'],['aiTimeout48','AI分析超时'],['aiInvalid48','AI结构化返回不合规']];
+const EXPECT66={normal:'按流程完成采集与诊断，处置仍需执行策略和审批。',sufficient50:'首轮证据充分时跳过补证，进入后续处置检查。',supplement50:'按缺口补证后返回同一分析节点，不重复创建业务任务。',groups50:'列出独立故障，确认后分别建立关联处置任务。',multiFault:'保留多个故障组，不能强行归为单一故障。',source_gap:'保留成功证据，失败来源标记为缺失，不推断无告警。',ambiguous:'暂停并收集身份信息，不选择不确定设备下发。',unknownModel:'找不到适用型号定义时暂停或转人工。',unknownType:'类型未定义时暂停，不自动建立对象。',unknownVersion:'找不到适用实现时暂停，不下发不匹配指令。',topologyGap:'说明实际关系缺口，补齐后重新查询。',staleSource:'过期数据不作为当前设备健康依据。',invalidAlarm:'原始字段不全时补齐信息，保留原始响应。',manual50:'交由人工复核，修正后重新检查并审批。',lowConfidence:'低置信度结论需补证或人工复核。',parent:'关联已有父故障，避免重复建立故障单。',noFault:'成功查询无告警，仍按诊断结果决定后续分支。',unrestored:'操作完成不代表恢复，独立验证失败后升级处理。',recoveryUnknown:'恢复来源不可用时保持待核实，不宣告恢复。',prohibited:'禁止自动执行，交由授权人员处理。',auto:'只有满足预授权、范围及白名单时才自动执行。',failDiagnostic45:'补证来源超时后保留已取得证据，转补充信息或人工。',missingMetric45:'缺少必需指标时不能判定健康。',staleEvidence45:'过期采证结果不能代替当前状态。',conflictingEvidence45:'标明来源冲突，等待核实。',aiTimeout48:'AI分析超时进入异常处理，不编造分析结果。',aiInvalid48:'AI输出格式无效进入异常处理，不执行未校验的建议。'};
+function provenance66(kind='example',note=''){return {kind,reference:kind==='customer'?BASIS66.id:'prototype-design',note:note||'为验证原型交互补充的模拟示例，不代表客户生产数据。',pending:'生产接口、阈值及业务适用性待相关负责人确认。',review:'pending',version:1};}
+function ruleSource66(p){return p?.provenance66||{...provenance66(CUSTOMER66[p?.id]?'customer':'example'),note:CUSTOMER66[p?.id]?'故障分类和诊断方式依据客户图；字段映射、能力绑定、判定阈值、AI门槛、处置建议与SLA为原型补充。':'自定义诊断规则，依据待补充。'};}
+function kind66(k){return {customer:'客户提供的依据',example:'原型补充示例',custom:'使用者补充内容'}[k]||'来源待补充';}
+function sourceFields66(p,handler,prefix='',disabled=false){const f=(name,key,area=false)=>`<label>${name}${area?`<textarea class="inp" data-in="${handler}" data-v="${prefix+key}" ${disabled?'disabled':''}>${esc(p[key]||'')}</textarea>`:`<input class="inp" data-in="${handler}" data-v="${prefix+key}" value="${esc(p[key]||'')}" ${disabled?'disabled':''}>`}</label>`;return `<div class="p66-grid"><label>依据类型<select class="inp" data-ch="${handler}" data-v="${prefix}kind" ${disabled?'disabled':''}>${[['customer','客户提供的依据'],['example','原型补充示例'],['custom','使用者补充内容']].map(([k,t])=>`<option value="${k}" ${p.kind===k?'selected':''}>${t}</option>`).join('')}</select></label>${f('来源名称 / 文档编号 / 链接','reference')}${f('依据范围与补充说明','note',true)}${f('待确认内容','pending',true)}</div>`;}
+function sourcePanel66(p,extra=''){return `<section class="p66-box"><div class="p66-summary"><b>来源与适用范围</b><span class="p66-badge">${kind66(p.kind)} · ${p.review==='confirmed'?'已人工确认':'待业务确认'}</span></div><p class="p66-note">${esc(p.note)}</p>${extra}</section>`;}
+function conditionsNote66(id){return `<div class="p66-note"><b>测试目的：</b>${esc(EXPECT66[id]||'此模拟设置未登记，请补充说明。')}<br>来源：原型回归测试设计；这是模拟适配器的运行情形，不是客户提供的故障分类。</div>`;}
+function goChild66(type,action){UI66.stack.push({child:type,parent:captureModal27(),scroll:contextScroll64()});action();}
+function back66(){const entry=UI66.stack.pop();if(!entry)return closeModal();openModal(entry.parent.type,entry.parent.data||{});restoreContextScroll64(entry.scroll);}
+function parent66(){return UI66.stack.at(-1)?.child===S.modal?.type;}
+A.source66=()=>goChild66('source66',()=>openModal('source66',{}));
+MODALS.source66=()=>modal40('客户依据与原型补充',`<dl class="p66-source"><dt>客户图名称</dt><dd>${esc(BASIS66.title)}</dd><dt>原文位置</dt><dd>${esc(BASIS66.location)}</dd><dt>覆盖范围</dt><dd>${esc(BASIS66.scope)}</dd><dt>附件状态</dt><dd>${esc(BASIS66.availability)}</dd></dl><table class="p66-source-table"><thead><tr><th>序号</th><th>原图故障名称</th><th>原图建议诊断方式（转录）</th></tr></thead><tbody>${Object.entries(CUSTOMER66).map(([id,[name,method]],i)=>`<tr><td>${i+1}</td><td>${esc(name)}<small>${id}</small></td><td>${esc(method)}</td></tr>`).join('')}</tbody></table><div class="p66-box"><b>待确认内容</b><p>原型中的数值阈值、置信度、型号适配、接口路径、责任团队、SLA与示例响应均不视为客户确认。Packet LOS 的原图措辞同时涉及信号丢失和丢包，具体分类与判定应由业务方确认。</p><p>用户另行确认：客户侧问题不建网络故障TT，可按配置建信息类TT或转交；危险操作需要审批。此处为会话决定摘要，不是原图原文。</p></div>`,btn42('返回上一页','back66'),true).replaceAll('data-a="close"','data-a="back66"');
+A.back66=back66;
+// Draft-only provenance: never rewrite a published diagnostic definition.
+for(const d of [...RULES3,...TPLS])for(const p of d.diagnosticRules55?.scenarios||[])if(!p.provenance66)p.provenance66=clone23(ruleSource66(p));
+for(const [id,f]of Object.entries(STATE43.fixtures)){f.provenance66 ||= {...provenance66(),reference:'prototype-resource-fixture:'+id,note:'根据对象定义构造的外部资源/监测系统模拟响应。设备编号、关联拓扑、时间和报文均为示例；未从客户生产接口采集。',capabilities:['resource_api.query_resource_identity','resource_api.query_resource_topology','alarm_system.query_alarms'],version:1};}
+const diagnosticModal66=MODALS.diagnostics55;
+MODALS.diagnostics55=()=>{let h=diagnosticModal66();const p=scene55();if(!p)return h;const s=ruleSource66(p),original=CUSTOMER66[p.id];return h.replace('<nav class="dg55-tabs">',sourcePanel66(s,`${original?`<p class="p66-note"><b>原图对应：</b>${esc(original[0])}<br>${esc(original[1])}</p>`:''}<div class="p66-actions">${btn42('查看客户依据','source66')}${btn42('维护模拟指标值','diagnosticFixtures55')}</div><details><summary>维护来源说明</summary>${sourceFields66(s,'ruleSource66','',!writable28())}</details>`)+ '<nav class="dg55-tabs">');};
+IN.ruleSource66=(v,e)=>{if(!writable28())return;const p=scene55();if(!p)return;editDiagnostic55(()=>{p.provenance66={...ruleSource66(p),[e.dataset.v]:v,review:'pending',updatedAt:stamp25()};});};
+// Input editing must not re-render on every keystroke.
+IN.ruleSource66=(v,e)=>{if(!writable28())return;const p=scene55();if(!p)return;mutate39(()=>{p.provenance66={...ruleSource66(p),[e.dataset.v]:v,review:'pending',updatedAt:stamp25()};syncDiagnostics55(S.wf.d);},'diagnostic-provenance66');};
+CH.ruleSource66=(v,e)=>{IN.ruleSource66(v,e);renderModal();};
+for(const key of ['diagnosticAdd55','diagnosticCopy55']){const prev=A[key];A[key]=(...args)=>{const parent=scene55()?.id;prev(...args);const p=scene55();if(p){p.provenance66={...provenance66('custom'),reference:parent?'derived-from:'+parent:'user-created',note:parent?'从已有规则复制后修改；需要核对本规则的依据和适用范围。':'新建规则，待补充业务依据。'};syncDiagnostics55(S.wf.d);renderModal();}};}
+function settingsFromCase66(c){const input=JSON.parse(c.input||'{}'),values=JSON.parse(c.values||'{}'),sim=values.__simulation40||{};let condition=c.simulation66?.condition||'normal';if(!c.simulation66){if(sim.initialEvidence50===true&&sim.multiFault)condition='groups50';else if(sim.initialEvidence50===true&&sim.lowConfidence)condition='manual50';else if(sim.initialEvidence50===true)condition='sufficient50';else if(sim.initialEvidence50===false)condition='supplement50';else if(sim.failSource)condition='source_gap';else condition=CONDITIONS66.find(([id])=>sim[id]===true)?.[0]||'normal';}return {caseId:c.id,fixture:values.__fixture43||c.simulation66?.fixture||'',scenario:sim.scenario||c.simulation66?.scenario||'',condition,source_system:input.source_system??values.source_system??'',device_id:input.device_id??values.device_id??'',serial_number:input.serial_number??values.serial_number??'',event:JSON.stringify(input.event??values.event??{},null,2),extraValues66:values};}
+function validateSettings66(v){if(!v.source_system?.trim()||!v.device_id?.trim())throw Error('请填写来源系统和外部设备编号');const event=JSON.parse(v.event);if(!event||typeof event!=='object'||Array.isArray(event))throw Error('原始事件必须是 JSON 对象');if(!STATE43.fixtures[v.fixture])throw Error('引用的模拟响应已不存在，请重新选择');if(!S.wf.d.diagnosticRules55?.scenarios.some(p=>p.id===v.scenario&&p.enabled!==false))throw Error('诊断规则已删除或停用，请在诊断规则中核对');if(!CONDITIONS66.some(([id])=>id===v.condition))throw Error('模拟运行情形已失效，请重新选择');return event;}
+function seedCases66(d){if(!d?.engine43||STATE43.caseSeed66?.[d.id])return;STATE43.caseSeed66||={};const scene=d.diagnosticRules55?.scenarios.find(p=>p.id==='device_down'&&p.enabled!==false);if(!scene)return;
+ for(const [condition,name,status]of [['sufficient50','设备不可达 · 首轮证据充分','waiting_approval'],['ambiguous','设备身份歧义 · 等待补充','waiting_input'],['source_gap','采集部分失败 · 保留成功证据','waiting_input'],['unknownVersion','运行版本未适配 · 阻止处置','waiting_input']]){const id='case66_'+d.id+'_'+condition;if(STATE29.cases.some(c=>c.id===id))continue;const v={fixture:'huawei',scenario:scene.id,condition,source_system:'OSS-EMS',device_id:'NEW-ONU-9001',serial_number:'',event:JSON.stringify({key:'TEST66-'+condition,code:scene.id,source:'OSS-EMS'})},values=trialValues43(v);const input={source_system:v.source_system,device_id:v.device_id,serial_number:'',event:JSON.parse(v.event)};delete values.source_system;delete values.device_id;delete values.serial_number;delete values.event;STATE29.cases.push({id,flowId:d.id,name,text:'',inst:'',input:JSON.stringify(input,null,2),values:JSON.stringify(values,null,2),mocks:{},expectedStatus:status,branches:[],assertions:[],simulation66:{condition},provenance66:{...provenance66(),reference:'FBB流程回归验证设计 / '+condition,note:EXPECT66[condition],pending:'该样例验证模拟流程分支；不证明客户接口、真实AI结果或生产恢复。'},revision66:1});}STATE43.caseSeed66[d.id]=true;}
+for(const d of RULES3)seedCases66(d);
+for(const c of STATE29.cases)c.provenance66 ||= {...provenance66(),reference:'existing-prototype-case:'+c.id,note:'既有流程回归样例，输入和预期由原型作者构造，未提供客户测试数据凭证。'};
+function caseOptions66(){return casesFor29().map(c=>[c.id,c.name]);}
+function loadCase66(id){const c=casesFor29().find(c=>c.id===id);if(!c)throw Error('测试样例已删除或不属于当前流程');V43.trial=settingsFromCase66(c);V43.error='';UI66.trialBase=JSON.stringify(V43.trial);}
+const trialOpen66=A.trial40;A.trial40=()=>{if(!S.wf?.d.engine43)return trialOpen66();seedCases66(S.wf.d);const c=casesFor29()[0];if(!c){A.testCases29();return toast('先建立一个测试样例，保存后可用于试运行');}try{loadCase66(c.id);openModal('trial43',{});}catch(e){toast(e.message);}};
+CH.trialCase66=id=>{const apply=()=>{try{loadCase66(id);openModal('trial43',{});}catch(e){V43.error=e.message;renderModal();}};if(JSON.stringify(V43.trial)!==UI66.trialBase)return confirmAction27('切换测试样例？','本次输入调整尚未另存为样例，切换后会加载所选样例。',apply);apply();};
+CH.trialField43=(v,e)=>{V43.trial[e.dataset.v]=v;V43.error='';if(e.dataset.v==='scenario'){try{const event=JSON.parse(V43.trial.event);if(event&&typeof event==='object'&&!Array.isArray(event)){event.code=v;V43.trial.event=JSON.stringify(event,null,2);}}catch{V43.error='原始事件JSON暂不完整，未自动改写事件代码。请修正后运行。';}}renderModal();};
+const trialRender66=MODALS.trial43;
+MODALS.trial43=()=>{let h=trialRender66();const v=V43.trial,c=casesFor29().find(c=>c.id===v.caseId),p=S.wf.d.diagnosticRules55?.scenarios.find(p=>p.id===v.scenario);h=h.replace('外部资源响应样例','模拟接口响应集').replace('故障场景','模拟故障类型').replace('验证条件','模拟运行情形');const intro=`<section class="p66-box"><div class="p66-grid"><label>测试样例<select class="inp" data-ch="trialCase66">${caseOptions66().map(([id,n])=>`<option value="${id}" ${v.caseId===id?'selected':''}>${esc(n)}</option>`).join('')}</select></label><div><span class="p66-badge">模拟测试 · 不调用生产接口</span><p class="p66-note">${esc(c?.provenance66?.note||'样例来源待补充')}<br>预期停留：${esc(STATUS25[c?.expectedStatus]||c?.expectedStatus||'待配置')}</p></div></div><div class="p66-actions">${btn42('维护当前样例','trialCaseEdit66')}${btn42('选择 / 管理样例','trialCases66')}${btn42('另存本次设置','trialSaveAs66')}</div><p class="p66-note">${JSON.stringify(v)!==UI66.trialBase?'本次设置已调整；不会覆盖已保存的测试样例。':'已自动带入样例输入和模拟设置。'}</p></section>`;h=h.replace('<div class="u42-formgrid"><section>',intro+'<div class="u42-formgrid"><section>');h=h.replace(btn42('检查/编辑模拟接口响应','fixtures43'),`<div class="p66-actions">${btn42('维护模拟接口响应','fixtures43')}${btn42('查看 / 配置诊断规则','trialRules66')}</div><div class="p66-box"><b>${esc(p?.name||'诊断规则缺失')}</b><p class="p66-note">${esc(ruleSource66(p).note)}</p>${conditionsNote66(v.condition)}${btn42('查看客户依据','source66')}</div>`);return h;};
+A.trialCases66=()=>goChild66('testCases29',()=>A.testCases29());
+A.trialCaseEdit66=()=>goChild66('testCases29',()=>{A.testCases29();A.caseEdit29(V43.trial.caseId);});
+A.trialRules66=()=>goChild66('diagnostics55',()=>{A.diagnostics55();const i=rules55()?.scenarios.findIndex(p=>p.id===V43.trial.scenario);if(i>=0){DIAG55.index=i;renderModal();}});
+function caseFromTrial66(){validateSettings66(V43.trial);const values=trialValues43(V43.trial),input={};for(const k of ['source_system','device_id','serial_number','event']){input[k]=values[k];delete values[k];}return {id:uid23('CASE66'),flowId:S.wf.d.id,name:'自定义测试 · '+(S.wf.d.diagnosticRules55.scenarios.find(p=>p.id===V43.trial.scenario)?.name||''),text:'',inst:'',input:JSON.stringify(input,null,2),values:JSON.stringify(values,null,2),mocks:{},expectedStatus:casesFor29().find(c=>c.id===V43.trial.caseId)?.expectedStatus||'waiting_input',branches:[],assertions:[],simulation66:{condition:V43.trial.condition},provenance66:{...provenance66('custom'),reference:'derived-from:'+V43.trial.caseId,note:'根据当前试运行设置另存，需核对预期状态及适用范围。'},revision66:0};}
+A.trialSaveAs66=()=>{try{const c=caseFromTrial66();goChild66('testCases29',()=>{V29.caseEditor=c;V29.caseBaseline=JSON.stringify(c);V29.caseTab='edit';openModal('testCases29',{});});}catch(e){V43.error=e.message;renderModal();}};
+const trialValuesBefore66=trialValues43;trialValues43=v=>{const base=trialValuesBefore66(v),extra=clone23(v.extraValues66||{});const sim=extra.__simulation40||{};for(const [id]of CONDITIONS66)delete sim[id];delete sim.failSource;delete sim.initialEvidence50;extra.__simulation40={...sim,...base.__simulation40};return {...extra,...base,__simulation40:extra.__simulation40};};
+function caseConfig66(c){let v;try{v=settingsFromCase66(c);}catch{return '<p class="p66-note">JSON尚未填写完整，请先修正流程输入或模拟字段。</p>';}return `<section class="p66-box"><h4>模拟测试设置</h4><div class="p66-grid">${field43('模拟接口响应集','caseSim66','fixture',v.fixture,'select',[['','请选择'],...Object.entries(STATE43.fixtures).map(([id,f])=>[id,f.name])])}${field43('模拟故障类型（引用本流程诊断规则）','caseSim66','scenario',v.scenario,'select',[['','请选择'],...(rules55()?.scenarios||[]).filter(p=>p.enabled!==false).map(p=>[p.id,p.name])])}${field43('模拟运行情形','caseSim66','condition',v.condition,'select',CONDITIONS66)}</div>${conditionsNote66(v.condition)}<p class="p66-note">本区域写入模拟字段JSON；流程输入JSON只保存来源系统、设备编号和事件等业务参数。预期状态及分支断言仍需根据测试目的填写。</p></section>`;}
+CH.caseSim66=(v,e)=>{const c=V29.caseEditor;try{const s=settingsFromCase66(c);s[e.dataset.v]=v;const values=trialValues43(s);for(const k of ['source_system','device_id','serial_number','event'])delete values[k];c.values=JSON.stringify(values,null,2);c.simulation66={condition:s.condition};delete c.error;}catch(error){c.error='请先修正JSON：'+error.message;}renderModal();};
+const caseNew66=A.caseNew29;A.caseNew29=()=>{caseNew66();const c=V29.caseEditor;c.provenance66=provenance66('custom');if(S.wf.d.engine43){const first=casesFor29().find(x=>x.simulation66);if(first){c.input=first.input;c.values=first.values;c.simulation66=clone23(first.simulation66);c.expectedStatus='waiting_approval';}}V29.caseBaseline=JSON.stringify(c);renderModal();};
+const caseEdit66=A.caseEdit29;A.caseEdit29=id=>{caseEdit66(id);const c=V29.caseEditor;if(c){c.provenance66||=provenance66('custom');V29.caseBaseline=JSON.stringify(c);renderModal();}};
+const casesRender66=MODALS.testCases29;MODALS.testCases29=()=>{let h=casesRender66(),c=V29.caseEditor;if(V29.caseTab==='edit'&&c){h=h.replace('<details><summary>节点模拟返回与失败设置</summary>',`${S.wf.d.engine43?caseConfig66(c):''}${sourcePanel66(c.provenance66||provenance66(),sourceFields66(c.provenance66||provenance66(),'case29','provenance66.'))}<details><summary>节点模拟返回与失败设置</summary>`);if(S.wf.d.engine43)h=h.replace('例如 查询.调用1.返回报文；保持为对象','FBB中由下方模拟测试设置同步；可查看高级模拟参数');}else{for(const c of casesFor29()){h=h.replace(`<b>${esc(c.name)}</b>`,`<b>${esc(c.name)}</b><span class="p66-badge">${kind66(c.provenance66?.kind)} · v${c.revision66||1}</span>`);if(S.wf.d.engine43)h=h.replace(`<button class="btn sm" data-a="caseEdit29" data-v="${c.id}">`,`<button class="btn sm" data-a="caseUse66" data-v="${c.id}">用于试运行</button><button class="btn sm" data-a="caseEdit29" data-v="${c.id}">`);if(c.last?.settingsSignature66&&c.last.settingsSignature66!==caseSignature66(c))h=h.replace(`<b>${esc(c.name)}</b>`,`<b>${esc(c.name)}</b><span class="p66-badge">样例或响应已变 · 需重测</span>`);}}
+ if(parent66())h=h.replace('data-a="close">关闭','data-a="return66">返回试运行');return h;};
+function caseDirty66(){return !!V29.caseEditor&&JSON.stringify(V29.caseEditor)!==V29.caseBaseline;}
+const listCase66=A.caseList29;A.caseList29=()=>{if(caseDirty66())return confirmAction27('放弃未保存的样例修改？','仅放弃当前编辑，不修改原样例。',()=>{V29.caseEditor=null;V29.caseTab='list';openModal('testCases29',{});});listCase66();};
+A.caseUse66=id=>{try{loadCase66(id);if(parent66())UI66.stack.pop();openModal('trial43',{});}catch(e){toast(e.message);}};
+const saveCase66=A.caseSave29;A.caseSave29=()=>{const c=V29.caseEditor;if(!c)return;if(STATE29.cases.some(x=>x.id===c.id)&&!caseDirty66())return toast('没有需要保存的修改');try{if(!c.provenance66?.reference?.trim()||!c.provenance66?.note?.trim())throw Error('请填写来源名称和依据说明，不能将未说明的数据作为样例');if(S.wf.d.engine43)validateSettings66(settingsFromCase66(c));const saved=STATE29.cases.find(x=>x.id===c.id);c.revision66=(saved?.revision66||0)+1;c.provenance66.updatedAt=stamp25();c.provenance66.updatedBy=B25.actor;c.provenance66.review='pending';const before=clone23(STATE29.cases),draft=clone23(c),out=editPersistChecked65(saveCase66,()=>{STATE29.cases=before;});if(!out.ok){V29.caseEditor=draft;V29.caseEditor.error='保存失败，修改仍保留，请重试。';V29.caseTab='edit';renderModal();}}catch(e){c.error=e.message;renderModal();}};
+// Every route back preserves the caller's form, and only explicit Use loads a changed case.
+A.return66=()=>{if(S.modal?.type==='testCases29'&&caseDirty66())return confirmAction27('放弃未保存的样例修改？','返回试运行会保留原来的试运行输入；已保存样例不受影响。',()=>{V29.caseEditor=null;back66();});back66();};
+const closeBefore66=requestClose27;requestClose27=()=>{if(parent66())return A.return66();if(S.modal?.type==='source66')return back66();return closeBefore66();};A.close=requestClose27;A.maskClose=requestClose27;
+// Fixture provenance is edited in the existing response editor, saved atomically with JSON.
+function fixtureLoadMeta66(){UI66.fixtureMeta=clone23(STATE43.fixtures[V43.fixture]?.provenance66||provenance66());UI66.fixtureBase=JSON.stringify(UI66.fixtureMeta);}
+const fixtureOpen66=A.fixtures43;A.fixtures43=()=>{fixtureOpen66();fixtureLoadMeta66();renderModal();};
+const fixtureDirtyBefore66=fixtureDirty58;fixtureDirty58=()=>fixtureDirtyBefore66()||JSON.stringify(UI66.fixtureMeta)!==UI66.fixtureBase;
+for(const k of ['fixture43','fixtureTab43']){const prev=CH[k];CH[k]=(...args)=>{const before=V43.fixture+'|'+V43.fixtureTab;prev(...args);if(before!==V43.fixture+'|'+V43.fixtureTab){fixtureLoadMeta66();renderModal();}};}
+IN.fixtureSource66=(v,e)=>{UI66.fixtureMeta[e.dataset.v]=v;};CH.fixtureSource66=(v,e)=>{IN.fixtureSource66(v,e);renderModal();};
+const fixtureRender66=MODALS.fixtures43;MODALS.fixtures43=()=>{let h=fixtureRender66();const f=STATE43.fixtures[V43.fixture],p=UI66.fixtureMeta||f.provenance66;return h.replace('<label class="u42-field">JSON响应',`${sourcePanel66(p,`<p class="p66-note">响应集版本：${f.provenance66.version||1} · 引用能力：资源拓扑服务 / 查询设备身份与型号版本、查询实际资源拓扑与监测覆盖；告警系统 / 查询告警。<br>资源JSON为空不可运行；告警响应为空对象时由所选诊断规则和模拟情形生成报文，不表示“无告警”。</p><details><summary>维护响应来源</summary>${sourceFields66(p,'fixtureSource66')}</details>`)}<label class="u42-field">JSON响应`);};
+const saveFixture66=A.fixtureSave43;A.fixtureSave43=()=>{if(!fixtureDirty58()){V43.error='';return toast('没有需要保存的修改');}const f=STATE43.fixtures[V43.fixture],before=clone23(f),history=clone23(STATE43.history),baseline=UI58.fixtureBaseline;try{if(!UI66.fixtureMeta?.reference?.trim()||!UI66.fixtureMeta?.note?.trim())throw Error('请填写响应来源名称及说明');JSON.parse(V43.fixtureText);f.provenance66={...clone23(UI66.fixtureMeta),version:(f.provenance66.version||0)+1,review:'pending',updatedAt:stamp25(),updatedBy:B25.actor};const result=editPersistChecked65(saveFixture66,()=>{STATE43.fixtures[V43.fixture]=before;STATE43.history=history;UI58.fixtureBaseline=baseline;});if(!result.ok){V43.error='保存失败，JSON和来源修改仍保留，请重试。';renderModal();return;}if(V43.error){STATE43.fixtures[V43.fixture]=before;STATE43.history=history;return;}fixtureLoadMeta66();renderModal();}catch(e){V43.error=e.message;renderModal();}};
+const diagnosticFixturesRender66=MODALS.diagnosticFixtures55;MODALS.diagnosticFixtures55=()=>diagnosticFixturesRender66().replace('<div class="mb">','<div class="mb"><section class="p66-box"><b>原型补充的模拟指标</b><p class="p66-note">按诊断规则编号与指标字段组织的健康 / 故障样例值。它们只供模拟接口返回使用，不是客户实测值，也不会修改规则判定门槛；生产适用性待确认。修改后应重新运行相关测试样例。</p></section>');
+function caseSignature66(c){let v;try{v=settingsFromCase66(c);}catch{return 'invalid';}return fingerprint40({input:c.input,values:c.values,mocks:c.mocks,expected:c.expectedStatus,branches:c.branches,assertions:c.assertions,fixture:STATE43.fixtures[v.fixture],diagnosticSamples:STATE43.diagnosticFixtures55[c.flowId]});}
+function runSources66(c,v){return {schema:1,capturedAt:stamp25(),testCase:c?{id:c.id,name:c.name,revision:c.revision66||1,provenance:clone23(c.provenance66),expectedStatus:c.expectedStatus}:null,settings:clone23(v),fixture:clone23(STATE43.fixtures[v.fixture]),diagnosticRules:clone23(rules55()),diagnosticSamples:clone23(STATE43.diagnosticFixtures55[S.wf.d.id]||{}),customerBasis:clone23(BASIS66),customerExtracts:clone23(CUSTOMER66),simulationOnly:true};}
+const createRunBefore66=createRun25;createRun25=opts=>{const source=UI66.pendingRun?clone23(UI66.pendingRun):null;const r=createRunBefore66(opts);if(source&&r){r.provenance66=source;persist23();}return r;};
+const startTrial66=A.trialStart43;A.trialStart43=()=>{try{validateSettings66(V43.trial);const c=casesFor29().find(c=>c.id===V43.trial.caseId);if(!c)throw Error('请选择存在的测试样例');UI66.pendingRun=runSources66(c,V43.trial);startTrial66();}catch(e){V43.error=e.message;renderModal();}finally{UI66.pendingRun=null;}};
+const runCaseBefore66=runCase29;runCase29=async c=>{try{if(S.wf?.d.engine43){const v=settingsFromCase66(c);validateSettings66(v);UI66.pendingRun=runSources66(c,v);}const pending=runCaseBefore66(c);UI66.pendingRun=null;const out=await pending;if(c.last)c.last.settingsSignature66=caseSignature66(c);persist23();return out;}catch(e){c.last={at:stamp25(),signature:flowSignature29(S.wf.d),ok:false,error:e.message,assertions:[]};persist23();return c.last;}finally{UI66.pendingRun=null;}};
+const runModal66=MODALS.runDetail25;MODALS.runDetail25=(...args)=>{let h=runModal66(...args);const r=runBy25(S.modal?.data?.id||B25.runId);if(r?.provenance66)h=h.replace('<div class="mb">',`<div class="mb"><div class="p66-box p66-summary"><span>测试依据 · ${esc(r.provenance66.testCase?.name||'临时测试')} · 样例 v${r.provenance66.testCase?.revision||1}</span>${btn42('查看本次测试来源','runSource66',r.id)}</div>`);return h;};
+A.runSource66=id=>goChild66('runSource66',()=>openModal('runSource66',{id}));
+MODALS.runSource66=()=>{const p=runBy25(S.modal.data.id)?.provenance66;return modal40('本次测试来源快照',p?`<dl class="p66-source"><dt>测试样例</dt><dd>${esc(p.testCase?.name)} · v${p.testCase?.revision}</dd><dt>采集时间</dt><dd>${esc(p.capturedAt)}</dd><dt>模拟响应集</dt><dd>${esc(p.fixture?.name)} · v${p.fixture?.provenance66?.version||1}</dd><dt>来源说明</dt><dd>${esc(p.testCase?.provenance?.note)}</dd><dt>待确认</dt><dd>${esc(p.testCase?.provenance?.pending)}</dd></dl><p class="p66-note">此处为运行开始时固定的副本；之后修改测试样例、规则或响应，不会改写本次记录。未接入真实外部接口或AI分析。</p><details><summary>查看完整来源、规则与模拟响应快照</summary>${jsonBlock25(p)}</details>`:'本次运行未保存来源快照，不能用当前配置推断历史来源。',btn42('返回执行记录','back66'),true).replaceAll('data-a="close"','data-a="back66"');};
+
+// The same metric editor can return to rules or to the response editor.
+const metricOpen66=A.diagnosticFixtures55;
+A.diagnosticFixtures55=()=>{if(S.modal?.type==='diagnostics55')goChild66('diagnosticFixtures55',metricOpen66);else metricOpen66();};
+const metricBack66=A.diagnosticBack58;
+A.diagnosticBack58=()=>{if(!parent66())return metricBack66();let dirty;try{dirty=JSON.stringify(JSON.parse(DIAG55.fixtureText))!==JSON.stringify(JSON.parse(UI58.diagnosticBaseline));}catch{dirty=true;}if(dirty)return confirmAction27('放弃未保存的模拟指标？','返回后仍保留诊断规则配置，未保存的指标修改会丢弃。',back66);back66();};
+const returnBefore66=A.return66;A.return66=()=>S.modal?.type==='diagnosticFixtures55'?A.diagnosticBack58():returnBefore66();
+CH.fixture43=v=>leaveFixture58(()=>{V43.fixture=v;V43.fixtureText=fixtureValue58();V43.error='';UI58.fixtureBaseline=V43.fixtureText;fixtureLoadMeta66();openModal('fixtures43',{});});
+CH.fixtureTab43=v=>leaveFixture58(()=>{V43.fixtureTab=v;V43.fixtureText=fixtureValue58();V43.error='';UI58.fixtureBaseline=V43.fixtureText;fixtureLoadMeta66();openModal('fixtures43',{});});
+// Keep visual labels and accessible names identical.
+const trialLabels66=MODALS.trial43;MODALS.trial43=()=>trialLabels66().replaceAll('外部资源响应样例','模拟接口响应集').replaceAll('故障场景','模拟故障类型').replaceAll('验证条件','模拟运行情形');
+const fixtureLabels66=MODALS.fixtures43;MODALS.fixtures43=()=>fixtureLabels66().replaceAll('故障场景','模拟故障类型').replaceAll('验证条件','模拟运行情形');
+const rulesReturnRender66=MODALS.diagnostics55;MODALS.diagnostics55=()=>{const h=rulesReturnRender66();return parent66()?h.replace(/data-a="close"/g,'data-a="return66"').replace('>完成</button>','>返回试运行</button>'):h;};
+const casesCompact66=MODALS.testCases29;MODALS.testCases29=()=>{let h=casesCompact66();const c=V29.caseEditor;if(c&&V29.caseTab==='edit'&&S.wf.d.engine43){const start=h.indexOf('<div class="v29-fields">'),end=h.indexOf('<section class="p66-box"><h4>模拟测试设置</h4>',start);if(start>=0&&end>start){h=h.slice(0,start)+`<div class="v29-fields">${input29('样例名称','case29','name',c.name)}${input29('预期运行状态','case29','expectedStatus',c.expectedStatus,{options:Object.entries(STATUS25).filter(([k])=>!['created','running'].includes(k))})}</div>${input29('流程输入 JSON','case29','input',c.input,{area:true,help:'业务参数；与开始节点的数据定义一致。'})}<details class="p66-box"><summary>高级模拟参数 JSON（与下方选择同步）</summary>${input29('模拟字段 JSON','case29','values',c.values,{area:true})}</details>`+h.slice(end);}if(parent66())h=h.replace('<div class="mf">','<div class="mf">'+btn42('返回试运行','return66'));}return h;};
+const inputCaseBefore66=IN.case29;IN.case29=(v,e)=>{inputCaseBefore66(v,e);const c=V29.caseEditor;if(e.dataset.v==='values'&&S.wf?.d.engine43){try{JSON.parse(v);const temp={...c};delete temp.simulation66;c.simulation66={condition:settingsFromCase66(temp).condition};}catch{}}};
+// Freeze source data before execution starts, including every later asynchronous read.
+const performBefore66=performRun25;performRun25=(r,...args)=>{if(UI66.pendingRun&&!r.provenance66){r.provenance66=clone23(UI66.pendingRun);r.diagnosticFixture55=clone23(r.provenance66.diagnosticSamples||{});}return performBefore66(r,...args);};
+function pinnedFixture66(r,fn,args){if(!r.provenance66?.fixture)return fn(r,...args);const key=r.fixture43||r.provenance66.settings.fixture,live=STATE43.fixtures[key];STATE43.fixtures[key]=r.provenance66.fixture;try{return fn(r,...args);}finally{STATE43.fixtures[key]=live;}}
+const rawBefore66=rawResourceResponse44;rawResourceResponse44=(r,...args)=>pinnedFixture66(r,rawBefore66,args);
+const alarmBefore66=alarmsFixture43;alarmsFixture43=(r,...args)=>pinnedFixture66(r,alarmBefore66,args);
+const metricLabel66=MODALS.diagnosticFixtures55;MODALS.diagnosticFixtures55=()=>{let h=metricLabel66().replace('>保存测试样例</button>','>保存模拟指标值</button>');if(parent66())h=h.replace('>返回模拟接口响应</button>','>返回诊断规则</button>');return h;};
+
+const caseRunOpen66=A.runOpen25;A.runOpen25=(...args)=>{if(S.modal?.type==='testCases29')return goChild66('runDetail25',()=>caseRunOpen66(...args));return caseRunOpen66(...args);};
+const runReturnRender66=MODALS.runDetail25;MODALS.runDetail25=(...args)=>{let h=runReturnRender66(...args);if(parent66())h=h.replace(/data-a="close"/g,'data-a="return66"').replace('>关闭</button>','>返回测试样例</button>');return h;};
+// A restored browser route may outlive an unsaved trial form; do not render missing inputs.
+const trialRestoreGuard66=MODALS.trial43;
+MODALS.trial43=()=>{if(!V43.trial||!S.wf?.d?.engine43)return modal40('重新打开试运行','<p class="p66-note">页面刷新后，这次未提交的试运行输入没有恢复。已保存的测试样例仍然保留，请重新打开试运行选择样例。</p>',btn42('关闭','close')+(S.wf?.d?.engine43?btn42('重新打开试运行','trial40','','pri'):''));return trialRestoreGuard66();};
+
+// v66 in-place update: work-order responsibility is independent of approval assignment.
+const TICKET_ROLES66={Chang:{name:'平台管理员',manage:true,domains:['*'],teams:['*'],receive:true},Dawit:{name:'OSS组长',manage:true,domains:['oss'],teams:['OSS设备维护组'],receive:true},Hana:{name:'OSS工程师',manage:false,domains:['oss'],teams:['OSS设备维护组'],receive:true},Meron:{name:'业务处理人',manage:false,domains:['bigdata','teleconnect'],teams:['业务运营组'],receive:true}};
+const ASSIGN66={draft:null,baseline:'',error:''};
+function ticketId66(r){return r?.runtime40?.context?.ticket_id||r?.fbb34?.ticketId||'';}
+function ticketRecord66(r){const id=ticketId66(r);if(!id)return null;const db=r.mode==='business'&&!r.simulation62&&STATE40.tickets[id]?STATE40:r.runtime40?.db;return db?.tickets?.[id]||null;}
+function ticketScope66(r,p){const t=ticketRecord66(r);return !!t&&!!p&&(p.domains.includes('*')||p.domains.includes(r.domainId))&&(p.teams.includes('*')||p.teams.includes(t.owner_team));}
+function manageTicket66(r,actor=B25.actor){const p=TICKET_ROLES66[actor];return !!p?.manage&&ticketScope66(r,p)&&PEOPLE25.some(x=>x.id===actor&&x.active!==false&&x.disabled!==true);}
+function eligibleTicket66(r,id){const p=TICKET_ROLES66[id];return !!p?.receive&&ticketScope66(r,p)&&PEOPLE25.some(x=>x.id===id&&x.active!==false&&x.disabled!==true);}
+function ticketOpen66(t){return !!t&&!['closed','archived','cancelled','resolved'].includes(t.status);}
+function ticketRevision66(t){return t?.assignmentRevision66||0;}
+function ticketRelated66(r){return RUN25.filter(x=>ticketId66(x)===ticketId66(r)&&ticketRecord66(x)===ticketRecord66(r));}
+function ticketPanel66(r){const id=ticketId66(r);if(!id)return '';const t=ticketRecord66(r),can=manageTicket66(r)&&ticketOpen66(t);return `<section class="ta66-panel"><div class="ta66-head"><div><strong>工单负责人</strong><span>${esc(id)} · ${esc(t?.owner_team||'责任团队待查询')}</span></div>${can?btn42(t.assignee66?'改派负责人':'分配负责人','ticketAssign66',r.id,'sm'):''}</div><div class="ta66-facts"><span>负责人 <b>${esc(t?.assignee66?PERSON49(t.assignee66):'待分派')}</b></span><span>工单状态 <b>${esc(({open:'处理中',closed:'已关闭',archived:'已归档',cancelled:'已取消'})[t?.status]||t?.status||'详情待查询')}</b></span><span>当前待办处理人 <b>${esc(r.waiting?.assignee?PERSON49(r.waiting.assignee):'当前无待办')}</b></span></div><p>${!t?'尚未取得工单系统中的负责人和版本，暂不能改派。':!ticketOpen66(t)?'已关闭或归档的工单不能改派。':'分配工单负责人不会自动转移审批权限，也不会重新执行设备操作。'}</p>${t&&!manageTicket66(r)?'<small>当前身份没有此工单的分派权限；请联系对应团队组长或管理员。</small>':''}${t?.assignmentHistory66?.length?`<details><summary>分派记录 · ${t.assignmentHistory66.length}</summary>${t.assignmentHistory66.slice().reverse().map(h=>`<div class="ta66-history"><b>${esc(h.from||'待分派')} → ${esc(h.to)}</b><span>${esc(h.actor)} · ${esc(shortTime25(h.at))} · 修订 ${h.revision}</span><p>${esc(h.reason)}</p></div>`).join('')}</details>`:''}</section>`;}
+function ensureTicket66(r){const t=ticketRecord66(r);if(!t)return;if(!Object.hasOwn(t,'assignmentRevision66')){t.assignmentRevision66=0;t.assignee66='';t.assignmentHistory66=[];t.createdAt||=stamp25();}}
+const modelTicketBefore66=modelFixture40;modelFixture40=(r,oid,f,input)=>{const out=modelTicketBefore66(r,oid,f,input);if(f.code==='create_or_associate_tt'&&out?.success){ensureTicket66(r);if(r.mode==='business'&&ticketRecord66(r)&&!ticketRecord66(r).assignee66)taskNotice49(r,'ticket-unassigned66:'+ticketId66(r),'工单 '+ticketId66(r)+' 待分配负责人',PEOPLE25.filter(p=>manageTicket66(r,p.id)).map(p=>p.id),'ticket');}return out;};
+for(const r of RUN25)ensureTicket66(r);
+function assignTicket66(id,member,reason,expected,actor){const r=runBy25(id),t=ticketRecord66(r);if(actor!==B25.actor)throw Error('演示身份已切换，请重新打开分派窗口');if(!r||!t||!manageTicket66(r,actor))throw Error('当前身份没有该工单的分派权限');if(!ticketOpen66(t))throw Error('工单已关闭或归档，不能改派');if(ticketRevision66(t)!==expected)throw Error('工单负责人已被他人调整，请返回详情刷新后再操作');if(!eligibleTicket66(r,member))throw Error('请选择在责任团队和领域范围内的有效处理人');if(!String(reason||'').trim())throw Error('请填写分派或改派原因');if(t.assignee66===member)throw Error('负责人未改变，无需保存');const previous=clone23(t),related=ticketRelated66(r);if(!related.includes(r))related.push(r);const backups=related.map(x=>({r:x,history:clone23(x.history),client:clone23(x.client49||null),owner:x.runtime40.context.ticket_assignee66,updated:x.updatedAt}));const at=stamp25(),from=t.assignee66||'',revision=expected+1;
+ t.assignee66=member;t.assignmentRevision66=revision;t.updatedAt=at;t.assignmentHistory66||=[];t.assignmentHistory66.push({actor,from,to:member,reason:String(reason).trim(),at,revision,source:'模拟工单系统',runId:r.id});
+ for(const x of related){x.runtime40.context.ticket_assignee66=member;x.updatedAt=at;x.history.push({actor,action:from?'改派工单负责人':'分配工单负责人',from,to:member,note:String(reason).trim(),ticketId:ticketId66(r),at,assignmentRevision:revision});if(x.mode==='business'){const c=clientState49(x);c.participants=[...new Set([...c.participants,member,from].filter(Boolean))];taskNotice49(x,'ticket-assignment66:'+ticketId66(r)+':'+revision,'工单 '+ticketId66(r)+' 已分派给 '+PERSON49(member),[member,from,actor].filter(Boolean),'ticket');}}
+ try{if(persist23()===false)throw Error('保存失败，分派未生效；请保留填写内容后重试');}catch(e){for(const k of Object.keys(t))delete t[k];Object.assign(t,previous);for(const b of backups){b.r.history=b.history;if(b.client)b.r.client49=b.client;else delete b.r.client49;b.r.updatedAt=b.updated;if(b.owner===undefined)delete b.r.runtime40.context.ticket_assignee66;else b.r.runtime40.context.ticket_assignee66=b.owner;}throw e;}return t;
+}
+A.ticketAssign66=id=>{const r=runBy25(id),t=ticketRecord66(r);if(!manageTicket66(r)||!ticketOpen66(t))return toast('当前没有可操作的工单分派权限');ensureTicket66(r);ASSIGN66.draft={id,member:t.assignee66||'',reason:'',revision:ticketRevision66(t),actor:B25.actor};ASSIGN66.baseline=JSON.stringify(ASSIGN66.draft);ASSIGN66.error='';goChild66('ticketAssign66',()=>openModal('ticketAssign66',{id}));};
+IN.ticketAssignField66=(v,e)=>{ASSIGN66.draft[e.dataset.v]=v;ASSIGN66.error='';};CH.ticketAssignField66=IN.ticketAssignField66;
+MODALS.ticketAssign66=()=>{const d=ASSIGN66.draft,r=runBy25(d.id),t=ticketRecord66(r),p=TICKET_ROLES66[B25.actor];return modal40(t?.assignee66?'改派工单负责人':'分配工单负责人',`${ASSIGN66.error?errors29([ASSIGN66.error]):''}<dl class="p66-source"><dt>工单</dt><dd>${esc(ticketId66(r))}</dd><dt>责任团队</dt><dd>${esc(t?.owner_team||'待查询')}</dd><dt>当前负责人</dt><dd>${esc(t?.assignee66||'待分派')}</dd><dt>当前权限</dt><dd>${esc(B25.actor)} · ${esc(p?.name||'无权限')} · ${p?.domains.includes('*')?'所有授权领域':esc(p?.domains.map(domainLabel63).join('、'))}</dd></dl><div class="p66-grid"><label>指派给<select class="inp" aria-label="工单负责人" data-ch="ticketAssignField66" data-v="member"><option value="">选择负责人</option>${PEOPLE25.filter(x=>eligibleTicket66(r,x.id)).map(x=>`<option value="${x.id}" ${d.member===x.id?'selected':''}>${esc(x.name)} · ${esc(TICKET_ROLES66[x.id].name)}</option>`).join('')}</select></label><label class="p66-full">分派 / 改派原因 *<textarea class="inp" aria-label="分派原因" data-in="ticketAssignField66" data-v="reason">${esc(d.reason)}</textarea></label></div><p class="p66-note">提交后通知新负责人并保留原负责人、操作人、原因和时间。当前审批人保持不变；如需转派审批，请使用“转派待办”。</p><details class="p66-box"><summary>权限演示说明</summary><p>管理员可跨授权团队分派；OSS组长只管理“OSS设备维护组”；工程师没有改派权。当前成员和团队映射为原型示例，正式开发复用平台组织、角色及数据权限。</p></details>`,btn42('返回详情','ticketAssignBack66')+btn42('确认分派','ticketAssignCommit66','','pri'),true).replaceAll('data-a="close"','data-a="ticketAssignBack66"');};
+A.ticketAssignCommit66=()=>{try{const d=ASSIGN66.draft;assignTicket66(d.id,d.member,d.reason,d.revision,d.actor);ASSIGN66.draft=null;back66();toast('工单负责人已更新；审批人保持不变');}catch(e){ASSIGN66.error=e.message;renderModal();}};
+A.ticketAssignBack66=()=>{const done=()=>{ASSIGN66.draft=null;back66();};if(ASSIGN66.draft&&JSON.stringify(ASSIGN66.draft)!==ASSIGN66.baseline)return confirmAction27('放弃未提交的分派？','工单负责人尚未改变。',done);done();};
+const returnTicketBefore66=A.return66;A.return66=()=>S.modal?.type==='ticketAssign66'?A.ticketAssignBack66():returnTicketBefore66();
+for(const type of ['runDetail25','clientTask49']){const prev=MODALS[type];MODALS[type]=data=>{const h=prev(data),r=runBy25(data?.id||S.modal?.data?.id||B25.runId);if(!r||!ticketId66(r)||S.app==='client'&&!taskVisible49(r))return h;return h.replace('<div class="mb">','<div class="mb">'+ticketPanel66(r));};}
+const taskVisibleTicket66=taskVisible49;taskVisible49=(r,actor=B25.actor)=>taskVisibleTicket66(r,actor)||!!(r?.mode==='business'&&domainAccess62(r,actor)&&(ticketRecord66(r)?.assignee66===actor||manageTicket66(r,actor)));
+const taskScopeTicket66=task63Scope;task63Scope=r=>C49.tab==='team66'?manageTicket66(r):taskScopeTicket66(r)||(C49.tab==='involved'&&ticketRecord66(r)?.assignee66===B25.actor)||(C49.tab==='team66'&&manageTicket66(r));
+const ticketRowsBefore66=taskRows49;taskRows49=()=>{if(C49.tab!=='tickets66')return ticketRowsBefore66();syncAllTasks49();return RUN25.filter(r=>taskVisible49(r)&&ticketRecord66(r)?.assignee66===B25.actor&&(C49.domain63==='all'||task63Domain(r)===C49.domain63)&&(C49.status==='all'||(C49.status==='waiting'?WAIT25.has(r.status):r.status===C49.status))&&(!C49.query||task63Search(r).includes(C49.query.toLowerCase()))).sort((a,b)=>String(b.updatedAt).localeCompare(String(a.updatedAt)));};
+const inboxTicketBefore66=inboxView;inboxView=()=>{let h=inboxTicketBefore66();const pending=taskPending49().filter(r=>C49.domain63==='all'||task63Domain(r)===C49.domain63).length;h=h.replace(/待我处理(?: · \d+)?<\/button>/,`待我处理${pending?' · '+pending:''}</button>`);if(['oss','all'].includes(C49.domain63)&&TICKET_ROLES66[B25.actor]?.manage&&!h.includes('data-v="managed62"'))h=h.replace('<div class="c49-tabs">',`<div class="c49-tabs"><button class="${C49.tab==='team66'?'on':''}" data-a="taskTab49" data-v="team66">团队工单</button>`);if(['oss','all'].includes(C49.domain63))h=h.replace('<div class="c49-tabs">',`<div class="c49-tabs"><button class="${C49.tab==='tickets66'?'on':''}" data-a="taskTab49" data-v="tickets66">我负责的工单</button>`);for(const r of taskRows49()){const t=ticketRecord66(r);if(!t)continue;const button=`data-a="taskOpen49" data-v="${r.id}"`;const pos=h.indexOf(button);if(pos>=0){const row=h.lastIndexOf('<tr',pos),cell=h.indexOf('</td>',row);if(cell>=0&&cell<h.indexOf('</tr>',pos))h=h.slice(0,cell)+`<small class="ta66-rowowner">工单 ${esc(ticketId66(r))} · 负责人 ${esc(t.assignee66||'待分派')}</small>`+h.slice(cell);}}return h;};
+// Domain work is embedded in the digital-human workspace; notifications remain cross-domain.
+const taskViewState66={};let currentTaskKey66='';
+function taskKey66(){return B25.actor+'|'+B25.agent;}
+function activateTaskView66(reset=false){const key=taskKey66();if(currentTaskKey66!==key||reset){if(currentTaskKey66)taskViewState66[currentTaskKey66]={tab:C49.tab,query:C49.query,status:C49.status};const saved=taskViewState66[key];Object.assign(C49,saved||{tab:accessFor62().manageTasks?'managed62':'involved',query:'',status:'all'});currentTaskKey66=key;}C49.domain63=currentDomain63();C49.reminders=false;}
+function embeddedTasks66(){activateTaskView66();let h=inboxView();h=h.replace(/<header class="c49-head">[\s\S]*?<\/header>/,'').replace(/<select[^>]*aria-label="任务领域"[\s\S]*?<\/select>/,'');return `<div class="ta66-workspace" data-scroll="domainTasks66">${h}</div>`;}
+const workspaceTicketBefore66=clientWorkspace63;clientWorkspace63=()=>{let h=workspaceTicketBefore66();const label=C63.domain==='oss'?'我的任务':C63.domain==='bigdata'?'分析任务':'协作任务';h=h.replace(/<button data-a="domainTasks63"[^>]*>[\s\S]*?<\/button>/,`<button class="${C63.tab==='tasks'?'on':''}" data-a="workspaceTab63" data-v="tasks">${label}</button>`);if(C63.tab==='tasks'){const start=h.indexOf('<div class="c63-thread"'),end=h.lastIndexOf('</section></div>');if(start>=0&&end>start)h=h.slice(0,start)+embeddedTasks66()+h.slice(end);}return h;};agentClient25=clientWorkspace63;
+const workspaceTabTicket66=A.workspaceTab63;A.workspaceTab63=tab=>{if(C63.tab==='tasks')taskViewState66[taskKey66()]={tab:C49.tab,query:C49.query,status:C49.status};if(tab==='tasks')activateTaskView66();workspaceTabTicket66(tab);};
+A.domainTasks63=domain=>{const b=BINDS25.find(x=>x.published25?.domainId===domain&&visibleBinding63(x));if(!b)return toast('当前没有可访问的该领域数字人，请从通知查看已有任务');B25.agent=b.id;C63.domain=domain;C63.tab='tasks';activateTaskView66();go('agents25');};
+const resetTaskBefore66=A.taskReset63;A.taskReset63=()=>{resetTaskBefore66();if(S.mod==='agents25'&&C63.tab==='tasks'){C49.domain63=currentDomain63();render();}};
+const clientNavTicket66=clientView;clientView=()=>clientNavTicket66().replace(/<button[^>]*data-a="go"[^>]*data-v="inbox"[^>]*>[\s\S]*?<\/button>/,'');
+const goTicketBefore66=go;go=mod=>{if(mod==='inbox'&&currentBinding63()&&C49.domain63!=='all'){C63.tab='tasks';return goTicketBefore66('agents25');}return goTicketBefore66(mod);};
+const notificationsRender66=MODALS.notifications49;if(notificationsRender66)MODALS.notifications49=(...args)=>notificationsRender66(...args).replace('<div class="mf">','<div class="mf">'+btn42('全部领域待办','allTasks66'));
+A.allTasks66=()=>{if(currentTaskKey66)taskViewState66[currentTaskKey66]={tab:C49.tab,query:C49.query,status:C49.status};currentTaskKey66='';C49.domain63='all';C49.tab='pending';C49.query='';C49.status='all';closeModal();goTicketBefore66('inbox');};
+
+const NOTE_CONTENT66={
+  "guide": {
+    "title": "如何阅读开发说明",
+    "summary": "先看这页解决什么问题，再看具体操作的数据来源和处理结果。",
+    "source": "说明来自本版功能配置与已确认的业务要求，不是AI在运行时临时生成的内容。",
+    "steps": "开启开发注释后，悬浮或用键盘聚焦ⓘ看摘要；点击看完整说明。说明不会提交表单或启动流程。",
+    "result": "关闭说明后继续原操作，原有输入和选中项保留。",
+    "exception": "未配置的引用会明确标出；示例、客户依据与待确认规则不能混为一谈。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "domain": {
+    "title": "领域与权限范围",
+    "summary": "领域把OSS、BigData、TeleConnect等业务配置分开管理，也支持共享引用。",
+    "source": "领域树、负责人和共享范围来自管理员配置；实际设备与数据权限仍来自外部系统和登录权限。",
+    "steps": "选择当前领域筛选资产；调整上级、归属或共享前查看受影响引用。领域约束由上级向下生效。",
+    "result": "保存后改变资产的可见与可引用范围；不会搬迁设备，也不产生真实设备连接。",
+    "exception": "不能形成循环层级，不能通过共享或下级配置放宽禁止执行规则。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "category": {
+    "title": "对象分类",
+    "summary": "分类帮助找到对象，不等于设备上下游，也不代表权限等级。",
+    "source": "分类名称、编码和说明由管理员维护，对象选择已有分类。",
+    "steps": "先维护分类，再在对象中引用；筛选不会改动对象定义。",
+    "result": "分类用于列表组织和查找。对象类型之间的继承、组成和连接分别定义。",
+    "exception": "删除前需要检查是否仍有对象引用；不能把分类树直接当成真实拓扑。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "object": {
+    "title": "对象定义与查看编辑",
+    "summary": "对象定义说明“它是什么、有哪些能力和事件、能与谁关联”，不登记每一台实际设备。",
+    "source": "名称、编码、属性、能力、事件和关系由建模配置提供；查看页按所选草稿或发布版本读取。",
+    "steps": "查看与编辑复用同一页面；编辑草稿后保存，再检查并发布。实际设备编号在运行时从外部输入和资源系统取得。",
+    "result": "发布版本可被流程和Agent间接引用；修改草稿不改变已经启动的运行。",
+    "exception": "对象被引用时需检查影响；型号不是终点，板卡、端口、光路等继续按统一对象结构定义。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "spec": {
+    "title": "对象内的规格配置",
+    "summary": "规格用于表达型号、服务套餐、指标口径等差异，不只服务于设备领域。",
+    "source": "字段来自本对象的规格字段定义；具体记录填写字段值，JSON是同一份结构的另一种编辑方式。",
+    "steps": "在对象内定义适用字段，再新增规格记录；可用表单或JSON修改并校验，也可导入导出。",
+    "result": "规格为实现匹配提供条件，不代替真实实例编号、实际版本或实际连接。",
+    "exception": "必填、类型、引用和唯一标识错误应阻止应用；不能因为属于某型号就认为设备一定支持当前实现。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "specSchema": {
+    "title": "规格字段如何定义",
+    "summary": "先定义字段叫什么、是什么类型、是否必填，再填写规格记录。",
+    "source": "对象所属领域及业务需求决定字段；已有记录按这些字段展示。",
+    "steps": "修改字段定义后检查已有规格；表单和JSON使用同一份字段定义。",
+    "result": "OSS可以使用型号和版本，BigData可以使用统计粒度，TeleConnect可以使用服务配置。",
+    "exception": "删除或改类型前需要检查已有数据及引用；未知字段不能悄悄丢弃。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "capability": {
+    "title": "对象能力与接口",
+    "summary": "能力说明对象可以做什么，接口实现说明如何调用外部系统完成它。",
+    "source": "对象发布版本提供输入输出、HTTP方法和路径、实现适用条件与风险要求。",
+    "steps": "选择能力后回显来源配置；按运行时型号、软硬件版本和管理方式匹配适用实现；将节点参数映射为请求。",
+    "result": "返回经过解析的业务字段和调用证据。接口成功受理不等于故障已经恢复。",
+    "exception": "缺少实现、版本不匹配、权限不足或返回格式不符时，进入配置的异常路径；危险操作仍需审批。",
+    "boundary": "工作流试运行使用模拟响应。对象能力里的“HTTP功能测试”可能发起真实请求，请以该测试窗口的地址与执行提示为准。"
+  },
+  "event": {
+    "title": "对象事件定义",
+    "summary": "事件定义描述“发生了什么”和消息包含哪些字段，不在这里决定运行哪个流程。",
+    "source": "由外部系统实际消息格式和业务含义整理出事件编码、说明和字段结构。",
+    "steps": "定义字段及示例；发布后由触发配置选择事件并完成必要的字段映射。",
+    "result": "同一事件可以被多个流程订阅，开始节点复用已有输入定义。",
+    "exception": "事件结构变化要检查订阅和字段映射；示例消息不代表真实告警已经接入。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "relation": {
+    "title": "对象之间的关系",
+    "summary": "关系说明两种对象如何关联；关系查询方式说明去哪里找到实际关联结果。",
+    "source": "来源对象、目标对象、方向、关系含义、关联条件和查询接口均来自模型配置。",
+    "steps": "选择两端对象及关系；定义查询参数和返回身份字段。图谱连线编辑与对象内编辑使用同一关系定义。",
+    "result": "模型关系保存为配置；实例探索或流程执行时再向可信来源查询真实上下游。",
+    "exception": "不能用类型继承推导物理连接；目标类型不存在或查询方式缺失时应明确提示。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "graph": {
+    "title": "知识图谱：模型与实际数据",
+    "summary": "模型关系展示定义；实例探索展示某次外部查询取得的实际关联。",
+    "source": "模型来自对象及关系版本；实际实例来自资源拓扑等外部查询，原型中的响应有明确测试来源。",
+    "steps": "全局查看对象关系，或聚焦一个对象；选择连线可查看关系；新增关系复用已有编辑页面。",
+    "result": "图谱与对象建模共享定义。返回原页面时保留视角和选择，避免另建一套关系台账。",
+    "exception": "缺少权限、来源失败和无匹配结果分别展示；模型图中的连线不能当成运行证据。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "instance": {
+    "title": "按实例探索实际上下游",
+    "summary": "输入实际资源身份，沿已定义的关系查询当前相关设备、业务和人员。",
+    "source": "来源系统、资源编号等来自输入；型号、版本、管理入口和实际连接来自外部响应。",
+    "steps": "先解析唯一身份，再查询关系，核对返回状态与时间；查看本次证据或历史查询。",
+    "result": "得到带来源和时间的实际拓扑；不会在建模中心新增实例记录。",
+    "exception": "身份歧义、缺少真实关系或数据过期时，保留已有结果并说明缺口，不能自动猜测连接。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "evidence": {
+    "title": "查询记录与诊断依据",
+    "summary": "证据帮助回答“结论依据哪次查询、哪些原始返回”。",
+    "source": "来自该运行或查询时保存的输入、原始响应、映射结果、来源状态、时间和快照。",
+    "steps": "先看结论和异常，再展开返回JSON与来源；从记录进入后返回同一记录。",
+    "result": "显示历史当时的事实，不用后来修改的模型或测试数据替换旧证据。",
+    "exception": "没有保存的证据明确标记缺失；失败或超时不应解释成没有告警，接口受理也不等于业务恢复。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "registry": {
+    "title": "规则节点定义",
+    "summary": "规则节点是可复用组件；流程里的节点是该组件的一次具体使用。",
+    "source": "基础定义包含名称、分类、说明、输入输出、实现方式、异常策略和发布版本。",
+    "steps": "维护基础定义、测试后发布，再加入流程；流程可重命名并补充本次业务说明。",
+    "result": "相同基础组件在画布上使用相同图标；固定引用版本避免后续修改悄悄改变运行。",
+    "exception": "删除、升级或变更字段前检查引用；基础说明与本流程说明不能互相覆盖。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "resource": {
+    "title": "引用MCP Tool、Skill或Agent",
+    "summary": "先选具体已发布资源，再用其参数定义配置节点，避免重复维护资源。",
+    "source": "资源列表应来自平台MCP、Skill和Agent管理；原型保留演示资源。",
+    "steps": "选择资源和版本，核对输入输出、权限与风险；再配置上游引用或固定值。",
+    "result": "流程保存资源引用，运行记录保留实际使用版本及调用结果。",
+    "exception": "资源停用、无权限、版本不可用或参数不匹配时不应静默换成其他资源。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "generate": {
+    "title": "描述生成或上传节点",
+    "summary": "自然语言和文件上传用于生成可检查的组件草稿，不代表已经具备执行能力。",
+    "source": "使用者提供需求或代码文件，选择语言、入口、运行环境与参数。",
+    "steps": "生成草稿后查看实现及输入输出，补齐配置、模拟测试，再经过发布检查。",
+    "result": "得到可继续编辑的节点定义。",
+    "exception": "上传成功不等于安全可执行；正式系统仍需隔离运行、依赖管理、权限检查和执行日志。",
+    "boundary": "本原型展示配置与模拟测试，不在浏览器运行上传的JAR/Python服务。"
+  },
+  "code": {
+    "title": "代码节点",
+    "summary": "通过代码处理当前节点的输入，并返回后续节点可使用的字段。",
+    "source": "语言、代码、输入变量、输出字段和测试值由节点配置提供。",
+    "steps": "选择JavaScript、Python或Java，编辑代码；先核对输入，再查看测试结果是否符合输出定义。",
+    "result": "代码与参数配置保存到流程草稿；运行时输出需按定义校验。",
+    "exception": "语法错误、超时、返回字段缺失或类型不符必须显示原因，不能只展示“成功”。",
+    "boundary": "代码执行能力依赖正式隔离执行器；原型的模拟测试结果不证明Java/Python已在生产环境执行。"
+  },
+  "params": {
+    "title": "输入与输出参数",
+    "summary": "输入说明本节点拿到什么，输出说明后续节点可以读取什么。",
+    "source": "字段名称、类型、必填及业务说明来自基础组件或引用能力；上游引用提供实际取值路径。",
+    "steps": "可新增或删除自定义字段，选择引用变量或固定值；JSON编辑与参数列表使用同一份定义。",
+    "result": "保存后形成可核对的数据流。中文名称是业务说明，不是另一个隐藏的取值来源。",
+    "exception": "引用来源不存在、必填值缺失或类型不符应报错；来源强制要求的字段不能通过删除绕过。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "paramRef": {
+    "title": "引用上游数据",
+    "summary": "引用记录的是取值路径，只有节点运行后才能取得实际值。",
+    "source": "来源必须是当前路径中可用的开始参数或已完成上游节点输出。",
+    "steps": "选择节点和字段，必要时填写子字段路径；也可新增当前节点自己的固定值参数。",
+    "result": "节点执行时解析引用并校验类型。查看配置时显示来源，查看执行时显示实际解析值。",
+    "exception": "未经过的条件分支可能没有输出；不要把空值、缺失值和空数组当成同一种情况。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "paramJSON": {
+    "title": "用JSON编辑参数",
+    "summary": "JSON用于定义字段结构或测试数据，具体作用由当前窗口标题和操作决定。",
+    "source": "读取当前参数列表、响应体或模拟数据，不从说明文字猜测字段。",
+    "steps": "修改后先解析与校验，再应用到当前编辑内容；应用后核对列表中的名称、类型与嵌套结构。",
+    "result": "有效修改回显到同一份表单数据；未提交的编辑仍属于草稿。",
+    "exception": "JSON格式无效时保留原文并指出错误，不能清空已有字段；删除字段还需检查后续引用。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "flow": {
+    "title": "流程编排",
+    "summary": "把可复用节点连成业务步骤，清楚表达输入、处理、等待和结果。",
+    "source": "节点来自规则节点库，对象能力来自固定的发布版本，业务输入来自触发或用户调用。",
+    "steps": "配置节点和连线，检查数据引用及异常出口；保存草稿，检查通过后发布。",
+    "result": "每次运行固定流程和依赖版本；后续编辑不会改变在途任务。",
+    "exception": "检查通过只是配置满足检查项，不表示外部服务已连通；未保存离开需明确保存或放弃。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "trigger": {
+    "title": "触发配置",
+    "summary": "把外部事件、时间计划或服务调用接到一个已发布流程的开始输入。",
+    "source": "对象事件提供消息字段，开始节点提供流程需要的输入，触发配置维护两者之间的映射。",
+    "steps": "选择来源与目标流程，复用已有字段；仅补充名称不同的映射、过滤和去重规则，再测试触发。",
+    "result": "匹配的消息生成可追溯运行；重复消息按规则关联或跳过。",
+    "exception": "缺少字段、匹配失败或未启用时显示原因；测试触发不等于部署了真正的消息接收器。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "start": {
+    "title": "开始节点与外部输入",
+    "summary": "开始节点定义这条流程启动时需要哪些信息。",
+    "source": "真实运行来自事件映射、Agent服务调用或用户输入；试运行来自所选测试样例。",
+    "steps": "优先复用事件字段，补充业务确实需要的输入；明确必填、默认值和描述。",
+    "result": "开始输出成为后续节点的上游参数，例如来源系统、设备编号和原始事件。",
+    "exception": "固定值只适合真正固定的配置。每次不同的设备编号不能写死在组件默认值里。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "exception": {
+    "title": "异常处理",
+    "summary": "把技术失败和业务结果分开处理，避免失败后静默继续。",
+    "source": "超时、重试和异常出口来自当前节点配置；来源能力的安全限制仍需遵守。",
+    "steps": "配置超时与有限重试；失败后选择终止、错误分支或人工处理，并传递失败原因。",
+    "result": "运行记录保留每次尝试、时间、原因和已取得的成功证据。",
+    "exception": "写操作不能盲目重试；回执不明确时先核对原请求，不能重复下发设备命令。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "collection": {
+    "title": "多源告警与按需采证",
+    "summary": "用一个可展开的采集组件处理动态目标数组，不固定编写A/B/C设备分支。",
+    "source": "目标来自真实拓扑和监测覆盖；每个目标按类型、型号、版本匹配已发布能力。",
+    "steps": "生成逐项调用任务，按并发上限查询设备或告警系统；展开内部配置和执行记录检查每一项。",
+    "result": "输出成功证据、原始告警、来源、目标身份、时间和采集状态，再交给归一与AI分析。",
+    "exception": "无告警、失败、超时、过期、部分缺失分别处理。部分来源失败不能丢掉其他成功结果。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "normalize": {
+    "title": "数据归一与结果汇总",
+    "summary": "先把字段、时间和级别整理成统一格式，再进行跨来源业务分析。",
+    "source": "原始报文和来源映射来自各采集结果；任务标识用于核对是否全部返回。",
+    "steps": "保留原始记录，映射标准字段并汇总状态；去重时保留每条来源记录的关联。",
+    "result": "统一数据供AI分析，并可追溯回原始响应。",
+    "exception": "字段转换不等于根因判断；不能将多个独立故障强行合并，也不能把缺少结果当成正常。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "ai": {
+    "title": "AI故障分析与补证",
+    "summary": "AI使用告警、拓扑和诊断规则提出根因与证据缺口，可选择Agent或大模型。",
+    "source": "执行资源来自平台发布资源；证据来自本次采集，规则来自流程诊断规则。",
+    "steps": "先判断已有证据是否足够；不足时走按需采证或人工复核，足够时直接进入后续业务判断。",
+    "result": "输出根因候选、故障分组、证据引用、可信度、业务影响和缺口。",
+    "exception": "AI超时、格式错误、低可信度或冲突证据需分流；AI建议不能直接替代设备操作审批。",
+    "boundary": "原型使用可追溯的模拟分析；正式Agent或模型调用、结构化输出校验需要后端接入。"
+  },
+  "condition": {
+    "title": "条件与出口",
+    "summary": "根据明确的数据或业务判断选择下一步，不是额外查询一次设备。",
+    "source": "读取本节点输入或上游已经返回的字段，与配置条件比较。",
+    "steps": "设置条件、优先顺序和默认出口，连接到对应处理节点。",
+    "result": "选中出口决定流程方向；没有新业务数据时可保留上游值而不伪造新输出。",
+    "exception": "字段缺失和条件不匹配必须有明确处理路径，不能默认当成业务成功。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "gate": {
+    "title": "执行权限与风险检查",
+    "summary": "决定允许自动执行、必须审批还是禁止执行。",
+    "source": "综合领域限制、流程策略、能力风险、实际目标、版本适配、白名单和预检结果。",
+    "steps": "核对本次操作计划；必要时等待审批；执行前再检查计划有效期和条件。",
+    "result": "输出明确路径及拒绝原因，供审批或人工处置使用。",
+    "exception": "管理员身份也不能越过来源禁止动作、版本不匹配或恢复验证要求。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "approval": {
+    "title": "人工审批、挂起与重定向",
+    "summary": "审批针对本次固定的目标和操作计划，处理结果决定下一步。",
+    "source": "审批人来自流程参与人规则；待办、计划快照和处理状态来自同一运行。",
+    "steps": "在用户端选择批准、拒绝转人工、退回补充或挂起；修改结论/动作后重新检查并审批。",
+    "result": "提交记录操作人、原因与时间；恢复时继续同一任务的配置路径。",
+    "exception": "过期计划、已办理待办或变更后的旧授权不能再次使用；挂起不等于批准，管理员代办需留原因。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "collect": {
+    "title": "补充信息与人工处理",
+    "summary": "遇到身份不明、数据缺口或需要现场处置时，暂停并收集必要信息。",
+    "source": "表单字段来自节点定义；已有信息和可选候选来自本次运行证据。",
+    "steps": "填写或选择补充内容，核对继续位置；允许按配置继续当前步骤或重新查询指定步骤。",
+    "result": "补充数据进入当前运行，成功证据保留，不自动写成主数据或模型关系。",
+    "exception": "必填缺失、候选不明确或超出权限时不继续；人工填写不能绕过设备身份和安全检查。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "run": {
+    "title": "运行中心与执行记录",
+    "summary": "一条记录对应一次业务执行，配置、输入、步骤和等待状态可以共同追溯。",
+    "source": "运行开始时固定流程及依赖版本；节点执行写入输入、输出、耗时、状态和证据。",
+    "steps": "先看当前状态与需要处理的事项，再展开节点或查询详情；用户端任务与后台共用记录。",
+    "result": "等待信息、审批或异步结果时继续同一运行，保留前后处理轨迹。",
+    "exception": "运行结束不一定等于业务恢复；异常、人工处置和恢复验证需要分别展示。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "verify": {
+    "title": "查询结果、操作回执与独立恢复",
+    "summary": "区分“接口调用成功”“操作完成”和“业务真正恢复”。",
+    "source": "请求时间、耗时、原始JSON、解析字段与后续状态查询来自本次运行记录。",
+    "steps": "先核对原请求回执；未知时查询原请求状态，之后通过独立告警和业务指标验证恢复。",
+    "result": "显示明确的结果、缺口与证据，满足恢复条件后才能关闭故障单。",
+    "exception": "超时或无回执不能自动判成功；没有状态查询能力时转人工核对，不能重复执行写操作。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "ticket": {
+    "title": "工单分派与审批职责",
+    "summary": "工单负责人负责跟进工单，当前审批人负责审批本次操作，两者分开管理。",
+    "source": "工单系统提供责任团队、负责人、状态和修订号；平台提供角色与成员范围。",
+    "steps": "管理员按授权范围分派，组长在团队内改派；填写原因后提交并通知相关人员。",
+    "result": "更新工单负责人和审计记录，审批人、操作计划与执行令牌保持不变。",
+    "exception": "已关闭、版本冲突、成员不适用或无权限时拒绝提交；保存失败保留输入。",
+    "boundary": "本版分派和通知为本地模拟；正式接入工单查询/分派API，由服务端再次检查权限和并发版本。"
+  },
+  "notification": {
+    "title": "通知与待办",
+    "summary": "通知提醒某件事发生了；真正办理需要打开对应的当前任务。",
+    "source": "通知来自任务状态变化、工单分派和本地示例；收件人按角色与参与范围确定。",
+    "steps": "查看通知后进入任务；标为已读只改变阅读状态；全部领域待办汇总可见任务。",
+    "result": "任务处理结果同时回显到数字人对话、任务列表和运行中心。",
+    "exception": "旧通知可能对应已办理或已变更待办，打开后必须展示当前状态，不能再次授权。",
+    "boundary": "原型通知保存在本浏览器，没有发送真实邮件、短信或平台消息。"
+  },
+  "template": {
+    "title": "场景模板与独立流程",
+    "summary": "模板保存可复用流程结构，使用时创建自己的流程草稿。",
+    "source": "模板来自已发布模板或满意流程的“发布为场景模板”。",
+    "steps": "先看适用范围与依赖，可只读试用；确认领域、负责人和参数后创建独立流程。",
+    "result": "新流程记录来源模板版本，后续可以独立修改。",
+    "exception": "模板升级不自动覆盖使用者改动；试用不会新增业务流程，缺少依赖要先解决。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "publish": {
+    "title": "保存草稿与发布检查",
+    "summary": "保存用于保留编辑；发布用于生成可稳定引用的版本。",
+    "source": "检查读取当前字段、节点连线、能力引用、版本、权限及业务约束。",
+    "steps": "先查看检查清单并修复问题，再确认发布。流程发布、启用与渠道发布按各自页面操作。",
+    "result": "新版本用于后续引用或新运行；在途运行继续使用原快照。",
+    "exception": "无修改时不应虚增版本；配置检查通过不保证真实接口可用，也不代表所有业务场景已验收。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "versions": {
+    "title": "固定版本、差异与恢复",
+    "summary": "固定版本让一次运行或引用不受后续草稿修改影响。",
+    "source": "版本来自对象、组件、流程或应用的发布记录；差异比较相应两个快照。",
+    "steps": "查看改动与影响后选择升级；恢复旧版先回到编辑区，再检查发布。",
+    "result": "历史记录保留当时使用的定义，不按当前最新配置重新解释。",
+    "exception": "来源版本不存在或字段不兼容时阻止替换；不能无提示地自动选择最新版本。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "import": {
+    "title": "配置导入与依赖映射",
+    "summary": "导入读取JSON中的对象或规格配置，并检查它能否在当前环境使用。",
+    "source": "内容来自上传文件或粘贴文本；外部依赖只能从内容里明确的引用解析出来。",
+    "steps": "解析配置，映射已有对象/资源，校验冲突及必填项，再确认导入为可编辑内容。",
+    "result": "展示将新增、匹配或调整的内容及处理结果，避免重复配置。",
+    "exception": "没有解析到引用时表示“在对象配置信息中暂未解析到外部依赖”，不保证实际业务没有依赖。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "agent": {
+    "title": "Agent配置与可调用流程",
+    "summary": "领域数字人组合能力与流程，在teleConnect中识别需求并发起业务。",
+    "source": "复用平台Agent、Digital Employees、Skill及已发布流程；流程说明提供适用范围和输入要求。",
+    "steps": "在Configuration选择能力和流程，填写清楚的用途、触发意图、参数及限制，再测试和发布。",
+    "result": "AI可推荐合适流程或通过服务接口调用，执行仍进入统一运行与任务机制。",
+    "exception": "Digital Employees是数字人可组合的能力，不等同整个OSS数字人；简单查询可直接调用MCP Tool。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "agentRelease": {
+    "title": "应用发布、可见范围与渠道",
+    "summary": "发布决定谁能看到数字人，以及通过哪个渠道或API使用它。",
+    "source": "成员、部门和身份来自平台组织；发布内容来自已确认的应用配置与固定流程引用。",
+    "steps": "先核对依赖，再设置可见范围、teleConnect渠道或API调用方式，确认发布。",
+    "result": "用户端展示有权限访问的已发布应用。",
+    "exception": "可见不等于拥有所有数据或操作权限；正式API还需认证、限流、审计和服务端授权。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "employees": {
+    "title": "Digital Employees与能力组合",
+    "summary": "Digital Employees用于绑定已有MCP及提示词，属于领域数字人可调用的能力层。",
+    "source": "定义应沿用平台现有Digital Employees管理，不在业务引擎再建一套同义资源。",
+    "steps": "应用配置选择相应能力，核对用途与工具范围；复杂流程由流程编排承担。",
+    "result": "同一能力可以服务多个领域应用，是否可调用仍受权限约束。",
+    "exception": "不能因为被OSS数字人引用就默认允许所有写工具；发布和调用权限需分别检查。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "cases": {
+    "title": "知识案例",
+    "summary": "把故障现象、诊断与处理经验整理为可复用案例。",
+    "source": "来源可为人工维护内容或流程整理的运行证据，示例案例需要保留来源标识。",
+    "steps": "查看案例依据与适用范围，再编辑和维护；流程产出的内容应先核实再作为正式知识。",
+    "result": "后续检索可引用适用案例，但不能将历史成功直接当作当前设备恢复证据。",
+    "exception": "完整审核、失效、知识库同步和检索权限需要正式知识服务支持；不能把展示条目等同已入生产库。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "clientChat": {
+    "title": "聊天与AI协作",
+    "summary": "在现有聊天入口中理解需求、查看结果，涉及业务任务时进入统一任务记录。",
+    "source": "聊天上下文来自当前会话和有权限的知识；业务结果来自Agent或流程。",
+    "steps": "输入需求，核对推荐操作及必要参数；遇到审批或缺口时打开对应任务处理。",
+    "result": "对话展示结果和进度入口，不另外维护一套审批状态。",
+    "exception": "涉及发送、写操作或权限不足时应明确提示；示例聊天不代表已经连接真实邮箱或消息服务。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "clientOss": {
+    "title": "OSS业务与故障处置",
+    "summary": "从外部设备与告警出发，查拓扑、采集证据、诊断并跟进处置。",
+    "source": "输入来自告警或用户，设备身份与关系来自可信资源系统，能力来自发布模型。",
+    "steps": "优先通过OSS数字人发起诊断并在“我的任务”跟进；传统OSS示例页展示原有运维场景。",
+    "result": "诊断、工单、审批和恢复验证关联到同一运行。",
+    "exception": "旧示例卡片与统一FBB运行的深度不同；显示“模拟”不能作为真实工单或设备操作完成证明。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "clientBigData": {
+    "title": "BigData问数与看板",
+    "summary": "用自然语言查询指标，确认口径后把结果保存到自己的看板。",
+    "source": "指标定义、数据权限与查询能力应来自ERP/Telebilling等已有平台服务；原型使用示例返回。",
+    "steps": "选择期间、维度等条件，查看数据来源和口径；保存看板后可再次打开分析结果。",
+    "result": "看板和分析任务保留结果及来源，便于复查。",
+    "exception": "没有数据、权限不足和查询失败要分别表达；不能由AI虚构指标或真实营收数据。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "clientMeet": {
+    "title": "会议、纪要与协作",
+    "summary": "整理会议纪要和行动项，并在分发前让有权限的人核对。",
+    "source": "会议内容、参与人和行动项来自当前任务输入及生成结果；成员来自平台组织。",
+    "steps": "编辑纪要、行动项、负责人和截止日期，确认收件人后提交；需要时保存草稿。",
+    "result": "确认结果与协作任务同步，分发记录保留发送范围与状态。",
+    "exception": "未确认不分发；不同任务的草稿不能串用，放弃修改后不应再次恢复。",
+    "boundary": "本地原型演示纪要和分发结果，没有连接真实会议或邮件发送服务。"
+  },
+  "clientSettings": {
+    "title": "个人设置与AI授权",
+    "summary": "设置用于表达个人偏好和允许AI协助的范围。",
+    "source": "当前设置与演示身份来自原型；正式身份、权限及偏好由平台服务保存。",
+    "steps": "调整可见选项后检查作用范围；演示身份切换只用于体验不同角色。",
+    "result": "个人体验可变化，领域安全限制与审批要求仍然生效。",
+    "exception": "切换身份不能继承上一人的待办表单，也不能视为真实登录或授权变更。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "clientCustomer": {
+    "title": "客户查询",
+    "summary": "在有权限的情况下关联客户、业务与相关服务信息。",
+    "source": "客户身份、账户及服务数据应来自CRM和相应业务系统；原型提供示例信息。",
+    "steps": "输入查询条件，确认客户后查看相关信息和下一步操作。",
+    "result": "结果需带来源，并可进入相应业务流程。",
+    "exception": "姓名相同或匹配多条时应确认身份；不能从一个客户自动跳到无权查看的其他客户。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "clientDigital": {
+    "title": "领域数字人工作区",
+    "summary": "同一个teleConnect入口承载不同领域的数字人，展示该领域真正需要的功能。",
+    "source": "可见应用来自Agent发布范围；会话、结果、看板与任务按当前身份和应用组织。",
+    "steps": "OSS使用业务对话和我的任务；BigData使用我的看板与分析任务；TeleConnect使用我的知识与协作任务。",
+    "result": "领域任务复用统一任务服务，通知可跨领域聚合。",
+    "exception": "切换数字人不能复用其他领域的草稿、筛选或未授权数据；未发布应用不应出现在可用列表。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "task": {
+    "title": "我的任务与处理权限",
+    "summary": "查看自己发起、参与、负责或待处理的业务，并继续当前需要人的步骤。",
+    "source": "任务来自统一运行记录；列表按领域、身份和授权范围筛选。",
+    "steps": "打开任务核对对象、证据、当前办理人和操作计划，再提交处理意见；返回保留查询条件。",
+    "result": "提交后同步对话和后台进度；我的工单与当前审批人分别展示。",
+    "exception": "管理员可在授权范围代办并留原因，但不能跳过设备安全条件；已办理任务不能重复提交。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "dashboard": {
+    "title": "我的看板",
+    "summary": "把有用的指标结果保存为个人可再次查看的展示。",
+    "source": "来源是已确认的查询结果、维度、期间、单位和指标口径。",
+    "steps": "命名看板、选择展示内容，再保存；后续查看原查询来源。",
+    "result": "看板归当前用户和领域使用，不把一次查询截图当成实时数据接口。",
+    "exception": "正式系统还需刷新策略、分享权限和失效提示；原型中的示例数字不是线上经营数据。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "knowledge": {
+    "title": "我的知识与检索来源",
+    "summary": "按当前用户权限查找知识，并保留答案依据。",
+    "source": "知识来自平台有权限的资料及示例引用，归属和检索权限需要由已有知识管理维护。",
+    "steps": "检索后查看来源，必要时回到原资料核对；不要只展示没有出处的结论。",
+    "result": "有依据的知识可用于对话或诊断参考。",
+    "exception": "当前无法访问或不存在的来源应说明；不能把示例引用当成已上传并索引的真实文档。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "testcase": {
+    "title": "测试样例",
+    "summary": "样例保存一组可重复使用的输入、模拟条件和预期结果。",
+    "source": "业务输入由使用者填写；FBB预置样例是原型补充，并引用诊断规则与模拟响应集。",
+    "steps": "选择样例自动带入试运行设置；临时修改不覆盖原样例，可另存或进入维护。",
+    "result": "运行后对照期望状态、分支或输出，保存测试记录及来源快照。",
+    "exception": "样例通过只证明该测试条件，不等于14类故障或所有生产条件都已验收；切换前提醒未保存修改。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "fixture": {
+    "title": "模拟接口响应",
+    "summary": "这里编辑测试时假装由外部系统返回的数据，不是在维护真实设备台账。",
+    "source": "资源拓扑、监测覆盖、告警及指标样例来自带来源说明和版本的模拟响应集。",
+    "steps": "检查或编辑JSON、来源说明及适用范围，校验后保存；返回试运行保留业务输入。",
+    "result": "新的测试使用保存后的响应；已经开始的运行保留原始快照。",
+    "exception": "模拟数据缺字段或与模型不匹配时应在测试中暴露，不能自动造出缺少的对象定义。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "diagnostic": {
+    "title": "诊断规则与14类故障依据",
+    "summary": "规则描述需要哪些证据、怎样判断及建议如何处理，而不是预先指定真实根因。",
+    "source": "14类名称及诊断方法来自客户流程图；阈值、责任团队、SLA和绑定实现是原型补充或待确认项。",
+    "steps": "在现有规则页维护证据需求、判断条件、适用范围和来源说明；测试样例选择相应规则。",
+    "result": "AI或规则分析读取这些配置并给出带证据的结果。",
+    "exception": "客户侧LAN、电源、CPE等问题不直接创建网络故障TT；按配置建信息类TT或转交责任团队。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "source": {
+    "title": "依据来源与维护入口",
+    "summary": "标明哪些来自客户、哪些是补充示例、哪些仍需确认。",
+    "source": "来源记录包括名称、文档定位、适用范围、补充说明和待确认内容。",
+    "steps": "从规则或测试打开来源；维护相关配置后返回原页面；历史运行查看自己的来源快照。",
+    "result": "开发和验收可以分清业务依据与演示数据。",
+    "exception": "没有原始文件或明确依据时如实标记；不能将助手补充的阈值当成客户已经确认的要求。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "impact": {
+    "title": "引用影响与继承来源",
+    "summary": "修改前看谁正在引用这项配置，判断需要同步调整哪些地方。",
+    "source": "引用来自对象、组件、流程、Agent及其固定版本；继承来源来自对象类型与实现配置。",
+    "steps": "查看直接引用、继承来源和字段变化；按提示回到原配置修复或选择升级。",
+    "result": "影响提示帮助维护，但不会自动更改所有被引用流程或在途任务。",
+    "exception": "没有找到引用不代表外部系统绝对没有依赖；不可用或越权引用应单独提示。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "delete": {
+    "title": "删除与停用",
+    "summary": "删除或停用会影响后续使用，先看对象与引用范围再确认。",
+    "source": "当前条目状态和引用检查来自相应列表及发布记录。",
+    "steps": "核对名称、影响和限制，再执行页面提供的操作。",
+    "result": "界面返回明确结果；正式系统应保留必要的版本和审计。",
+    "exception": "被引用或无权限时不应直接删除；历史运行证据不能随配置删除而消失。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "leave": {
+    "title": "未保存修改与返回",
+    "summary": "离开编辑前明确保存、放弃还是继续编辑，避免丢失或恢复错误草稿。",
+    "source": "比较当前编辑与打开时基线；任务表单还应绑定任务、身份与待办版本。",
+    "steps": "无修改直接返回；有修改时按提示选择，保留原页面上下文。",
+    "result": "保存保留草稿，放弃恢复基线并清除临时表单，继续编辑不跳转。",
+    "exception": "保存失败不能当成已保存；不同任务、角色或版本的草稿不能互相套用。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "metadata": {
+    "title": "创建与更新时间",
+    "summary": "这些字段帮助追踪谁创建、何时修改，通常由系统记录。",
+    "source": "创建人取当前登录身份，时间取服务端记录；本原型使用本地演示身份与时间。",
+    "steps": "创建时记录来源与创建信息；实际保存有效变更后更新修改信息。",
+    "result": "列表和详情显示同一记录的信息。",
+    "exception": "不能把查看时间当成更新时间；未修改的保存不应生成虚假的变更历史。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "zoom": {
+    "title": "画布缩放与定位",
+    "summary": "缩放只改变查看比例，不改变节点参数和业务连线。",
+    "source": "视角来自当前画布缩放与平移状态。",
+    "steps": "在图谱或流程画布内用Ctrl/Command加滚轮或加减键缩放，也可适应画布和定位选中。",
+    "result": "用户更容易查看全局结构或局部节点。",
+    "exception": "输入框、代码编辑区输入加减号时不应触发画布缩放；缩放不能吞掉正常页面滚动。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "legacy": {
+    "title": "保留的历史示例",
+    "summary": "此入口用于查看早期示例或兼容旧记录，不是新增一套当前业务配置。",
+    "source": "内容来自原型保留的数据与历史定义；请以当前主流程和运行记录为主要开发参考。",
+    "steps": "核对所在示例、版本和当前是否只读；需要新业务时复用现有对象与通用节点。",
+    "result": "旧记录仍可理解，避免迁移后失去上下文。",
+    "exception": "旧界面的成功文字不能当成真实外部执行证明；缺少证据或接口时应明确待接入。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "service": {
+    "title": "流程描述与服务调用",
+    "summary": "描述帮助AI判断何时推荐流程，服务定义帮助系统以固定参数调用流程。",
+    "source": "流程名称、描述、适用意图、输入输出和发布版本来自当前流程。",
+    "steps": "写清用途和限制，复用开始与结束节点的参数，选择可调用范围与发布版本。",
+    "result": "Agent可推荐或调用流程；运行仍遵守同一审批和结果校验。",
+    "exception": "自然语言命中只是推荐依据；缺参数时应收集信息，不能自动猜测设备或执行危险动作。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "batch": {
+    "title": "循环与批处理",
+    "summary": "对输入数组逐项处理，批处理可控制并发，循环按顺序执行。",
+    "source": "数组来自上游输出；被调用组件及版本来自节点配置。",
+    "steps": "设置次数和并发上限，给每项绑定参数，并分别记录成功、失败和超时。",
+    "result": "返回逐项结果及汇总状态，供后续检查。",
+    "exception": "部分失败不能伪装全部成功；需要限制重试和取消行为，写操作须满足原有授权。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "merge": {
+    "title": "变量聚合与字段赋值",
+    "summary": "整理不同分支的数据，不负责等待所有并行任务完成。",
+    "source": "读取配置的上游字段或固定值。",
+    "steps": "按指定顺序或映射规则选择、赋值，输出稳定字段名称。",
+    "result": "后续节点使用统一的变量路径。",
+    "exception": "变量聚合不能代替并行汇合；空值、未执行分支和失败状态需要分别识别。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "text": {
+    "title": "文本与JSON转换",
+    "summary": "把已有内容整理为目标格式，不创造新的业务事实。",
+    "source": "原始文本、JSON对象及转换规则来自输入配置。",
+    "steps": "选择拼接、清理、序列化或解析方式，再查看样例结果。",
+    "result": "返回处理后的文本或结构化数据。",
+    "exception": "JSON格式错误或必需字段缺失时应报错；转换成功不代表内容业务正确。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "sql": {
+    "title": "只读数据查询",
+    "summary": "通过授权数据源取得结构化结果供分析使用。",
+    "source": "数据源、参数化SQL和参数来自节点配置；数据权限来自平台。",
+    "steps": "绑定查询参数，限制返回范围，检查列类型和结果。",
+    "result": "返回行列数据及执行信息。",
+    "exception": "禁止把用户输入直接拼成SQL；空结果、超时与无权限分别处理。",
+    "boundary": "原型使用配置与模拟结果；真实数据库连接、查询限制和权限需后端实现。"
+  },
+  "subflow": {
+    "title": "子流程与异步任务",
+    "summary": "把可复用或耗时步骤交给独立流程执行，并保留父子关联。",
+    "source": "子流程选择已发布版本，输入由父流程参数映射。",
+    "steps": "提交后记录子任务编号，按配置等待结果或继续；明确超时、失败与取消路径。",
+    "result": "父流程可引用子流程输出并追溯执行记录。",
+    "exception": "子流程失败不能当作父流程成功；重复回调必须去重，在途版本保持固定。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "end": {
+    "title": "结束节点与返回结果",
+    "summary": "结束当前路径，向调用者返回明确的业务结果。",
+    "source": "返回字段从本次实际执行过的节点读取。",
+    "steps": "映射结果、业务状态和必要说明，保存运行记录。",
+    "result": "Agent或API收到结构化返回；任务列表显示最终状态或后续业务事项。",
+    "exception": "流程技术结束不等于故障已经恢复；未产生的数据不能伪造返回。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "history": {
+    "title": "会话历史与消息输出",
+    "summary": "为当前任务读取允许的上下文，或向当前会话展示阶段进度。",
+    "source": "历史来自有权限的当前会话，输出内容来自本次节点结果。",
+    "steps": "限定读取范围和条数；输出前核对接收会话与内容。",
+    "result": "用户可在对话里理解进展，不需要不断进入后台。",
+    "exception": "不可读取无权访问的聊天，也不能把阶段消息当成最终执行成功。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "fieldValue": {
+    "title": "参数值与默认值",
+    "summary": "字段名负责定位数据，业务说明帮助人理解，固定值和默认值负责不同的取值方式。",
+    "source": "引用变量从上游路径读取；固定值由本节点明确设置；默认值只在允许缺省时使用。",
+    "steps": "先选取值方式，再填写值或引用路径；必填、类型和默认值规则一起检查。",
+    "result": "执行记录展示实际解析后的值及来源，不靠中文标签猜测取值。",
+    "exception": "空字符串不一定等于未传入；默认值不能悄悄替代无法解析的设备身份或安全信息。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "description": {
+    "title": "名称与业务说明",
+    "summary": "名称用于识别，说明用于解释用途、适用场景或字段含义。",
+    "source": "基础组件或能力可以提供默认说明；本流程可保存自己的业务说明。",
+    "steps": "写明此处解决什么问题和适用限制；字段中文含义应对应description等说明属性。",
+    "result": "展示名改变不应改变稳定标识；本流程说明不会反向覆盖基础组件。",
+    "exception": "说明不是数据来源，也不是权限配置；没有填写时显示未填写，不猜测其业务含义。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "runtimeModel": {
+    "title": "固定对象与动态对象",
+    "summary": "固定对象选择已定义的模型；动态对象从上游取得模型标识，再匹配其发布能力。",
+    "source": "模型标识来自可信的身份或拓扑解析结果，实际设备编号通过能力输入传入。",
+    "steps": "普通接口可固定对象；批量采集按每个目标的类型、规格与版本匹配实现。",
+    "result": "同一基础对象能力组件可以处理不同设备或其他领域对象。",
+    "exception": "模型编号不等于设备编号；不能让用户随意传入的模型名绕过版本、能力范围和权限检查。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "response": {
+    "title": "响应解析与字段映射",
+    "summary": "把接口原始返回转换为节点能使用的字段，并校验返回结构。",
+    "source": "默认沿用所引用固定能力版本的响应定义；显式覆盖时应清楚标记本节点设置。",
+    "steps": "选择JSON或文本解析方式，配置业务字段路径；使用样例JSON检查映射结果。",
+    "result": "输出列表和执行记录回显解析值，原始报文仍可追溯。",
+    "exception": "HTTP状态成功不保证业务成功；路径不存在、类型错误或无效JSON进入异常处理，不伪造默认成功。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  },
+  "identity": {
+    "title": "实例身份与版本匹配",
+    "summary": "型号描述一类产品，实际资源编号才能定位正在操作的那一个实例。",
+    "source": "来源系统与资源编号来自外部消息或用户；实际型号、版本和管理入口由可信系统返回。",
+    "steps": "查询唯一身份，核对类型、规格、软硬件版本及可用实现，再查询关联资源。",
+    "result": "把明确身份和适用实现传给后续采集或处置。",
+    "exception": "缺失、多个候选、未知版本或拓扑缺口都要暂停或转人工，不能仅凭型号下发指令。",
+    "boundary": "此处说明原型的交互与开发意图。外部服务未接入的部分须以页面的“模拟”或“待接入”标识为准。"
+  }
+};
+// Contextual developer notes. Independent of business drafts, routing and the modal stack.
+const NOTE66={enabled:false,open:false,key:'',label:'',anchor:null,tipTimer:0,scheduled:false};
+try{NOTE66.enabled=localStorage.getItem('teleconnect-dev-notes66')==='on';}catch{}
+const NOTE_MODAL66={};
+function noteMap66(topic,ids){for(const id of ids.split(/\s+/).filter(Boolean))NOTE_MODAL66[id]=topic;}
+noteMap66('domain','scopeLeave24 domainInventory24 domainForm24 domainReparent24 domainImpact24 domainStatus24 domainDelete24 assetScope24 assetConfirm24 chooseOwner24 categoryScope24 domainRules34');
+noteMap66('category','ncCategories23');
+noteMap66('object','objectRead55 objectInspect56 typeMore42 publishedDefinition36 model41');
+noteMap66('spec','record42 trial42 catalogPublish41');
+noteMap66('specSchema','profile42');
+noteMap66('capability','function29 capability29 interface29 nodeCapability51 impl41 implementation42 readiness36 resolve41 resolve42');
+noteMap66('event','event62 relatedTriggers62');
+noteMap66('relation','relation37 graphDraft56 graphPair56 graphLine56');
+noteMap66('instance','identity36 queryLibrary30 query30 match43');
+noteMap66('evidence','evidenceChoose32 queryDetail33 queryEvidence55 factHistory55 factsHistory43 evidence53');
+noteMap66('registry','ncChoose23 nodeInfo51 nodeBase51 ncCozeGuide23 nodeNavigate56');
+noteMap66('resource','ncResources23 ncResourceDetail23');
+noteMap66('generate','ncGenerate23');
+noteMap66('code','codeIDE28');
+noteMap66('params','inspectContract29 diagnosticContract55 contract56');
+noteMap66('paramRef','upstream39 nodeSources47');
+noteMap66('paramJSON','json40 definitionCode42');
+noteMap66('flow','createFlow59 findNode29 flowExamples35 flowGuide47');
+noteMap66('trigger','subscription30 trace62');
+noteMap66('collection','collectionOverview44 collectionRecords50');
+noteMap66('diagnostic','diagnostics55 fbbConfig34 scenarios40 scenario31 fbbSource36');
+noteMap66('gate','execution34 policy31 policyTest31');
+noteMap66('approval','fbbModifyPlan34 transfer62');
+noteMap66('collect','gap30 tasks30');
+noteMap66('run','runDetail25 taskProgress53 runHelp35');
+noteMap66('verify','resultChecks54 accept31 acceptanceList31');
+noteMap66('ticket','ticketAssign66 dispatch ttRevise order41');
+noteMap66('notification','notifications49');
+noteMap66('template','templateDetail27 templateWizard27 templateUpgrade27 templatePublish56 templateCreated56');
+noteMap66('publish','objectPublish25 objectPublish37 publish27 publish42 checklist58');
+noteMap66('versions','versions25 versions27 restore27 upgrade53');
+noteMap66('import','import36 import42');
+noteMap66('agent','binding25 agentPlan25');
+noteMap66('agentRelease','appPublish26');
+noteMap66('employees','employees26');
+noteMap66('cases','caseEdit36 caseDetail36 caseHelp36');
+noteMap66('clientMeet','meet meetingEdit36 meetingDoc36');
+noteMap66('clientSettings','demoIdentity36');
+noteMap66('clientDigital','request63');
+noteMap66('task','clientTask49');
+noteMap66('dashboard','dashboard63');
+noteMap66('knowledge','source63');
+noteMap66('testcase','testCases29 nodeTest38 ncTest23 unit40 trial40 trial43 fbbTrial34 demoTask49 demo30 demoBusiness31');
+noteMap66('fixture','fixtures43 domainFixtures43 diagnosticFixtures55');
+noteMap66('source','source66 runSource66');
+noteMap66('impact','impact27 ncRefs23 references47 sources47 fieldImpact29 fieldImpact50');
+noteMap66('delete','del rdel ncDelete23');
+noteMap66('leave','wfLeave appLeave26 ncLeave23 ncNavigate23 objectLeave37 editLeave65');
+noteMap66('metadata','metadata55 metadata59');
+noteMap66('legacy','group48 groups49 groupEdit49 groupDetails49 groupEdge49 groupRecord49 runGroups49 fbbOverview37 instance41 runLegacy35');
+noteMap66('service','service40 service42');
+noteMap66('guide','logic27 action27 form');
+noteMap66('capability','httpTest');
+const NOTE_PAGE66={domains:'domain',objTypes:'category',objs:'object',graph:'graph',ruleNodes:'registry',resources:'resource',rules:'flow',tpls:'template',applications26:'agent',runs:'run',cases:'cases'};
+const NOTE_CLIENT66={inbox:'task',chat:'clientChat',meeting:'clientMeet',bigdata:'clientBigData',oss:'clientOss',cq:'clientCustomer',agents25:'clientDigital',settings:'clientSettings'};
+const NOTE_NODE66={start:'start',query:'capability',check:'condition',kb:'knowledge',llm:'ai',classify:'condition',if:'condition',sub:'subflow',func:'capability',confirm:'approval',notify:'notification',case:'cases',end:'end',cap40:'capability',map40:'params',route40:'condition',analyze40:'ai',gate40:'gate',collect40:'collect',norm43:'normalize',plan44:'collection',aggregate44:'normalize',evidence45:'evidence'};
+const NOTE_KIND66={collect:'collect',http:'capability',python:'code',jar:'code',assign:'merge',merge:'merge',loop:'batch',batch:'batch',output:'history',mcp:'resource',skill:'resource',agent:'resource',object:'capability',text:'text',serialize:'text',parse:'text',sql:'sql',history:'history',async:'subflow',relation25:'relation',fbb34:'legacy',prompt:'ai'};
+function noteNode66(n){if(!n)return 'registry';if(n.cfg?.collection50)return 'collection';if(n.cfg?.ai48)return 'ai';return NOTE_NODE66[n.type]||NOTE_KIND66[baseNode51(n).definition?.kind]||'registry';}
+function notePage66(){if(S.app==='client'){if(S.mod==='agents25'){if(C63.tab==='tasks')return 'task';if(C63.tab==='dashboards')return 'dashboard';if(C63.tab==='knowledge')return 'knowledge';return ({oss:'clientOss',bigdata:'clientBigData',teleconnect:'clientMeet'})[currentDomain63()]||'clientDigital';}return NOTE_CLIENT66[S.mod]||'guide';}if(S.wf?.d)return 'flow';if(S.adm.page==='graph'&&V43.graphTab==='runtime')return 'instance';if(S.adm.page==='objs'&&S.adm.ob)return ({capabilities:'capability',events:'event',relations:'relation',queries:'instance',specs:'spec'})[objectTab55()]||'object';if(S.adm.page==='rules'&&(V30.page==='triggers'||UI61.edit))return 'trigger';if(S.adm.page==='applications26'&&B26.page!=='list')return 'agent';return NOTE_PAGE66[S.adm.page]||'guide';}
+function noteModal66(type=S.modal?.type,data=S.modal?.data){if(type==='form')return ({ob3:'object',p3:'params',f3:'capability',e3:'event',r3:'relation',kc:'cases',ot3:'category',query3:'instance'})[data?.key]||notePage66();if(type==='action27'){const t=String(data?.title||data?.text||data?.message||'');return /删除|移除/.test(t)?'delete':/发布|启用/.test(t)?'publish':/审批|批准|拒绝/.test(t)?'approval':/放弃|离开|未保存/.test(t)?'leave':'guide';}if(['nodeInfo51','nodeBase51','nodeTest38'].includes(type)){const n=S.wf?.d&&wn(S.wf.d,NODEINFO51.node||S.wf.sel);return n?noteNode66(n):NOTE_MODAL66[type];}return NOTE_MODAL66[type]||notePage66();}
+function noteDetails66(key){return NOTE_CONTENT66[key]||NOTE_CONTENT66.guide;}
+function noteContext66(){const rows=[];try{if(S.app==='admin'&&S.wf?.d){rows.push(['当前流程',S.wf.d.name],['编辑状态',S.wf.readOnly27?'只读体验':S.wf.dirty?'有未保存修改':'当前草稿 / 以页面版本状态为准']);const n=wn(S.wf.d,S.wf.sel||NODEINFO51.node);if(n){const b=baseNode51(n);rows.push(['当前节点',n.name],['基础组件',b.name],['组件版本',b.version||'内置或尚未固定'],['本次业务说明',nodeDescription51(n)]);if(n.type==='cap40'){if(n.cfg.collection50){rows.push(['采集方式',n.cfg.collection50.mode==='alarms'?'按拓扑动态查询多源告警':'按诊断证据需求动态采集'],['固定模型数量',String(Object.keys(n.cfg.objectVersions40||{}).length)]);}else{const c=fixedCapability51(n);rows.push(['对象能力',`${c.o?.name||c.id||'尚未选择'} / ${c.f?.name||n.cfg.function||'尚未选择'}`],['引用对象版本',c.version||'尚未固定']);if(c.f)rows.push(['调用定义',`${c.f.method||'未定义方法'} ${c.f.url||c.f.path||'路径见能力定义'}`]);}}if(n.cfg.ai48){const c=n.cfg.ai48;rows.push(['AI来源',`${c.kind==='agent'?'Agent':'大模型'} · ${aiResource48(c)?.name||c.id||'尚未选择'}`],['AI版本',c.version||'尚未固定']);}const inputs=n.cfg.io39?.inputs||[],outputs=n.cfg.io39?.outputs||[];if(inputs.length||outputs.length)rows.push(['本节点字段',`${inputs.length}个输入 / ${outputs.length}个输出`]);}}
+if(S.app==='admin'&&S.adm.page==='rules'&&UI61.edit&&V30.subscription){const t=V30.subscription,r=targetRelease30(t);rows.push(['当前触发',t.name],['事件来源',t.source||'尚未配置'],['事件对象',obBefore25(t.objectId)?.name||t.objectId||'尚未选择'],['事件编码',t.eventType||'尚未选择'],['事件定义版本',t.objectVersion||'尚未固定'],['目标流程',r?.definition?.name||'尚未选择可用发布版'],['流程版本',r?.version||t.flowVersion||'尚未固定']);}
+if(S.app==='admin'&&S.adm.page==='objs'&&S.adm.ob){const o=obBefore25(S.adm.ob);rows.push(['当前对象',o?.name||S.adm.ob],['查看状态',OBJ55.mode==='edit'?'编辑草稿':OBJ55.version==='draft'?'已保存草稿 · 只读':`发布版 ${OBJ55.version} · 只读`]);}
+const id=S.modal?.data?.id,r=id&&runBy25(id);if(r&&['runDetail25','clientTask49','ticketAssign66','taskProgress53','resultChecks54'].includes(S.modal.type)){rows.push(['运行编号',r.id],['运行版本',r.version||'见运行快照'],['当前状态',STATUS25[r.status]||r.status],['当前待办处理人',r.waiting?.assignee||'当前无待办']);const t=ticketRecord66(r);if(t)rows.push(['工单负责人',t.assignee66||'待分派'],['责任团队',t.owner_team||'待查询']);}
+if(S.app==='client')rows.push(['当前身份',B25.actor],['业务领域',S.mod==='agents25'?domainLabel63(currentDomain63()):'按当前页面与权限筛选']);
+}catch(e){rows.push(['当前引用','无法解析，请回到原配置核对；说明不会自动替换配置。']);}return rows.filter(x=>x[1]!=null);}
+function noteBadge66(key,label,cls=''){return `<button type="button" class="dn66-badge ${cls}" data-note66="${esc(key)}" data-label66="${esc(label||noteDetails66(key).title)}" aria-label="开发说明：${esc(label||noteDetails66(key).title)}">i</button>`;}
+const noteTopBefore66=topbar;topbar=()=>{let h=noteTopBefore66();if(S.simMenu)h=h.replace('<div class="menu">',`<div class="menu"><button data-a="devToggle66"><b>开发注释 · ${NOTE66.enabled?'已开启':'已关闭'}</b><span>开启后悬浮ⓘ看摘要，点击查看详细逻辑</span></button><button data-a="devPage66"><b>本页功能说明</b><span>数据来源、操作结果与开发边界</span></button>`);return h;};
+// Opening the explanation menu must not rerender partially filled business forms.
+A.simMenu=()=>{S.simMenu=!S.simMenu;const h=document.querySelector('header.topbar');if(h)h.outerHTML=topbar();};
+A.devToggle66=()=>{NOTE66.enabled=!NOTE66.enabled;try{localStorage.setItem('teleconnect-dev-notes66',NOTE66.enabled?'on':'off');}catch{}S.simMenu=false;document.querySelector('.menu-wrap .menu')?.remove();noteHideTip66();if(!NOTE66.enabled)noteClose66();if(!NOTE66.enabled)document.querySelectorAll('.dn66-badge').forEach(e=>e.remove());noteDecorate66();toast(NOTE66.enabled?'开发注释已开启：悬浮看摘要，点击看完整逻辑':'开发注释已关闭');};
+A.devPage66=()=>{S.simMenu=false;document.querySelector('.menu-wrap .menu')?.remove();noteOpen66(S.modal?noteModal66():notePage66(),S.modal?'当前弹窗':'本页功能说明');};
+A.logic27=A.devPage66;
+// Allow old routes to the help modal to keep working without stale version wording.
+MODALS.logic27=()=>{const k=notePage66(),n=noteDetails66(k);return modal40(n.title,`<p>${esc(n.summary)}</p>${noteSections66(n)}`,btn42('关闭','close'),true);};
+function noteSections66(n){return [['数据从哪里来',n.source],['怎样操作与处理',n.steps],['完成后得到什么',n.result],['异常与限制',n.exception],['原型与正式开发',n.boundary]].map(([h,p])=>`<section><h4>${h}</h4><p>${esc(p)}</p></section>`).join('');}
+function noteShell66(){let e=document.getElementById('devNotes66');if(e)return e;e=document.createElement('aside');e.id='devNotes66';e.className='dn66-drawer';e.setAttribute('role','dialog');e.setAttribute('aria-label','开发功能说明');e.setAttribute('aria-modal','false');e.hidden=true;document.body.appendChild(e);return e;}
+function noteOpen66(key,label,anchor){NOTE66.open=true;NOTE66.key=key;NOTE66.label=label||'';NOTE66.anchor=anchor||document.activeElement;NOTE66.fingerprint=noteFingerprint66();noteHideTip66();const e=noteShell66();e.hidden=false;noteDraw66();e.querySelector('[data-note-close66]')?.focus({preventScroll:true});}
+function noteDraw66(){const e=noteShell66(),n=noteDetails66(NOTE66.key),rows=noteContext66();e.innerHTML=`<header><div><small>开发说明 · 不修改业务配置</small><h3>${esc(n.title)}</h3></div><button type="button" data-note-close66 aria-label="关闭开发说明">×</button></header><div class="dn66-body" data-scroll="devNotes66"><p class="dn66-summary">${esc(n.summary)}</p>${NOTE66.label?`<div class="dn66-location">说明位置：${esc(NOTE66.label)}</div>`:''}${rows.length?`<details class="dn66-current" open><summary>当前配置与来源</summary><dl>${rows.map(([k,v])=>`<dt>${esc(k)}</dt><dd>${esc(v)}</dd>`).join('')}</dl></details>`:''}${noteSections66(n)}<details class="dn66-index"><summary>查找其他功能说明 · ${Object.keys(NOTE_CONTENT66).length}项</summary><input aria-label="搜索开发说明" placeholder="搜索功能，例如：工单、事件、审批" data-note-search66><div>${Object.entries(NOTE_CONTENT66).map(([key,v])=>`<button type="button" data-note-link66="${key}">${esc(v.title)}</button>`).join('')}</div></details></div><footer><span>说明不提交表单、不启动流程</span><button type="button" data-note-close66>返回原操作</button></footer>`;}
+function noteClose66(){NOTE66.open=false;const e=document.getElementById('devNotes66');if(e)e.hidden=true;const a=NOTE66.anchor;NOTE66.anchor=null;if(a?.isConnected)a.focus?.({preventScroll:true});}
+function noteHideTip66(){clearTimeout(NOTE66.tipTimer);document.getElementById('devTip66')?.remove();document.querySelectorAll('[aria-describedby="devTip66"]').forEach(e=>e.removeAttribute('aria-describedby'));}
+function noteTip66(b,instant=false){noteHideTip66();if(!b||!NOTE66.enabled)return;const show=()=>{if(!b.isConnected)return;const t=document.createElement('div');t.id='devTip66';t.className='dn66-tip';t.setAttribute('role','tooltip');t.textContent=noteDetails66(b.dataset.note66).summary+' 点击查看处理逻辑。';document.body.appendChild(t);b.setAttribute('aria-describedby','devTip66');const r=b.getBoundingClientRect(),w=t.getBoundingClientRect();t.style.left=Math.max(10,Math.min(r.left,window.innerWidth-w.width-12))+'px';t.style.top=(r.bottom+w.height+10<window.innerHeight?r.bottom+8:Math.max(8,r.top-w.height-8))+'px';};if(instant)show();else NOTE66.tipTimer=setTimeout(show,350);}
+const NOTE_SECTION66=[[/发生什么时触发|多个流程同时命中|重复事件|消息版本/,'trigger'],[/启动哪个流程/,'versions'],[/把哪些数据传入流程|事件字段对应/,'paramRef'],[/检查与模拟/,'testcase'],[/事件数据定义/,'event'],[/^基本信息$/,'description'],[/^对象属性/,'params'],[/实例身份|实例定位约定/,'identity'],[/维护信息/,'metadata'],[/下一步/,'condition'],[/^(输入|输出|输入输出|返回参数|请求参数|响应参数|字段定义|参数定义)(\s|$|[（(·\d])/,'params'],[/上游数据|引用变量|参数来源|子字段路径/,'paramRef'],[/JSON|统一定义|定义代码/,'paramJSON'],[/异常处理|执行与异常|超时|重试/,'exception'],[/处理配置|对象能力|功能定义|接口配置|能力实现/,'capability'],[/规格字段|类型与规格设置/,'specSchema'],[/型号|规格配置|规格记录/,'spec'],[/事件定义|对象事件/,'event'],[/关系配置|新增关系|关联条件/,'relation'],[/模型关系|全局对象关系|对象聚焦/,'graph'],[/实例探索|外部设备|实际拓扑/,'instance'],[/采集.*证据|查询记录|诊断依据|来源证据/,'evidence'],[/执行记录|执行过程|运行详情/,'run'],[/测试样例|试运行|模拟测试/,'testcase'],[/模拟.*响应|模拟指标/,'fixture'],[/诊断规则|故障场景/,'diagnostic'],[/审批|操作计划|处理意见/,'approval'],[/分派记录|工单负责人/,'ticket'],[/恢复参数/,'params'],[/恢复结果|业务恢复|恢复验证|结果校验|操作回执/,'verify'],[/发布检查|检查清单/,'publish'],[/归属|共享|执行约束/,'domain'],[/引用影响|继承来源|引用检查/,'impact'],[/固定版本|版本与差异/,'versions'],[/可调用流程|描述与服务/,'service'],[/创建时间|更新时间|创建人/,'metadata'],[/代码/,'code'],[/AI.*分析|根因/,'ai'],[/配置保存|保存草稿/,'publish']];
+const NOTE_ACTION66={wfChk:'publish',objectPublish25:'publish',wfSave:'publish',publish27:'publish',ncPublish:'publish',trial40:'testcase',testCases29:'testcase',fixtures43:'fixture',diagnostics55:'diagnostic',subscription30:'trigger',ticketAssign66:'ticket',taskTransfer62:'approval',profileOpen42:'specSchema',definitionCode42:'paramJSON',graphFrom42:'graph',objectEvent55:'event',references47:'impact',service40:'service',templatePublish56:'template',obImport36:'import'};
+function noteMark66(el,key,label){if(!el||el.closest('#devNotes66,#devTip66,.dn66-badge,.menu,.v38-menu,.wfn'))return;if(el.querySelector?.(':scope > .dn66-badge')||el.nextElementSibling?.classList?.contains('dn66-badge'))return;const b=document.createElement('button');b.type='button';b.className='dn66-badge';b.dataset.note66=key;b.dataset.label66=label||noteDetails66(key).title;b.setAttribute('aria-label','开发说明：'+b.dataset.label66);b.textContent='i';// Keep business buttons separate; a summary marker handles its own click without toggling the section.
+if(el.matches('button,input,select,textarea,label')){el.insertAdjacentElement('afterend',b);}else el.appendChild(b);}
+function noteDecorate66(){if(!NOTE66.enabled||typeof document.querySelectorAll!=='function')return;const areas=[document.getElementById('root'),...document.querySelectorAll('.overlay .modal,[role="dialog"]')].filter(x=>x&&x.id!=='devNotes66');for(const area of areas){if(area.closest?.('#devNotes66'))continue;const isModal=area.matches?.('[role="dialog"],.modal'),key=isModal?noteModal66():notePage66();const h=area.querySelector(isModal?'.mh h3,.mh h2,h3,h2':'.page-title h1,.o55-title h1,.c63-header h2,.p64-title h1,h1,h2,.convhd .col>b');if(h)noteMark66(h,key,h.textContent.trim());for(const el of area.querySelectorAll('h3,h4,summary,.n51-description label,.ta66-head strong')){if(el.closest('.wfn,.menu,#devNotes66'))continue;const txt=el.textContent.replace(/^[›▾▶\s]+/,'').replace(/\s+/g,' ').trim(),match=NOTE_SECTION66.find(([re])=>re.test(txt));if(match)noteMark66(el,match[1],txt);}
+// One marker per action family per surface, never one on every repeated row.
+const seen=new Set();for(const el of area.querySelectorAll('button[data-a]')){const action=el.dataset.a,k=NOTE_ACTION66[action];if(!k||seen.has(k)||el.closest('.wfn,.menu,.o55-tabs,.c63-tabs,.wfbar,td'))continue;seen.add(k);noteMark66(el,k,el.textContent.trim());}}
+if(S.wf?.d&&S.wf.sel){const n=wn(S.wf.d,S.wf.sel),header=document.querySelector('.e50-head,.wfpanel .ph,.wfpanel header,.p40-panel .ph,.u47-nodehead');if(n){const anchor=header||document.querySelector('button[data-a="nodeInfo51"]');if(anchor)noteMark66(anchor,noteNode66(n),n.name);}}
+}
+function noteFingerprint66(){return JSON.stringify([S.app,S.mod,S.adm.page,S.adm.ob,S.wf?.d?.id,S.wf?.sel,S.modal?.type,S.modal?.data?.id,S.modal?.data?.key,V43.graphTab,S.adm.obTab,S.adm.tmTab,OBJ55.mode,OBJ55.version,B25.actor,S.app==='client'&&S.mod==='agents25'?currentDomain63():'',typeof C63!=='undefined'?C63.tab:'']);}
+function noteSchedule66(){if(NOTE66.scheduled)return;NOTE66.scheduled=true;requestAnimationFrame(()=>{NOTE66.scheduled=false;if(NOTE66.open&&NOTE66.fingerprint!==noteFingerprint66())noteClose66();noteDecorate66();});}
+if(typeof MutationObserver!=='undefined'){new MutationObserver(ms=>{if(ms.every(m=>m.target.closest?.('#devNotes66,#devTip66')||[...m.addedNodes,...m.removedNodes].every(n=>n.nodeType===1&&(n.classList?.contains('dn66-badge')||n.id==='devTip66'||n.id==='devNotes66'))))return;noteHideTip66();noteSchedule66();}).observe(document.body,{childList:true,subtree:true});}
+document.addEventListener('pointerdown',e=>{if(e.target.closest?.('.dn66-badge,#devNotes66'))e.stopPropagation();},true);
+document.addEventListener('click',e=>{const b=e.target.closest?.('[data-note66],[data-note-close66],[data-note-link66]');if(b){e.preventDefault();e.stopImmediatePropagation();if(b.hasAttribute('data-note-close66'))noteClose66();else noteOpen66(b.dataset.note66||b.dataset.noteLink66,b.dataset.label66||'',b);return;}if(e.target.closest?.('#devNotes66'))e.stopPropagation();},true);
+document.addEventListener('input',e=>{if(e.target.matches?.('[data-note-search66]')){const q=e.target.value.trim().toLowerCase();document.querySelectorAll('[data-note-link66]').forEach(b=>b.hidden=!b.textContent.toLowerCase().includes(q));e.stopImmediatePropagation();}},true);
+document.addEventListener('pointerover',e=>{const b=e.target.closest?.('.dn66-badge');if(b&&!b.contains(e.relatedTarget))noteTip66(b);});
+document.addEventListener('pointerout',e=>{const b=e.target.closest?.('.dn66-badge');if(b&&!b.contains(e.relatedTarget))noteHideTip66();});
+document.addEventListener('focusin',e=>{if(e.target.matches?.('.dn66-badge'))noteTip66(e.target,true);});
+document.addEventListener('focusout',e=>{if(e.target.matches?.('.dn66-badge'))noteHideTip66();});
+window.addEventListener('keydown',e=>{if(e.key==='Escape'&&(NOTE66.open||document.getElementById('devTip66'))){e.preventDefault();e.stopImmediatePropagation();noteHideTip66();if(NOTE66.open)noteClose66();return;}if(NOTE66.open&&e.target.closest?.('#devNotes66'))e.stopImmediatePropagation();},true);
+window.addEventListener('resize',noteHideTip66);document.addEventListener('scroll',noteHideTip66,true);
+noteSchedule66();
+// Field-level notes appear once per concept in a form, not on each repeated parameter row.
+const NOTE_FIELD66=[[/对象选择方式|运行时对象模型引用|动态对象/,'runtimeModel'],[/响应解析|响应设置/,'response'],[/取值方式|默认值|固定值/,'fieldValue'],[/来源系统|设备编号|设备序列号|实例标识/,'identity'],[/业务说明|节点说明|描述信息/,'description'],[/对象发布版本|固定版本/,'versions']];
+const noteDecorateBase66=noteDecorate66;
+noteDecorate66=()=>{noteDecorateBase66();if(!NOTE66.enabled)return;const sections=[document.querySelector('#root .view'),document.querySelector('.wfpanel'),document.querySelector('.e50-panel'),document.querySelector('.modal[role="dialog"]')].filter(Boolean);for(const section of sections){const seen=new Set();for(const el of section.querySelectorAll('label,.l,.v37-field>span,.u42-field>span')){if(el.closest('#devNotes66,.wfn'))continue;const text=[...el.childNodes].filter(n=>n.nodeType===3).map(n=>n.textContent).join(' ').trim()||el.textContent.slice(0,60).trim();const match=NOTE_FIELD66.find(([re])=>re.test(text));if(match&&!seen.has(match[1])){seen.add(match[1]);noteMark66(el,match[1],text);}}}};
 
 BOOTING43=false;persist23();flushStorage40();
 render();

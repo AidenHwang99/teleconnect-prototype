@@ -1,15 +1,16 @@
 {
-  "version": 65,
-  "sourceFile": "teleConnect_AI主动模式原型_65.html",
-  "sourceSha256": "584d61403f14d83e5bd727e7b90971b9658ead7e7c037c8f6d8f65a873912bf3",
-  "hostedSha256": "40f5992aacf2445193eff8e42b2b5aa57220a47df2011bec5d668fad758ff0a6",
+  "version": 66,
+  "sourceFile": "teleConnect_AI主动模式原型_66.html",
+  "sourceSha256": "2980e3692ed10270d99c594990eb82c76632e1caa92f454c26c89fd8dfaae35a",
+  "hostedSha256": "d9e305bdf84b91da66445d8b2b63da28363b3b66fcf8ea479596f966bd5848b6",
   "packaging": "Removed optional Google Fonts links only; application script and inline CSS unchanged.",
   "entry": "./",
-  "fixedVersion": "versions/v65/",
+  "fixedVersion": "versions/v66/",
   "archives": [
+    "versions/v65/",
     "versions/v60/",
     "versions/v56/"
   ],
-  "storage": "Per-browser versioned localStorage plus per-tab temporary form storage; no automatic migration from old versions.",
-  "services": "External integrations, AI, device operations, tickets and notifications remain simulated."
+  "storage": "Per-browser versioned localStorage plus per-tab temporary form storage; source-defined storage behavior retained unchanged.",
+  "services": "Workflows, AI, device operations, tickets and notifications remain simulated. Object HTTP function testing may send real requests; HTTPS and CORS required. Not exercised in publication acceptance."
 }
