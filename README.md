@@ -1,21 +1,23 @@
 # teleConnect 可交互原型
 
-当前版本：第60版。
+当前版本：第65版。
 
 - [打开在线原型](https://aidenhwang99.github.io/teleconnect-prototype/)
-- [固定第60版地址](https://aidenhwang99.github.io/teleconnect-prototype/versions/v60/)
-- [第60版功能说明](docs/v60.md)
-- [第60版在线发布说明](docs/hosting-v60.md)
-- [历史第56版](https://aidenhwang99.github.io/teleconnect-prototype/versions/v56/)
+- [固定第65版地址](https://aidenhwang99.github.io/teleconnect-prototype/versions/v65/)
+- [第65版功能说明](docs/v65.md)
+- [第65版在线发布说明](docs/hosting-v65.md)
+- 历史版本：[第60版](https://aidenhwang99.github.io/teleconnect-prototype/versions/v60/) · [第56版](https://aidenhwang99.github.io/teleconnect-prototype/versions/v56/)
 
 ## 使用方式
 
-使用桌面版 Chrome 或 Edge，建议窗口宽度至少1280px。所有页面、画布、配置表单、导入导出、测试和审批演示在浏览器内执行。导入文件只在本机解析；修改保存在当前浏览器的 localStorage 中，刷新后保留。不同同事的修改互相独立，不会写回Git仓库或同步到其他人的浏览器。清除网站数据会删除本地修改，请先导出需要保留的配置。
+使用桌面版Chrome或Edge，建议窗口宽度至少1280px。页面、画布、配置、导入导出、测试与审批演示在浏览器内运行。导入文件只在本机解析；已保存配置和运行记录使用当前浏览器的localStorage。临时待办填写使用当前标签页的临时存储，恢复前检查待办与依据是否仍然有效。不同同事的修改彼此独立，不写回Git或自动同步。
 
-外部OSS/EMS、告警、Agent/模型、设备指令、工单与通知仍是本地模拟。GitHub Pages提供静态页面，不提供这些生产后台服务。页面中的接口地址、示例凭据引用和设备数据为原型配置。
+第65版使用独立版本的存储键。升级不会自动导入旧版个人修改；旧版可从历史地址打开。清除网站数据前，请导出需要保留的配置。
+
+外部OSS/EMS、告警、Agent/模型、设备指令、工单与通知继续使用原型模拟。GitHub Pages只托管静态页面。
 
 ## 发布结构
 
-`index.html`为当前入口，`versions/v60/index.html`为当前固定版本，`versions/v56/`保留历史版本。单文件包含应用逻辑、样例数据、样式及图标。发布包移除可选的外部Google Fonts依赖，使用系统中文字体；应用JavaScript与本地第60版完全一致。`.nojekyll`避免静态文件被模板构建处理。
+`index.html`为当前入口；`versions/v65/index.html`为固定版本，历史目录继续保留。应用为单文件，含逻辑、样例、样式和图标。发布时只移除可选Google Fonts链接，使用系统中文字体；JavaScript与内嵌CSS和本地第65版逐字一致。`.nojekyll`避免模板构建处理静态文件。
 
-`main`保存交付源文件和说明；`gh-pages`保存在线发布文件。更新后先验证再提交，执行`scripts/publish-pages.sh`发布当前已提交版本。旧版本可从Git历史与固定版本目录查看。
+`main`保存交付文件及说明，`gh-pages`保存在线内容。修改提交后使用`scripts/publish-pages.sh`发布，再核对Pages构建和正式网址。Git标签保存各次发布快照。

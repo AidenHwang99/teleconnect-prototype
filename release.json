@@ -1,12 +1,15 @@
 {
-  "version": 60,
-  "sourceFile": "teleConnect_AI主动模式原型_60.html",
-  "sourceSha256": "1a2c3349dfb64f2600f0fe474f75a12cee37be105b792eae488e548329e1be74",
-  "hostedSha256": "598c600498636f3e30f51be174e8f0e5451e2749820e3ffc62a5205a83ecde08",
-  "packaging": "Removed optional Google Fonts stylesheet; application script and inline styles unchanged. Uses installed Chinese system fonts.",
-  "storage": "Per-browser localStorage; version 60 uses its own configuration key. Previous local edits are not automatically migrated.",
-  "services": "All integrations, AI responses and operations remain simulated.",
+  "version": 65,
+  "sourceFile": "teleConnect_AI主动模式原型_65.html",
+  "sourceSha256": "584d61403f14d83e5bd727e7b90971b9658ead7e7c037c8f6d8f65a873912bf3",
+  "hostedSha256": "40f5992aacf2445193eff8e42b2b5aa57220a47df2011bec5d668fad758ff0a6",
+  "packaging": "Removed optional Google Fonts links only; application script and inline CSS unchanged.",
   "entry": "./",
-  "fixedVersion": "versions/v60/",
-  "previousVersion": "versions/v56/"
+  "fixedVersion": "versions/v65/",
+  "archives": [
+    "versions/v60/",
+    "versions/v56/"
+  ],
+  "storage": "Per-browser versioned localStorage plus per-tab temporary form storage; no automatic migration from old versions.",
+  "services": "External integrations, AI, device operations, tickets and notifications remain simulated."
 }
